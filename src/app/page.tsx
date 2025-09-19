@@ -67,7 +67,7 @@ export default function ReadingListApp() {
     <Box sx={{ minHeight: "100vh", bgcolor: "#222" }}>
       <Box position="sticky" sx={{ p: 2, paddingX: 15 }}>
         <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
-          Leo's Reading List
+          {"Leo's Reading List"}
         </Typography>
       </Box>
 
