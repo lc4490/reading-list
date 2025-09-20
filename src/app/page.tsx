@@ -193,7 +193,11 @@ export default function ReadingListApp() {
                   bgcolor: "#555",
                 },
               }}
-              onClick={() => openNotes(book)}
+              onClick={() => {
+                if (book.notes !== "") {
+                  openNotes(book);
+                }
+              }}
             >
               <Box
                 display="flex"
