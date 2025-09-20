@@ -225,10 +225,10 @@ export default function ReadingListApp() {
               <Stack
                 direction="row"
                 spacing={{ xs: 0.5, md: 1 }}
-                minWidth={"150px"}
+                minWidth={"140px"}
                 alignItems={"center"}
                 justifyContent={"flex-end"}
-                sx={{ mt: 1, flexWrap: "wrap" }}
+                sx={{ mt: 1, flexWrap: "wrap", backgroundColor: "red" }}
               >
                 <Chip
                   size="small"
