@@ -85,8 +85,17 @@ export default function ReadingListApp() {
   };
 
   return (
-    <Box sx={{ minHeight: "100vh", bgcolor: "#222" }}>
-      <Box position="sticky" sx={{ p: 2, marginLeft: { xs: 0, md: 15 } }}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        // bgcolor: "#222",
+        background: `linear-gradient(180deg, #000 0px, #222 500px)`,
+      }}
+    >
+      <Box
+        position="sticky"
+        sx={{ p: 2, marginLeft: { xs: 0, md: 15 }, marginTop: 5 }}
+      >
         <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
           {"Leo's Reading List"}
         </Typography>
@@ -126,6 +135,7 @@ export default function ReadingListApp() {
                 size="small"
                 value={genre}
                 onChange={(_, val) => val && setGenre(val)}
+                sx={{ paddingX: 2 }}
               >
                 {GENRES.map((g) => (
                   <ToggleButton
@@ -155,7 +165,7 @@ export default function ReadingListApp() {
                 size="small"
                 value={category}
                 onChange={(_, val) => val && setCategory(val)}
-                sx={{ overflowX: "scroll" }}
+                sx={{ overflowX: "scroll", paddingX: 2 }}
               >
                 {CATEGORIES.map((c) => (
                   <ToggleButton
