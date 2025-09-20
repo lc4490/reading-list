@@ -228,7 +228,7 @@ export default function ReadingListApp() {
                 minWidth={"140px"}
                 alignItems={"center"}
                 justifyContent={"flex-end"}
-                sx={{ mt: 1, flexWrap: "wrap", backgroundColor: "red" }}
+                sx={{ mt: 1, flexWrap: "wrap" }}
               >
                 <Chip
                   size="small"
