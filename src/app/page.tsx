@@ -28,6 +28,7 @@ type Book = {
   id: string;
   title: string;
   author: string;
+  translation?: string;
   year: number;
   genre: string;
   category: string;
@@ -213,7 +214,8 @@ export default function ReadingListApp() {
                     whiteSpace: "pre-line",
                   }}
                 >
-                  {book.title} {`by ${book.author}`}
+                  {book.title} {`by ${book.author}`}{" "}
+                  {isMobile ? "" : `${book.translation}`}
                 </Typography>
               </Box>
               <Stack

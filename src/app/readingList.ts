@@ -2,6 +2,7 @@ type Book = {
   id: string;
   title: string;
   author: string;
+  translation?: string;
   year: number;
   genre: string;
   category: string;
@@ -14,7 +15,8 @@ export const READING_LIST: Book[] = [
   {
     id: "homer-iliad",
     title: "The Iliad",
-    author: "Homer (translated by Emily Wilson)",
+    author: "Homer",
+    translation: "(translated by Emily Wilson)",
     year: -750,
     genre: "literature",
     category: "greece",
@@ -24,7 +26,8 @@ export const READING_LIST: Book[] = [
   {
     id: "homer-odyssey",
     title: "The Odyssey",
-    author: "Homer (translated by Emily Wilson)",
+    author: "Homer",
+    translation: "(translated by Emily Wilson)",
     year: -725,
     genre: "literature",
     category: "greece",
@@ -34,7 +37,8 @@ export const READING_LIST: Book[] = [
   {
     id: "an-oresteia",
     title: "An Oresteia",
-    author: "Aeschylus, Sophocles, Euripides (translated by Anne Carson)",
+    author: "Aeschylus, Sophocles, Euripides",
+    translation: "(translated by Anne Carson)",
     year: -458,
     genre: "literature",
     category: "greece",
@@ -44,7 +48,8 @@ export const READING_LIST: Book[] = [
   {
     id: "herodotus-histories",
     title: "The Histories",
-    author: "Herodotus (translated by Aubrey de Sélincourt)",
+    author: "Herodotus",
+    translation: "(translated by Aubrey de Sélincourt)",
     year: -440,
     genre: "history",
     category: "greece",
