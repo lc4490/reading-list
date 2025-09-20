@@ -38,7 +38,23 @@ type Book = {
 import { READING_LIST } from "./readingList";
 
 const GENRES = ["all", "history", "philosophy", "literature"];
-const CATEGORIES = ["all", "greece", "rome", "christianity"];
+const CATEGORIES = [
+  "all",
+  "greece",
+  "rome",
+  "christianity",
+  "renaissance",
+  "protestant",
+  "science",
+  "enlightenment",
+  "kant",
+  "hegel",
+  "marx",
+  "russia",
+  "nietzsche",
+  "capitalism",
+  "modern",
+];
 
 export default function ReadingListApp() {
   const theme = useTheme();
@@ -87,10 +103,10 @@ export default function ReadingListApp() {
         </Box>
         <Stack spacing={2} sx={{ mb: 3 }}>
           <Stack
-            direction={{ xs: "column", sm: "row" }}
+            direction={"column"}
             spacing={2}
             justifyContent={"space-between"}
-            alignItems={{ xs: "stretch", sm: "center" }}
+            alignItems={"stretch"}
           >
             <Box display="flex" flexDirection="row" alignItems="center">
               <Typography
@@ -98,7 +114,7 @@ export default function ReadingListApp() {
                   display: "block",
                   mb: 0.5,
                   fontWeight: "600",
-                  paddingX: 2,
+                  // paddingX: 2,
                 }}
               >
                 Genre:
@@ -127,10 +143,10 @@ export default function ReadingListApp() {
                   display: "block",
                   mb: 0.5,
                   fontWeight: "600",
-                  paddingX: 2,
+                  // paddingX: 2,
                 }}
               >
-                Category
+                Category:
               </Typography>
               <ToggleButtonGroup
                 color="secondary"
@@ -138,6 +154,7 @@ export default function ReadingListApp() {
                 size="small"
                 value={category}
                 onChange={(_, val) => val && setCategory(val)}
+                sx={{ overflowX: "scroll" }}
               >
                 {CATEGORIES.map((c) => (
                   <ToggleButton
