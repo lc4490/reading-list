@@ -22,6 +22,8 @@ import {
 } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 type Book = {
   id: string;
   title: string;
@@ -39,6 +41,8 @@ const GENRES = ["all", "history", "philosophy", "literature"];
 const CATEGORIES = ["all", "greece", "rome", "christianity"];
 
 export default function ReadingListApp() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   // const [books, setBooks] = useState<Book[]>(INITIAL_BOOKS);
 
   const [genre, setGenre] = useState("all");
@@ -65,7 +69,7 @@ export default function ReadingListApp() {
 
   return (
     <Box sx={{ minHeight: "100vh", bgcolor: "#222" }}>
-      <Box position="sticky" sx={{ p: 2, paddingX: 15 }}>
+      <Box position="sticky" sx={{ p: 2, marginLeft: { xs: 0, md: 15 } }}>
         <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
           {"Leo's Reading List"}
         </Typography>
@@ -158,13 +162,17 @@ export default function ReadingListApp() {
               display="flex"
               flexDirection="row"
               justifyContent={"space-between"}
-              sx={{ bgcolor: "#333", p: 2, borderRadius: "16px" }}
+              sx={{
+                bgcolor: "#333",
+                p: { xs: 0.5, md: 2 },
+                borderRadius: "16px",
+              }}
             >
               <Box
                 display="flex"
                 flexDirection="row"
                 alignItems="center"
-                width={{ xs: "150px", md: "750px" }}
+                // width={{ xs: "200px", md: "750px" }}
                 sx={{
                   overflowX: "auto", // enables horizontal scrolling
                   whiteSpace: "nowrap", // keep text on one line
@@ -180,19 +188,29 @@ export default function ReadingListApp() {
                   }
                   label=""
                 />
-                <Typography variant="subtitle1">
-                  {book.title + " by " + book.author}
+                <Typography
+                  variant="subtitle1"
+                  sx={{
+                    display: { xs: "block", md: "inline" },
+                    whiteSpace: "pre-line",
+                  }}
+                >
+                  {book.title} {`by ${book.author}`}
                 </Typography>
               </Box>
               <Stack
                 direction="row"
-                spacing={1}
+                spacing={{ xs: 0.5, md: 1 }}
+                minWidth={"150px"}
                 alignItems={"center"}
                 sx={{ mt: 1, flexWrap: "wrap" }}
               >
                 <Chip
                   size="small"
-                  sx={{ backgroundColor: "white" }}
+                  sx={{
+                    backgroundColor: "white",
+                    display: { xs: "none", md: "block" },
+                  }}
                   label={
                     book.year > 0
                       ? `${book.year} CE`
@@ -202,12 +220,20 @@ export default function ReadingListApp() {
                 <Chip
                   size="small"
                   color="primary"
-                  label={capitalize(book.genre)}
+                  label={
+                    isMobile
+                      ? capitalize(book.genre).slice(0, 3) + "."
+                      : capitalize(book.genre)
+                  }
                 />
                 <Chip
                   size="small"
                   color="secondary"
-                  label={capitalize(book.category)}
+                  label={
+                    isMobile
+                      ? capitalize(book.category).slice(0, 3) + "."
+                      : capitalize(book.category)
+                  }
                 />
                 <IconButton onClick={() => openNotes(book)}>
                   <InfoIcon />
