@@ -89,7 +89,7 @@ export default function ReadingListApp() {
       sx={{
         minHeight: "100vh",
         // bgcolor: "#222",
-        background: `linear-gradient(180deg, #000 0px, #222 500px)`,
+        background: `linear-gradient(180deg, #000 0px, #222 250px)`,
       }}
     >
       <Box
