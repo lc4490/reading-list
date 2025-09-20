@@ -229,7 +229,7 @@ export default function ReadingListApp() {
                 direction="row"
                 spacing={{ xs: 0.5, md: 1 }}
                 marginRight={1}
-                minWidth={"140px"}
+                minWidth={"100px"}
                 alignItems={"center"}
                 justifyContent={"flex-end"}
                 sx={{ mt: 1, flexWrap: "wrap" }}
