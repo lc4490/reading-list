@@ -20,7 +20,8 @@ export const READING_LIST: Book[] = [
     year: -750,
     genre: "literature",
     category: "greece",
-    notes: "",
+    notes: `Rage and how to let it go\n
+(One of) the first works that show and glorify both sides of a conflict. Tells the story of the rage of Achilles, and how it was ultimately fruitless and only lead to greater suffering. He could only be relieved of his suffering by the love shown to him by King Priam, his enemy, and they are able to empathize with each other.`,
     done: true,
   },
   {
@@ -31,7 +32,8 @@ export const READING_LIST: Book[] = [
     year: -725,
     genre: "literature",
     category: "greece",
-    notes: "",
+    notes: `Hope and how to hold onto it\n
+Tells the story of unjust suffering, a universal experience in life. Odysseus, Penelope, and Telemachus are able to overcome their suffering by holding onto hope, which is derived from love.`,
     done: true,
   },
   {
@@ -42,7 +44,9 @@ export const READING_LIST: Book[] = [
     year: -458,
     genre: "literature",
     category: "greece",
-    notes: "",
+    notes: `Justice and its contradictory nature\n
+Tells the story of how the fervor for justice dismantles the house of Atreus. Agamemnon believes himself just in sacrificing Iphigenia for the greater good, Clymenestra believes herself just in killing Agamemnon in revenge, Electra and Orestes believe themselves just in killing Clymenestra in revenge. In their pursuit of justice, Electra and Orestes grow more and more depraved in their pursuits. There is no resolution, except for deus ex machina, a mockery that the concept of justice can somehow be systemized.
+`,
     done: true,
   },
   {
@@ -53,7 +57,8 @@ export const READING_LIST: Book[] = [
     year: -440,
     genre: "history",
     category: "greece",
-    notes: "",
+    notes: `Hubris and its fleeting nature\n
+The history spans over many different kings, and shows the impermanence of their rule. Shows how the pride of various Persian kings lead to their downfall, Cyrus when he attacked the Massagetae, Cambyses when he attacked the Ethiopians and lost his own kingdom, Darius when he attacked Schythia, and Xerxes when he attacked the united Greeks. Also shows how the division between peoples is very arbitrary, most of the Hellenistic world fought each other, and often allied with non-Hellenic peoples. `,
     done: true,
   },
   {

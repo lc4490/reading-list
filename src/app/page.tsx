@@ -98,14 +98,14 @@ export default function ReadingListApp() {
             Overall Progress
           </Typography>
           <LinearProgress variant="determinate" value={progress} />
-          <Typography variant="caption" sx={{ mt: 0.5, display: "block" }}>
+          <Typography variant="caption" sx={{ py: 0.5, display: "block" }}>
             {completedCount}/{filtered.length} completed ({progress}%)
           </Typography>
         </Box>
         <Stack spacing={2} sx={{ mb: 3 }}>
           <Stack
             direction={"column"}
-            spacing={2}
+            // spacing={2}
             justifyContent={"space-between"}
             alignItems={"stretch"}
           >
@@ -113,7 +113,7 @@ export default function ReadingListApp() {
               <Typography
                 sx={{
                   display: "block",
-                  mb: 0.5,
+                  // mb: 0.5,
                   fontWeight: "600",
                   // paddingX: 2,
                 }}
@@ -142,7 +142,7 @@ export default function ReadingListApp() {
               <Typography
                 sx={{
                   display: "block",
-                  mb: 0.5,
+                  // mb: 0.5,
                   fontWeight: "600",
                   // paddingX: 2,
                 }}
@@ -171,7 +171,7 @@ export default function ReadingListApp() {
           </Stack>
         </Stack>
 
-        <Divider sx={{ mb: 2 }} />
+        <Divider sx={{ mb: 0 }} />
 
         <Stack spacing={2}>
           {filtered.map((book) => (
@@ -184,7 +184,16 @@ export default function ReadingListApp() {
                 bgcolor: "#333",
                 p: { xs: 0.5, md: 2 },
                 borderRadius: "16px",
+                cursor: "pointer",
+                transition: "background-color 0.2s",
+                "&:hover": {
+                  bgcolor: "#444",
+                },
+                "&:active": {
+                  bgcolor: "#555",
+                },
               }}
+              onClick={() => openNotes(book)}
             >
               <Box
                 display="flex"
@@ -219,6 +228,7 @@ export default function ReadingListApp() {
               <Stack
                 direction="row"
                 spacing={{ xs: 0.5, md: 1 }}
+                marginRight={1}
                 minWidth={"140px"}
                 alignItems={"center"}
                 justifyContent={"flex-end"}
@@ -254,9 +264,6 @@ export default function ReadingListApp() {
                       : capitalize(book.category)
                   }
                 />
-                <IconButton onClick={() => openNotes(book)}>
-                  <InfoIcon />
-                </IconButton>
               </Stack>
             </Box>
           ))}
@@ -268,10 +275,13 @@ export default function ReadingListApp() {
           maxWidth="md"
           fullWidth
         >
-          <DialogTitle>
-            {activeBook ? `${activeBook.title} — Notes` : "Notes"}
+          <DialogTitle sx={{ backgroundColor: "#222", color: "#fff" }}>
+            {activeBook ? `Thoughts on ${activeBook.title}` : "Notes"}
           </DialogTitle>
-          <DialogContent dividers>
+          <DialogContent
+            dividers
+            sx={{ backgroundColor: "#222", color: "#fff" }}
+          >
             {activeBook ? (
               <Box
                 sx={{
@@ -285,7 +295,7 @@ export default function ReadingListApp() {
               </Box>
             ) : null}
           </DialogContent>
-          <DialogActions>
+          <DialogActions sx={{ backgroundColor: "#222" }}>
             <Button onClick={() => setOpen(false)}>Close</Button>
           </DialogActions>
         </Dialog>
