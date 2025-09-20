@@ -38,7 +38,7 @@ type Book = {
 
 import { READING_LIST } from "./readingList";
 
-const GENRES = ["all", "history", "philosophy", "literature"];
+const GENRES = ["all", "literature", "history", "philosophy"];
 const CATEGORIES = [
   "all",
   "greece",
@@ -215,7 +215,11 @@ export default function ReadingListApp() {
                   }}
                 >
                   {book.title} {`by ${book.author}`}{" "}
-                  {isMobile ? "" : `${book.translation}`}
+                  {book.translation
+                    ? isMobile
+                      ? ""
+                      : `${book.translation}`
+                    : ""}
                 </Typography>
               </Box>
               <Stack
@@ -223,6 +227,7 @@ export default function ReadingListApp() {
                 spacing={{ xs: 0.5, md: 1 }}
                 minWidth={"150px"}
                 alignItems={"center"}
+                justifyContent={"flex-end"}
                 sx={{ mt: 1, flexWrap: "wrap" }}
               >
                 <Chip
