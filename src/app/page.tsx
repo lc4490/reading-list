@@ -1,6 +1,5 @@
 "use client";
 
-import InfoIcon from "@mui/icons-material/Info";
 import {
   Box,
   Button,
@@ -12,18 +11,16 @@ import {
   DialogContent,
   DialogTitle,
   Divider,
-  FormControlLabel,
-  IconButton,
   LinearProgress,
   Stack,
   ToggleButton,
   ToggleButtonGroup,
   Typography,
 } from "@mui/material";
-import { useEffect, useMemo, useState } from "react";
-import ReactMarkdown from "react-markdown";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useEffect, useMemo, useState } from "react";
+import ReactMarkdown from "react-markdown";
 type Book = {
   id: string;
   title: string;
@@ -32,7 +29,7 @@ type Book = {
   year: number;
   genre: string;
   category: string;
-  notes: string;
+  notesPath?: string;
   done?: boolean;
 };
 
@@ -204,7 +201,7 @@ export default function ReadingListApp() {
                 },
               }}
               onClick={() => {
-                if (book.notes !== "") {
+                if (book.notesPath) {
                   openNotes(book);
                 }
               }}
@@ -289,25 +286,16 @@ export default function ReadingListApp() {
           maxWidth="md"
           fullWidth
         >
-          <DialogTitle sx={{ backgroundColor: "#222", color: "#fff" }}>
+          <DialogTitle
+            sx={{ backgroundColor: "#222", color: "#fff", fontWeight: "600" }}
+          >
             {activeBook ? `Thoughts on ${activeBook.title}` : "Notes"}
           </DialogTitle>
           <DialogContent
             dividers
             sx={{ backgroundColor: "#222", color: "#fff" }}
           >
-            {activeBook ? (
-              <Box
-                sx={{
-                  "& h1, & h2, & h3": { mt: 2 },
-                  "& p": { lineHeight: 1.75 },
-                }}
-              >
-                <ReactMarkdown>
-                  {activeBook.notes || "No notes yet."}
-                </ReactMarkdown>
-              </Box>
-            ) : null}
+            {activeBook ? <MarkdownNotes book={activeBook} /> : null}
           </DialogContent>
           <DialogActions sx={{ backgroundColor: "#222" }}>
             <Button onClick={() => setOpen(false)}>Close</Button>
@@ -320,4 +308,52 @@ export default function ReadingListApp() {
 
 function capitalize(s: string) {
   return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function MarkdownNotes({ book }: { book: Book }) {
+  const [md, setMd] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (!book) return;
+    let cancelled = false;
+
+    const path = book.notesPath || `/notes/${book.id}.md`;
+    setLoading(true);
+
+    fetch(path)
+      .then((r) => (r.ok ? r.text() : Promise.reject()))
+      .then((text) => !cancelled && setMd(text))
+      .catch(() => {
+        // fallback to inline notes (if any)
+        if (!cancelled) setMd("");
+      })
+      .finally(() => !cancelled && setLoading(false));
+
+    return () => {
+      cancelled = true;
+    };
+  }, [book]);
+
+  if (loading && md === null) {
+    return (
+      <Box sx={{ mt: 1 }}>
+        <LinearProgress />
+      </Box>
+    );
+  }
+
+  return (
+    <Box
+      sx={{
+        "& h1, & h2, & h3": { mt: 2, mb: 1, fontWeight: 700 },
+        "& p": { lineHeight: 1.75, mb: 1 },
+        "& ul, & ol": { pl: 3, mb: 1 },
+      }}
+    >
+      <Box sx={{ whiteSpace: "pre-line" }}>
+        <ReactMarkdown>{(md ?? "").trim() || "No notes yet."}</ReactMarkdown>
+      </Box>
+    </Box>
+  );
 }

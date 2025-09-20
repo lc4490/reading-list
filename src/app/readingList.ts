@@ -6,7 +6,7 @@ type Book = {
   year: number;
   genre: string;
   category: string;
-  notes: string;
+  notesPath?: string;
   done?: boolean;
 };
 
@@ -20,8 +20,7 @@ export const READING_LIST: Book[] = [
     year: -750,
     genre: "literature",
     category: "greece",
-    notes: `Rage and how to let it go\n
-(One of) the first works that show and glorify both sides of a conflict. Tells the story of the rage of Achilles, and how it was ultimately fruitless and only lead to greater suffering. He could only be relieved of his suffering by the love shown to him by King Priam, his enemy, and they are able to empathize with each other.`,
+    notesPath: "/notes/iliad.md",
     done: true,
   },
   {
@@ -32,8 +31,7 @@ export const READING_LIST: Book[] = [
     year: -725,
     genre: "literature",
     category: "greece",
-    notes: `Hope and how to hold onto it\n
-Tells the story of unjust suffering, a universal experience in life. Odysseus, Penelope, and Telemachus are able to overcome their suffering by holding onto hope, which is derived from love.`,
+    notesPath: "/notes/odyssey.md",
     done: true,
   },
   {
@@ -44,9 +42,7 @@ Tells the story of unjust suffering, a universal experience in life. Odysseus, P
     year: -458,
     genre: "literature",
     category: "greece",
-    notes: `Justice and its contradictory nature\n
-Tells the story of how the fervor for justice dismantles the house of Atreus. Agamemnon believes himself just in sacrificing Iphigenia for the greater good, Clymenestra believes herself just in killing Agamemnon in revenge, Electra and Orestes believe themselves just in killing Clymenestra in revenge. In their pursuit of justice, Electra and Orestes grow more and more depraved in their pursuits. There is no resolution, except for deus ex machina, a mockery that the concept of justice can somehow be systemized.
-`,
+    notesPath: "/notes/oresteia.md",
     done: true,
   },
   {
@@ -57,8 +53,7 @@ Tells the story of how the fervor for justice dismantles the house of Atreus. Ag
     year: -440,
     genre: "history",
     category: "greece",
-    notes: `Hubris and its fleeting nature\n
-The history spans over many different kings, and shows the impermanence of their rule. Shows how the pride of various Persian kings lead to their downfall, Cyrus when he attacked the Massagetae, Cambyses when he attacked the Ethiopians and lost his own kingdom, Darius when he attacked Schythia, and Xerxes when he attacked the united Greeks. Also shows how the division between peoples is very arbitrary, most of the Hellenistic world fought each other, and often allied with non-Hellenic peoples. `,
+    notesPath: "/notes/herodotus.md",
     done: true,
   },
   {
@@ -68,7 +63,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: -400,
     genre: "history",
     category: "greece",
-    notes: "",
     done: false,
   },
   {
@@ -78,7 +72,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: -360,
     genre: "history",
     category: "greece",
-    notes: "",
     done: false,
   },
   {
@@ -88,7 +81,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: -399,
     genre: "philosophy",
     category: "greece",
-    notes: "",
     done: false,
   },
   {
@@ -98,7 +90,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: -385,
     genre: "philosophy",
     category: "greece",
-    notes: "",
     done: false,
   },
   {
@@ -108,7 +99,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: -375,
     genre: "philosophy",
     category: "greece",
-    notes: "",
     done: false,
   },
   {
@@ -118,7 +108,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: -340,
     genre: "philosophy",
     category: "greece",
-    notes: "",
     done: false,
   },
   {
@@ -128,7 +117,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: -330,
     genre: "philosophy",
     category: "greece",
-    notes: "",
     done: false,
   },
   {
@@ -138,7 +126,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: -50,
     genre: "history",
     category: "greece",
-    notes: "",
     done: false,
   },
   {
@@ -148,7 +135,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: 120,
     genre: "history",
     category: "greece",
-    notes: "",
     done: false,
   },
 
@@ -160,7 +146,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: -150,
     genre: "history",
     category: "rome",
-    notes: "",
     done: false,
   },
   {
@@ -170,7 +155,6 @@ The history spans over many different kings, and shows the impermanence of their
     year: -50,
     genre: "history",
     category: "rome",
-    notes: "",
     done: false,
   },
   {
@@ -180,7 +164,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: -45,
     genre: "history",
     category: "rome",
-    notes: "",
+
     done: false,
   },
   {
@@ -190,7 +174,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 14,
     genre: "history",
     category: "rome",
-    notes: "",
+
     done: false,
   },
   {
@@ -200,7 +184,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: -19,
     genre: "literature",
     category: "rome",
-    notes: "",
+
     done: false,
   },
   {
@@ -210,7 +194,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 110,
     genre: "history",
     category: "rome",
-    notes: "",
+
     done: false,
   },
   {
@@ -220,7 +204,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 105,
     genre: "history",
     category: "rome",
-    notes: "",
+
     done: false,
   },
   {
@@ -230,7 +214,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 75,
     genre: "history",
     category: "rome",
-    notes: "",
+
     done: false,
   },
   {
@@ -240,7 +224,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: -55,
     genre: "philosophy",
     category: "rome",
-    notes: "",
+
     done: false,
   },
   {
@@ -250,7 +234,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 65,
     genre: "philosophy",
     category: "rome",
-    notes: "",
+
     done: false,
   },
   {
@@ -260,7 +244,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 108,
     genre: "philosophy",
     category: "rome",
-    notes: "",
+
     done: false,
   },
   {
@@ -270,7 +254,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 170,
     genre: "philosophy",
     category: "rome",
-    notes: "",
+
     done: false,
   },
 
@@ -282,7 +266,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 325,
     genre: "literature",
     category: "christianity",
-    notes: "",
+
     done: false,
   },
   {
@@ -292,7 +276,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 325,
     genre: "history",
     category: "christianity",
-    notes: "",
+
     done: false,
   },
   {
@@ -302,7 +286,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 400,
     genre: "philosophy",
     category: "christianity",
-    notes: "",
+
     done: false,
   },
   {
@@ -312,7 +296,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 426,
     genre: "philosophy",
     category: "christianity",
-    notes: "",
+
     done: false,
   },
 
@@ -324,7 +308,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1320,
     genre: "literature",
     category: "renaissance",
-    notes: "",
+
     done: false,
   },
   {
@@ -334,7 +318,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1513,
     genre: "philosophy",
     category: "renaissance",
-    notes: "",
+
     done: false,
   },
 
@@ -346,7 +330,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1517,
     genre: "philosophy",
     category: "protestant",
-    notes: "",
+
     done: false,
   },
   {
@@ -356,7 +340,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1667,
     genre: "literature",
     category: "protestant",
-    notes: "",
+
     done: false,
   },
   {
@@ -366,7 +350,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1671,
     genre: "literature",
     category: "protestant",
-    notes: "",
+
     done: false,
   },
 
@@ -378,7 +362,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1687,
     genre: "philosophy",
     category: "science",
-    notes: "",
+
     done: false,
   },
   {
@@ -389,7 +373,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1733,
     genre: "philosophy",
     category: "science",
-    notes: "",
+
     done: false,
   },
 
@@ -401,7 +385,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1755,
     genre: "philosophy",
     category: "enlightenment",
-    notes: "",
+
     done: false,
   },
   {
@@ -411,7 +395,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1762,
     genre: "philosophy",
     category: "enlightenment",
-    notes: "",
+
     done: false,
   },
   {
@@ -421,7 +405,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1762,
     genre: "philosophy",
     category: "enlightenment",
-    notes: "",
+
     done: false,
   },
 
@@ -433,7 +417,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1781,
     genre: "philosophy",
     category: "kant",
-    notes: "",
+
     done: false,
   },
   {
@@ -443,7 +427,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1785,
     genre: "philosophy",
     category: "kant",
-    notes: "",
+
     done: false,
   },
   {
@@ -453,7 +437,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1788,
     genre: "philosophy",
     category: "kant",
-    notes: "",
+
     done: false,
   },
 
@@ -465,7 +449,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1820,
     genre: "philosophy",
     category: "hegel",
-    notes: "",
+
     done: false,
   },
   {
@@ -475,7 +459,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1837,
     genre: "philosophy",
     category: "hegel",
-    notes: "",
+
     done: false,
   },
 
@@ -487,7 +471,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1848,
     genre: "philosophy",
     category: "marx",
-    notes: "",
+
     done: false,
   },
   {
@@ -497,7 +481,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1867,
     genre: "philosophy",
     category: "marx",
-    notes: "",
+
     done: false,
   },
 
@@ -509,7 +493,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1866,
     genre: "literature",
     category: "russia",
-    notes: "",
+
     done: false,
   },
 
@@ -521,7 +505,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1887,
     genre: "philosophy",
     category: "nietzsche",
-    notes: "",
+
     done: false,
   },
 
@@ -533,7 +517,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1897,
     genre: "philosophy",
     category: "capitalism",
-    notes: "",
+
     done: false,
   },
   {
@@ -543,7 +527,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1900,
     genre: "philosophy",
     category: "capitalism",
-    notes: "",
+
     done: false,
   },
   {
@@ -553,7 +537,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1905,
     genre: "philosophy",
     category: "capitalism",
-    notes: "",
+
     done: false,
   },
 
@@ -565,7 +549,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1990,
     genre: "literature",
     category: "modern",
-    notes: "",
+
     done: false,
   },
   {
@@ -575,7 +559,7 @@ The history spans over many different kings, and shows the impermanence of their
     year: 1997,
     genre: "philosophy",
     category: "modern",
-    notes: "",
+
     done: false,
   },
 ];
