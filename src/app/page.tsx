@@ -191,6 +191,7 @@ export default function ReadingListApp() {
                 alignItems="center"
                 // width={{ xs: "200px", md: "750px" }}
                 sx={{
+                  marginLeft: 1,
                   overflowX: "auto", // enables horizontal scrolling
                   whiteSpace: "nowrap", // keep text on one line
                 }}
