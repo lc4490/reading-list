@@ -287,7 +287,12 @@ export default function ReadingListApp() {
           fullWidth
         >
           <DialogTitle
-            sx={{ backgroundColor: "#222", color: "#fff", fontWeight: "600" }}
+            sx={{
+              backgroundColor: "#222",
+              color: "#fff",
+              fontWeight: "600",
+              fontSize: "1.5rem",
+            }}
           >
             {activeBook ? `Thoughts on ${activeBook.title}` : "Notes"}
           </DialogTitle>
