@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  AppBar,
   Box,
   Button,
   Checkbox,
@@ -15,6 +16,7 @@ import {
   Stack,
   ToggleButton,
   ToggleButtonGroup,
+  Toolbar,
   Typography,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
@@ -93,55 +95,62 @@ export default function ReadingListApp() {
         background: `linear-gradient(180deg, #000 0px, #222 250px)`,
       }}
     >
+      {/* progress bar */}
+      <AppBar
+        position="fixed"
+        elevation={0}
+        sx={{
+          top: 0,
+          zIndex: (t) => t.zIndex.drawer + 1,
+          background: "rgba(20,20,26,0.7)",
+          backdropFilter: "blur(8px)",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+        }}
+      >
+        <Toolbar sx={{ py: 1, gap: 2, alignItems: "stretch" }}>
+          <Box sx={{ flex: 1 }}>
+            <Typography
+              variant="overline"
+              sx={{ opacity: 0.85, fontWeight: 600, letterSpacing: 1 }}
+            >
+              {`Overall Progress${genre !== "all" ? ` [${genre}]` : ""}${
+                category !== "all" ? ` [${category}]` : ""
+              }`}
+            </Typography>
+            <LinearProgress
+              variant="determinate"
+              value={progress}
+              sx={{
+                height: 10,
+                borderRadius: 999,
+                backgroundColor: "rgba(255,255,255,0.1)",
+                "& .MuiLinearProgress-bar": {
+                  background: "linear-gradient(90deg, #6366f1, #14b8a6)",
+                },
+              }}
+            />
+            <Typography
+              variant="caption"
+              sx={{ mt: 0.5, display: "block", opacity: 0.85 }}
+            >
+              {completedCount}/{filtered.length} completed ({progress}%)
+            </Typography>
+          </Box>
+        </Toolbar>
+      </AppBar>
+
+      {/* Spacer so content doesn’t hide under the fixed bar */}
+      <Toolbar sx={{ py: 2 }} />
       <Box
         position="sticky"
-        sx={{ p: 2, marginLeft: { xs: 0, md: 15 }, marginTop: 5 }}
+        sx={{ p: 2, marginLeft: { xs: 0, md: 15 }, marginTop: 2 }}
       >
         <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
           {"Leo's Reading List"}
         </Typography>
       </Box>
 
-      <Container maxWidth="lg" sx={{ py: 3 }}>
-        {/* progress bar */}
-        <Box>
-          <Typography
-            variant="overline"
-            sx={{ opacity: 0.85, fontWeight: 600, letterSpacing: 1 }}
-          >
-            Overall Progress
-          </Typography>
-
-          <LinearProgress
-            variant="determinate"
-            value={progress}
-            sx={{
-              height: 10,
-              borderRadius: 999,
-              backgroundColor: "rgba(255,255,255,0.1)",
-              "& .MuiLinearProgress-bar": {
-                background: "linear-gradient(90deg, #6366f1, #14b8a6)",
-              },
-            }}
-          />
-          <Typography
-            variant="body2"
-            sx={{
-              fontWeight: 800,
-              mt: 0.5,
-              mb: 1,
-              display: "flex",
-              alignItems: "baseline",
-              gap: 1,
-            }}
-          >
-            {completedCount}/{filtered.length} completed
-            <Typography variant="body2" component="span" sx={{ opacity: 0.7 }}>
-              ({progress}%)
-            </Typography>
-          </Typography>
-        </Box>
-
+      <Container maxWidth="lg" sx={{ py: 0 }}>
         {/* genre/categories */}
         <Stack spacing={2} sx={{ mb: 3 }}>
           <Stack
