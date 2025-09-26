@@ -121,7 +121,7 @@ export default function ReadingListApp() {
               alignItems="center"
               paddingY={1}
             >
-              <Box width="75px">
+              <Box minWidth="75px">
                 <Typography
                   sx={{
                     display: "block",
@@ -163,7 +163,7 @@ export default function ReadingListApp() {
               </ToggleButtonGroup>
             </Box>
             <Box display="flex" flexDirection="row" alignItems="center">
-              <Box width="75px">
+              <Box minWidth="75px">
                 <Typography
                   sx={{
                     display: "block",
