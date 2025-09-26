@@ -115,17 +115,24 @@ export default function ReadingListApp() {
             justifyContent={"space-between"}
             alignItems={"stretch"}
           >
-            <Box display="flex" flexDirection="row" alignItems="center">
-              <Typography
-                sx={{
-                  display: "block",
-                  // mb: 0.5,
-                  fontWeight: "600",
-                  // paddingX: 2,
-                }}
-              >
-                Genre:
-              </Typography>
+            <Box
+              display="flex"
+              flexDirection="row"
+              alignItems="center"
+              paddingY={1}
+            >
+              <Box width="75px">
+                <Typography
+                  sx={{
+                    display: "block",
+                    // mb: 0.5,
+                    fontWeight: "600",
+                    // paddingX: 2,
+                  }}
+                >
+                  Genre:
+                </Typography>
+              </Box>
               <ToggleButtonGroup
                 color="primary"
                 exclusive
@@ -138,7 +145,17 @@ export default function ReadingListApp() {
                   <ToggleButton
                     key={g}
                     value={g}
-                    sx={{ textTransform: "capitalize", color: "white" }}
+                    sx={{
+                      textTransform: "capitalize",
+                      // borderRadius: 999,
+                      // borderColor: "rgba(255,255,255,0.2)",
+                      color: "rgba(255,255,255,0.9)",
+                      "&.Mui-selected": {
+                        background:
+                          "linear-gradient(135deg, rgba(99,102,241,0.8), rgba(16,185,129,0.8))",
+                        color: "#fff",
+                      },
+                    }}
                   >
                     {g}
                   </ToggleButton>
@@ -146,29 +163,41 @@ export default function ReadingListApp() {
               </ToggleButtonGroup>
             </Box>
             <Box display="flex" flexDirection="row" alignItems="center">
-              <Typography
-                sx={{
-                  display: "block",
-                  // mb: 0.5,
-                  fontWeight: "600",
-                  // paddingX: 2,
-                }}
-              >
-                Category:
-              </Typography>
+              <Box width="75px">
+                <Typography
+                  sx={{
+                    display: "block",
+                    // mb: 0.5,
+                    fontWeight: "600",
+                    // paddingX: 2,
+                  }}
+                >
+                  Category:
+                </Typography>
+              </Box>
               <ToggleButtonGroup
                 color="secondary"
                 exclusive
                 size="small"
                 value={category}
                 onChange={(_, val) => val && setCategory(val)}
-                sx={{ overflowX: "scroll", paddingX: 2 }}
+                sx={{ overflowX: "auto", paddingX: 2 }}
               >
                 {CATEGORIES.map((c) => (
                   <ToggleButton
                     key={c}
                     value={c}
-                    sx={{ textTransform: "capitalize", color: "white" }}
+                    sx={{
+                      textTransform: "capitalize",
+                      // borderRadius: 999,
+                      // borderColor: "rgba(255,255,255,0.2)",
+                      color: "rgba(255,255,255,0.9)",
+                      "&.Mui-selected": {
+                        background:
+                          "linear-gradient(135deg, rgba(236,72,153,0.85), rgba(249,115,22,0.85))",
+                        color: "#fff",
+                      },
+                    }}
                   >
                     {c}
                   </ToggleButton>
@@ -259,21 +288,30 @@ export default function ReadingListApp() {
                 />
                 <Chip
                   size="small"
-                  color="primary"
                   label={
                     isMobile
                       ? capitalize(book.genre).slice(0, 3) + "."
                       : capitalize(book.genre)
                   }
+                  sx={{
+                    background: "linear-gradient(135deg, #6366f1, #14b8a6)",
+                    color: "#fff",
+                    fontWeight: 600,
+                  }}
                 />
+
                 <Chip
                   size="small"
-                  color="secondary"
                   label={
                     isMobile
                       ? capitalize(book.category).slice(0, 3) + "."
                       : capitalize(book.category)
                   }
+                  sx={{
+                    background: "linear-gradient(135deg, #ec4899, #f97316)", // pink → orange
+                    color: "#fff",
+                    fontWeight: 600,
+                  }}
                 />
               </Stack>
             </Box>
