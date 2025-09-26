@@ -69,6 +69,7 @@ export const READING_LIST: Book[] = [
   {
     id: "thucydides-peloponnesian",
     title: "History of the Peloponnesian War",
+    translation: "(translated by Rex Warner)",
     author: "Thucydides",
     year: -400,
     genre: "history",
