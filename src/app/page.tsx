@@ -150,7 +150,7 @@ export default function ReadingListApp() {
         </Typography>
       </Box>
 
-      <Container maxWidth="lg" sx={{ py: 0 }}>
+      <Container maxWidth="lg" sx={{ py: 0, paddingBottom: 5 }}>
         {/* genre/categories */}
         <Stack spacing={2} sx={{ mb: 3 }}>
           <Stack
