@@ -100,14 +100,43 @@ export default function ReadingListApp() {
 
       <Container maxWidth="lg" sx={{ py: 3 }}>
         <Box>
-          <Typography variant="subtitle2" sx={{ opacity: 0.7, mb: 1 }}>
+          <Typography
+            variant="overline"
+            sx={{ opacity: 0.85, fontWeight: 600, letterSpacing: 1 }}
+          >
             Overall Progress
           </Typography>
-          <LinearProgress variant="determinate" value={progress} />
-          <Typography variant="caption" sx={{ py: 0.5, display: "block" }}>
-            {completedCount}/{filtered.length} completed ({progress}%)
+
+          <LinearProgress
+            variant="determinate"
+            value={progress}
+            sx={{
+              height: 10,
+              borderRadius: 999,
+              backgroundColor: "rgba(255,255,255,0.1)",
+              "& .MuiLinearProgress-bar": {
+                background: "linear-gradient(90deg, #6366f1, #14b8a6)",
+              },
+            }}
+          />
+          <Typography
+            variant="body2"
+            sx={{
+              fontWeight: 800,
+              mt: 0.5,
+              mb: 1,
+              display: "flex",
+              alignItems: "baseline",
+              gap: 1,
+            }}
+          >
+            {completedCount}/{filtered.length} completed
+            <Typography variant="body2" component="span" sx={{ opacity: 0.7 }}>
+              ({progress}%)
+            </Typography>
           </Typography>
         </Box>
+
         <Stack spacing={2} sx={{ mb: 3 }}>
           <Stack
             direction={"column"}
