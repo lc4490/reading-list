@@ -21,6 +21,8 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 type Book = {
   id: string;
   title: string;
@@ -99,6 +101,7 @@ export default function ReadingListApp() {
       </Box>
 
       <Container maxWidth="lg" sx={{ py: 3 }}>
+        {/* progress bar */}
         <Box>
           <Typography
             variant="overline"
@@ -137,6 +140,7 @@ export default function ReadingListApp() {
           </Typography>
         </Box>
 
+        {/* genre/categories */}
         <Stack spacing={2} sx={{ mb: 3 }}>
           <Stack
             direction={"column"}
@@ -238,7 +242,8 @@ export default function ReadingListApp() {
 
         <Divider sx={{ mb: 0 }} />
 
-        <Stack spacing={2}>
+        {/* books */}
+        <Stack spacing={1.5}>
           {filtered.map((book) => (
             <Box
               key={book.id}
@@ -246,17 +251,22 @@ export default function ReadingListApp() {
               flexDirection="row"
               justifyContent={"space-between"}
               sx={{
-                bgcolor: "#333",
-                p: { xs: 0.5, md: 2 },
-                borderRadius: "16px",
-                cursor: "pointer",
-                transition: "background-color 0.2s",
+                p: { xs: 1.25, md: 2 },
+                borderRadius: 3,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 1.5,
+                background: "rgba(255,255,255,0.035)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                transition:
+                  "transform .18s ease, background .18s ease, border-color .18s ease",
                 "&:hover": {
-                  bgcolor: "#444",
+                  transform: "translateY(-2px)",
+                  background: "rgba(255,255,255,0.055)",
+                  borderColor: "rgba(255,255,255,0.16)",
                 },
-                "&:active": {
-                  bgcolor: "#555",
-                },
+                cursor: book.notesPath ? "pointer" : "default",
               }}
               onClick={() => {
                 if (book.notesPath) {
@@ -274,11 +284,16 @@ export default function ReadingListApp() {
                   whiteSpace: "nowrap", // keep text on one line
                 }}
               >
-                <Checkbox
-                  // disabled
-                  checked={!!book.done}
-                  // onChange={() => toggleDone(book.id)}
-                />
+                <Box sx={{ marginRight: 1 }}>
+                  {book.done ? (
+                    <CheckCircleIcon sx={{ color: "#3b82f6", fontSize: 25 }} />
+                  ) : (
+                    <RadioButtonUncheckedIcon
+                      sx={{ color: "rgba(59,130,246,0.4)", fontSize: 25 }}
+                    />
+                  )}
+                </Box>
+
                 <Typography
                   variant="subtitle1"
                   sx={{
