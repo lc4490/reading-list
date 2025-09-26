@@ -33,6 +33,8 @@ type Book = {
   category: string;
   notesPath?: string;
   done?: boolean;
+  cover?: string;
+  link?: string;
 };
 
 import { READING_LIST } from "./readingList";
@@ -382,8 +384,43 @@ export default function ReadingListApp() {
             dividers
             sx={{ backgroundColor: "#222", color: "#fff" }}
           >
+            {/* Book cover link */}
+            {activeBook?.cover && (
+              <Box
+                component="a"
+                href={activeBook.link || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  display: "block",
+                  mb: 3,
+                  width: isMobile ? "50%" : "25%", // keep it narrower for balance
+                  mx: "auto",
+                }}
+              >
+                <Box
+                  component="img"
+                  src={activeBook.cover}
+                  alt={`${activeBook.title} cover`}
+                  sx={{
+                    width: "100%",
+                    aspectRatio: "2 / 3", // standard book cover ratio
+                    objectFit: "cover",
+                    borderRadius: 1.5,
+                    boxShadow: "0 4px 16px rgba(0,0,0,0.5)",
+                    transition: "transform .2s ease",
+                    "&:hover": {
+                      transform: "scale(1.02)",
+                    },
+                  }}
+                />
+              </Box>
+            )}
+
+            {/* Notes content */}
             {activeBook ? <MarkdownNotes book={activeBook} /> : null}
           </DialogContent>
+
           <DialogActions sx={{ backgroundColor: "#222" }}>
             <Button onClick={() => setOpen(false)}>Close</Button>
           </DialogActions>

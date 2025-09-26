@@ -8,6 +8,8 @@ type Book = {
   category: string;
   notesPath?: string;
   done?: boolean;
+  cover?: string;
+  link?: string;
 };
 
 export const READING_LIST: Book[] = [
@@ -22,6 +24,8 @@ export const READING_LIST: Book[] = [
     category: "greece",
     notesPath: "/notes/iliad.md",
     done: true,
+    cover: "/iliad.jpeg",
+    link: "https://www.amazon.com/Iliad-Homer/dp/1324001801",
   },
   {
     id: "homer-odyssey",
@@ -33,6 +37,8 @@ export const READING_LIST: Book[] = [
     category: "greece",
     notesPath: "/notes/odyssey.md",
     done: true,
+    cover: "/odyssey.jpeg",
+    link: "https://www.amazon.com/Odyssey-Homer/dp/0393089053",
   },
   {
     id: "an-oresteia",
@@ -44,6 +50,8 @@ export const READING_LIST: Book[] = [
     category: "greece",
     notesPath: "/notes/oresteia.md",
     done: true,
+    cover: "/oresteia.jpg",
+    link: "https://www.amazon.com/Oresteia-Agamemnon-Aiskhylos-Sophokles-Euripides/dp/086547916X",
   },
   {
     id: "herodotus-histories",
@@ -55,6 +63,8 @@ export const READING_LIST: Book[] = [
     category: "greece",
     notesPath: "/notes/herodotus.md",
     done: true,
+    cover: "/herodotus.jpg",
+    link: "https://www.amazon.com/Histories-Herodotus-dp-0140449086/dp/0140449086/",
   },
   {
     id: "thucydides-peloponnesian",
