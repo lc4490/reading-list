@@ -69,12 +69,15 @@ export const READING_LIST: Book[] = [
   {
     id: "thucydides-peloponnesian",
     title: "History of the Peloponnesian War",
-    translation: "(translated by Rex Warner)",
     author: "Thucydides",
+    translation: "(translated by Rex Warner)",
     year: -400,
     genre: "history",
     category: "greece",
+    notesPath: "/notes/thucydides.md",
     done: false,
+    cover: "/thucydides.jpg",
+    link: "https://www.amazon.com/History-Peloponnesian-War-Thucydides/dp/0140440399",
   },
   {
     id: "xenophon-hellenika",
