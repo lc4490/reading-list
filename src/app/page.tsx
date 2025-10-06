@@ -59,7 +59,7 @@ const GENRES = ["all", "literature", "history", "philosophy"];
 //   "capitalism",
 //   "modern",
 // ];
-let CATEGORIES: string[] = ["all"];
+const CATEGORIES: string[] = ["all"];
 for (let i = 0; i < READING_LIST.length; i++) {
   if (!CATEGORIES.includes(READING_LIST[i].category)) {
     CATEGORIES.push(READING_LIST[i].category);
