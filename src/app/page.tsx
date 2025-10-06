@@ -42,23 +42,30 @@ type Book = {
 import { READING_LIST } from "./readingList";
 
 const GENRES = ["all", "literature", "history", "philosophy"];
-const CATEGORIES = [
-  "all",
-  "greece",
-  "rome",
-  "christianity",
-  "renaissance",
-  "protestant",
-  "science",
-  "enlightenment",
-  "kant",
-  "hegel",
-  "marx",
-  "russia",
-  "nietzsche",
-  "capitalism",
-  "modern",
-];
+// const CATEGORIES = [
+//   "all",
+//   "greece",
+//   "rome",
+//   "christianity",
+//   "renaissance",
+//   "protestant",
+//   "science",
+//   "enlightenment",
+//   "kant",
+//   "hegel",
+//   "marx",
+//   "russia",
+//   "nietzsche",
+//   "capitalism",
+//   "modern",
+// ];
+let CATEGORIES: string[] = ["all"];
+for (let i = 0; i < READING_LIST.length; i++) {
+  if (!CATEGORIES.includes(READING_LIST[i].category)) {
+    CATEGORIES.push(READING_LIST[i].category);
+  }
+}
+console.log(CATEGORIES);
 
 export default function ReadingListApp() {
   const theme = useTheme();

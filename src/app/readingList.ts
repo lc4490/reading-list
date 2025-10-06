@@ -284,12 +284,42 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
+    id: "dead-sea-scrolls",
+    title: "The Dead Sea Scrolls",
+    author: "Various",
+    year: 325,
+    genre: "literature",
+    category: "christianity",
+
+    done: false,
+  },
+  {
+    id: "nag-hammadi",
+    title: "The Nag Hammadi Scriptures",
+    author: "Various",
+    year: 325,
+    genre: "literature",
+    category: "christianity",
+
+    done: false,
+  },
+  {
     id: "eusebius-history",
     title: "Ecclesiastical History",
     author: "Eusebius",
     year: 325,
     genre: "history",
-    category: "christianity",
+    category: "byzantine",
+
+    done: false,
+  },
+  {
+    id: "later-roman-empire",
+    title: "The Later Roman Empire",
+    author: "Ammianus Marcellinus",
+    year: 390,
+    genre: "history",
+    category: "byzantine",
 
     done: false,
   },
@@ -299,7 +329,7 @@ export const READING_LIST: Book[] = [
     author: "Saint Augustine",
     year: 400,
     genre: "philosophy",
-    category: "christianity",
+    category: "byzantine",
 
     done: false,
   },
@@ -309,7 +339,27 @@ export const READING_LIST: Book[] = [
     author: "Saint Augustine",
     year: 426,
     genre: "philosophy",
-    category: "christianity",
+    category: "byzantine",
+
+    done: false,
+  },
+  {
+    id: "secret-history",
+    title: "The Secret History",
+    author: "Procopius",
+    year: 550,
+    genre: "history",
+    category: "byzantine",
+
+    done: false,
+  },
+  {
+    id: "alexiad",
+    title: "The Alexiad",
+    author: "Anne Komnene",
+    year: 1148,
+    genre: "literature",
+    category: "byzantine",
 
     done: false,
   },
@@ -321,7 +371,7 @@ export const READING_LIST: Book[] = [
     author: "Dante Alighieri",
     year: 1320,
     genre: "literature",
-    category: "renaissance",
+    category: "modernity",
 
     done: false,
   },
@@ -331,7 +381,7 @@ export const READING_LIST: Book[] = [
     author: "Niccolò Machiavelli",
     year: 1513,
     genre: "philosophy",
-    category: "renaissance",
+    category: "modernity",
 
     done: false,
   },
@@ -343,7 +393,7 @@ export const READING_LIST: Book[] = [
     author: "Martin Luther",
     year: 1517,
     genre: "philosophy",
-    category: "protestant",
+    category: "modernity",
 
     done: false,
   },
@@ -353,7 +403,7 @@ export const READING_LIST: Book[] = [
     author: "John Milton",
     year: 1667,
     genre: "literature",
-    category: "protestant",
+    category: "modernity",
 
     done: false,
   },
@@ -363,7 +413,7 @@ export const READING_LIST: Book[] = [
     author: "John Milton",
     year: 1671,
     genre: "literature",
-    category: "protestant",
+    category: "modernity",
 
     done: false,
   },
@@ -375,7 +425,7 @@ export const READING_LIST: Book[] = [
     author: "Isaac Newton",
     year: 1687,
     genre: "philosophy",
-    category: "science",
+    category: "modernity",
 
     done: false,
   },
@@ -386,7 +436,7 @@ export const READING_LIST: Book[] = [
     author: "Isaac Newton",
     year: 1733,
     genre: "philosophy",
-    category: "science",
+    category: "modernity",
 
     done: false,
   },
