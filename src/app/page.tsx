@@ -120,8 +120,8 @@ export default function ReadingListApp() {
               variant="overline"
               sx={{ opacity: 0.85, fontWeight: 600, letterSpacing: 1 }}
             >
-              {`Overall Progress${genre !== "all" ? ` [${genre}]` : ""}${
-                category !== "all" ? ` [${category}]` : ""
+              {`Overall Progress${category !== "all" ? ` [${category}]` : ""}${
+                genre !== "all" ? ` [${genre}]` : ""
               }`}
             </Typography>
             <LinearProgress

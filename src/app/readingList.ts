@@ -13,7 +13,7 @@ type Book = {
 };
 
 export const READING_LIST: Book[] = [
-  // --- Greece ---
+  // --- greek ---
   {
     id: "homer-iliad",
     title: "The Iliad",
@@ -21,7 +21,7 @@ export const READING_LIST: Book[] = [
     translation: "(translated by Emily Wilson)",
     year: -750,
     genre: "literature",
-    category: "greece",
+    category: "greek",
     notesPath: "/notes/iliad.md",
     done: true,
     cover: "/iliad.jpeg",
@@ -34,7 +34,7 @@ export const READING_LIST: Book[] = [
     translation: "(translated by Emily Wilson)",
     year: -725,
     genre: "literature",
-    category: "greece",
+    category: "greek",
     notesPath: "/notes/odyssey.md",
     done: true,
     cover: "/odyssey.jpeg",
@@ -47,7 +47,7 @@ export const READING_LIST: Book[] = [
     translation: "(translated by Anne Carson)",
     year: -458,
     genre: "literature",
-    category: "greece",
+    category: "greek",
     notesPath: "/notes/oresteia.md",
     done: true,
     cover: "/oresteia.jpg",
@@ -60,7 +60,7 @@ export const READING_LIST: Book[] = [
     translation: "(translated by Aubrey de Sélincourt)",
     year: -440,
     genre: "history",
-    category: "greece",
+    category: "greek",
     notesPath: "/notes/herodotus.md",
     done: true,
     cover: "/herodotus.jpg",
@@ -73,7 +73,7 @@ export const READING_LIST: Book[] = [
     translation: "(translated by Rex Warner)",
     year: -400,
     genre: "history",
-    category: "greece",
+    category: "greek",
     notesPath: "/notes/thucydides.md",
     done: false,
     cover: "/thucydides.jpg",
@@ -85,7 +85,7 @@ export const READING_LIST: Book[] = [
     author: "Xenophon",
     year: -360,
     genre: "history",
-    category: "greece",
+    category: "greek",
     done: false,
   },
   {
@@ -94,7 +94,7 @@ export const READING_LIST: Book[] = [
     author: "Plato",
     year: -399,
     genre: "philosophy",
-    category: "greece",
+    category: "greek",
     done: false,
   },
   {
@@ -103,7 +103,7 @@ export const READING_LIST: Book[] = [
     author: "Plato",
     year: -385,
     genre: "philosophy",
-    category: "greece",
+    category: "greek",
     done: false,
   },
   {
@@ -112,7 +112,7 @@ export const READING_LIST: Book[] = [
     author: "Plato",
     year: -375,
     genre: "philosophy",
-    category: "greece",
+    category: "greek",
     done: false,
   },
   {
@@ -121,7 +121,7 @@ export const READING_LIST: Book[] = [
     author: "Aristotle",
     year: -340,
     genre: "philosophy",
-    category: "greece",
+    category: "greek",
     done: false,
   },
   {
@@ -130,7 +130,7 @@ export const READING_LIST: Book[] = [
     author: "Aristotle",
     year: -330,
     genre: "philosophy",
-    category: "greece",
+    category: "greek",
     done: false,
   },
   {
@@ -139,7 +139,7 @@ export const READING_LIST: Book[] = [
     author: "Diodorus Siculus",
     year: -50,
     genre: "history",
-    category: "greece",
+    category: "greek",
     done: false,
   },
   {
@@ -148,18 +148,18 @@ export const READING_LIST: Book[] = [
     author: "Arrian",
     year: 120,
     genre: "history",
-    category: "greece",
+    category: "greek",
     done: false,
   },
 
-  // --- Rome ---
+  // --- roman ---
   {
     id: "polybius-histories",
     title: "Histories",
     author: "Polybius",
     year: -150,
     genre: "history",
-    category: "rome",
+    category: "roman",
     done: false,
   },
   {
@@ -168,7 +168,7 @@ export const READING_LIST: Book[] = [
     author: "Julius Caesar",
     year: -50,
     genre: "history",
-    category: "rome",
+    category: "roman",
     done: false,
   },
   {
@@ -177,7 +177,7 @@ export const READING_LIST: Book[] = [
     author: "Julius Caesar",
     year: -45,
     genre: "history",
-    category: "rome",
+    category: "roman",
 
     done: false,
   },
@@ -187,7 +187,7 @@ export const READING_LIST: Book[] = [
     author: "Augustus",
     year: 14,
     genre: "history",
-    category: "rome",
+    category: "roman",
 
     done: false,
   },
@@ -197,7 +197,7 @@ export const READING_LIST: Book[] = [
     author: "Virgil (translated by Scott McGill)",
     year: -19,
     genre: "literature",
-    category: "rome",
+    category: "roman",
 
     done: false,
   },
@@ -207,7 +207,7 @@ export const READING_LIST: Book[] = [
     author: "Tacitus",
     year: 110,
     genre: "history",
-    category: "rome",
+    category: "roman",
 
     done: false,
   },
@@ -217,7 +217,7 @@ export const READING_LIST: Book[] = [
     author: "Tacitus",
     year: 105,
     genre: "history",
-    category: "rome",
+    category: "roman",
 
     done: false,
   },
@@ -227,7 +227,7 @@ export const READING_LIST: Book[] = [
     author: "Josephus",
     year: 75,
     genre: "history",
-    category: "rome",
+    category: "roman",
 
     done: false,
   },
@@ -237,7 +237,7 @@ export const READING_LIST: Book[] = [
     author: "Lucretius",
     year: -55,
     genre: "philosophy",
-    category: "rome",
+    category: "roman",
 
     done: false,
   },
@@ -247,7 +247,7 @@ export const READING_LIST: Book[] = [
     author: "Seneca",
     year: 65,
     genre: "philosophy",
-    category: "rome",
+    category: "roman",
 
     done: false,
   },
@@ -257,7 +257,7 @@ export const READING_LIST: Book[] = [
     author: "Epictetus",
     year: 108,
     genre: "philosophy",
-    category: "rome",
+    category: "roman",
 
     done: false,
   },
@@ -267,7 +267,7 @@ export const READING_LIST: Book[] = [
     author: "Marcus Aurelius",
     year: 170,
     genre: "philosophy",
-    category: "rome",
+    category: "roman",
 
     done: false,
   },
@@ -279,7 +279,7 @@ export const READING_LIST: Book[] = [
     author: "Various",
     year: 325,
     genre: "literature",
-    category: "christianity",
+    category: "christian",
 
     done: false,
   },
@@ -289,7 +289,7 @@ export const READING_LIST: Book[] = [
     author: "Various",
     year: 325,
     genre: "literature",
-    category: "christianity",
+    category: "christian",
 
     done: false,
   },
@@ -299,7 +299,7 @@ export const READING_LIST: Book[] = [
     author: "Various",
     year: 325,
     genre: "literature",
-    category: "christianity",
+    category: "christian",
 
     done: false,
   },
