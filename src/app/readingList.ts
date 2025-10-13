@@ -279,7 +279,7 @@ export const READING_LIST: Book[] = [
     author: "Various",
     year: 325,
     genre: "literature",
-    category: "christian",
+    category: "byzantine",
 
     done: false,
   },
@@ -289,7 +289,7 @@ export const READING_LIST: Book[] = [
     author: "Various",
     year: 325,
     genre: "literature",
-    category: "christian",
+    category: "byzantine",
 
     done: false,
   },
@@ -299,7 +299,7 @@ export const READING_LIST: Book[] = [
     author: "Various",
     year: 325,
     genre: "literature",
-    category: "christian",
+    category: "byzantine",
 
     done: false,
   },
@@ -353,17 +353,6 @@ export const READING_LIST: Book[] = [
 
     done: false,
   },
-  {
-    id: "alexiad",
-    title: "The Alexiad",
-    author: "Anne Komnene",
-    year: 1148,
-    genre: "literature",
-    category: "byzantine",
-
-    done: false,
-  },
-
   // --- Renaissance ---
   {
     id: "dante-comedy",
