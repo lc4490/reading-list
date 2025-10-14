@@ -374,11 +374,42 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
+    id: "pico-oration",
+    title: "Oration on the Dignity of Man",
+    author: "Giovanni Pico della Mirandola",
+    year: 1486,
+    genre: "philosophy",
+    category: "renaissance",
+
+    done: false,
+  },
+
+  {
     id: "machiavelli-prince",
     title: "The Prince",
     author: "Niccolò Machiavelli",
     year: 1513,
     genre: "philosophy",
+    category: "renaissance",
+
+    done: false,
+  },
+  {
+    id: "machiavelli-livy",
+    title: "Discourse on Livy",
+    author: "Niccolò Machiavelli",
+    year: 1517,
+    genre: "philosophy",
+    category: "renaissance",
+
+    done: false,
+  },
+  {
+    id: "machiavelli-florentine",
+    title: "Florentine Histories",
+    author: "Niccolò Machiavelli",
+    year: 1532,
+    genre: "history",
     category: "renaissance",
 
     done: false,
