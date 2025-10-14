@@ -154,6 +154,15 @@ export const READING_LIST: Book[] = [
 
   // --- roman ---
   {
+    id: "livy-histories",
+    title: "History of Rome (Books I-V)",
+    author: "Livy",
+    year: -293,
+    genre: "history",
+    category: "roman",
+    done: false,
+  },
+  {
     id: "polybius-histories",
     title: "Histories",
     author: "Polybius",
@@ -272,7 +281,7 @@ export const READING_LIST: Book[] = [
     done: false,
   },
 
-  // --- Catholicism ---
+  // --- Byzantine ---
   {
     id: "bible",
     title: "The Holy Bible",
@@ -360,7 +369,7 @@ export const READING_LIST: Book[] = [
     author: "Dante Alighieri",
     year: 1320,
     genre: "literature",
-    category: "modernity",
+    category: "renaissance",
 
     done: false,
   },
@@ -370,7 +379,7 @@ export const READING_LIST: Book[] = [
     author: "Niccolò Machiavelli",
     year: 1513,
     genre: "philosophy",
-    category: "modernity",
+    category: "renaissance",
 
     done: false,
   },
@@ -382,31 +391,10 @@ export const READING_LIST: Book[] = [
     author: "Martin Luther",
     year: 1517,
     genre: "philosophy",
-    category: "modernity",
+    category: "renaissance",
 
     done: false,
   },
-  {
-    id: "milton-lost",
-    title: "Paradise Lost",
-    author: "John Milton",
-    year: 1667,
-    genre: "literature",
-    category: "modernity",
-
-    done: false,
-  },
-  {
-    id: "milton-regained",
-    title: "Paradise Regained",
-    author: "John Milton",
-    year: 1671,
-    genre: "literature",
-    category: "modernity",
-
-    done: false,
-  },
-
   // --- Scientific Revolution ---
   {
     id: "newton-principia",
@@ -414,7 +402,7 @@ export const READING_LIST: Book[] = [
     author: "Isaac Newton",
     year: 1687,
     genre: "philosophy",
-    category: "modernity",
+    category: "renaissance",
 
     done: false,
   },
@@ -425,10 +413,30 @@ export const READING_LIST: Book[] = [
     author: "Isaac Newton",
     year: 1733,
     genre: "philosophy",
-    category: "modernity",
+    category: "renaissance",
 
     done: false,
   },
+  {
+    id: "milton-lost",
+    title: "Paradise Lost",
+    author: "John Milton",
+    year: 1667,
+    genre: "literature",
+    category: "enlightenment",
+
+    done: false,
+  },
+  // {
+  //   id: "milton-regained",
+  //   title: "Paradise Regained",
+  //   author: "John Milton",
+  //   year: 1671,
+  //   genre: "literature",
+  //   category: "enlightenment",
+
+  //   done: false,
+  // },
 
   // --- Enlightenment / French Revolution ---
   {
@@ -469,7 +477,7 @@ export const READING_LIST: Book[] = [
     author: "Immanuel Kant",
     year: 1781,
     genre: "philosophy",
-    category: "kant",
+    category: "enlightenment",
 
     done: false,
   },
@@ -479,7 +487,7 @@ export const READING_LIST: Book[] = [
     author: "Immanuel Kant",
     year: 1785,
     genre: "philosophy",
-    category: "kant",
+    category: "enlightenment",
 
     done: false,
   },
@@ -489,7 +497,7 @@ export const READING_LIST: Book[] = [
     author: "Immanuel Kant",
     year: 1788,
     genre: "philosophy",
-    category: "kant",
+    category: "enlightenment",
 
     done: false,
   },
@@ -501,7 +509,7 @@ export const READING_LIST: Book[] = [
     author: "Friedrich Hegel",
     year: 1820,
     genre: "philosophy",
-    category: "hegel",
+    category: "industrial",
 
     done: false,
   },
@@ -511,7 +519,7 @@ export const READING_LIST: Book[] = [
     author: "Friedrich Hegel",
     year: 1837,
     genre: "philosophy",
-    category: "hegel",
+    category: "industrial",
 
     done: false,
   },
@@ -523,7 +531,7 @@ export const READING_LIST: Book[] = [
     author: "Karl Marx",
     year: 1848,
     genre: "philosophy",
-    category: "marx",
+    category: "industrial",
 
     done: false,
   },
@@ -533,34 +541,34 @@ export const READING_LIST: Book[] = [
     author: "Karl Marx",
     year: 1867,
     genre: "philosophy",
-    category: "marx",
+    category: "industrial",
 
     done: false,
   },
 
-  // --- Russia ---
-  {
-    id: "dostoevsky-crime",
-    title: "Crime and Punishment",
-    author: "Fyodor Dostoevsky",
-    year: 1866,
-    genre: "literature",
-    category: "russia",
+  // // --- Russia ---
+  // {
+  //   id: "dostoevsky-crime",
+  //   title: "Crime and Punishment",
+  //   author: "Fyodor Dostoevsky",
+  //   year: 1866,
+  //   genre: "literature",
+  //   category: "russia",
 
-    done: false,
-  },
+  //   done: false,
+  // },
 
-  // --- Nietzsche ---
-  {
-    id: "nietzsche-genealogy",
-    title: "On the Genealogy of Morals",
-    author: "Friedrich Nietzsche",
-    year: 1887,
-    genre: "philosophy",
-    category: "nietzsche",
+  // // --- Nietzsche ---
+  // {
+  //   id: "nietzsche-genealogy",
+  //   title: "On the Genealogy of Morals",
+  //   author: "Friedrich Nietzsche",
+  //   year: 1887,
+  //   genre: "philosophy",
+  //   category: "nietzsche",
 
-    done: false,
-  },
+  //   done: false,
+  // },
 
   // --- Capitalism / Sociology ---
   {
@@ -569,7 +577,7 @@ export const READING_LIST: Book[] = [
     author: "Emile Durkheim",
     year: 1897,
     genre: "philosophy",
-    category: "capitalism",
+    category: "industrial",
 
     done: false,
   },
@@ -579,7 +587,7 @@ export const READING_LIST: Book[] = [
     author: "Georg Simmel",
     year: 1900,
     genre: "philosophy",
-    category: "capitalism",
+    category: "industrial",
 
     done: false,
   },
@@ -589,30 +597,30 @@ export const READING_LIST: Book[] = [
     author: "Max Weber",
     year: 1905,
     genre: "philosophy",
-    category: "capitalism",
+    category: "industrial",
 
     done: false,
   },
 
   // --- Modern day ---
-  {
-    id: "walcott-omeros",
-    title: "Omeros",
-    author: "Derek Walcott",
-    year: 1990,
-    genre: "literature",
-    category: "modern",
+  // {
+  //   id: "walcott-omeros",
+  //   title: "Omeros",
+  //   author: "Derek Walcott",
+  //   year: 1990,
+  //   genre: "literature",
+  //   category: "modern",
 
-    done: false,
-  },
-  {
-    id: "dugin-geopolitics",
-    title: "The Foundations of Geopolitics: The Geopolitical Future of Russia",
-    author: "Aleksandr Dugin",
-    year: 1997,
-    genre: "philosophy",
-    category: "modern",
+  //   done: false,
+  // },
+  // {
+  //   id: "dugin-geopolitics",
+  //   title: "The Foundations of Geopolitics: The Geopolitical Future of Russia",
+  //   author: "Aleksandr Dugin",
+  //   year: 1997,
+  //   genre: "philosophy",
+  //   category: "modern",
 
-    done: false,
-  },
+  //   done: false,
+  // },
 ];
