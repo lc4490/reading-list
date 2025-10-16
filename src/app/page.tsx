@@ -97,18 +97,6 @@ export default function ReadingListApp() {
     setOpen(true);
   };
 
-  // ADMIN MODE
-  const [admin, setAdmin] = useState(false);
-  const [adminModal, setAdminModal] = useState(false);
-  const [password, setPassword] = useState("");
-
-  useEffect(() => {
-    if (password === "1q2w3e4r") {
-      setAdminModal(false);
-      setAdmin(true);
-    }
-  }, [password]);
-
   return (
     <Box
       sx={{
@@ -167,7 +155,7 @@ export default function ReadingListApp() {
         position="sticky"
         sx={{
           p: 2,
-          paddingX: { xs: 2, md: 15 },
+          paddingLeft: { xs: 2, md: 15 },
           marginTop: 2,
           display: "flex",
           flexDirection: "row",
@@ -176,17 +164,6 @@ export default function ReadingListApp() {
         <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
           {"Leo's Reading List"}
         </Typography>
-        {/* ADMIN MODE */}
-        <Box
-          onClick={() => {
-            if (!admin) {
-              setAdminModal(true);
-            }
-          }}
-          sx={{ cursor: "pointer", color: admin ? "#fff" : "#000" }}
-        >
-          {admin ? <LockOpenIcon /> : <LockOutlineIcon />}
-        </Box>
       </Box>
 
       <Container maxWidth="lg" sx={{ py: 0, paddingBottom: 5 }}>
@@ -474,60 +451,6 @@ export default function ReadingListApp() {
           </DialogActions>
         </Dialog>
       </Container>
-      {/* ADMIN MODE */}
-      <Dialog
-        open={adminModal}
-        onClose={() => {
-          setAdminModal(false), setPassword("");
-        }}
-        maxWidth="md"
-        fullWidth
-      >
-        <DialogTitle
-          sx={{
-            backgroundColor: "#222",
-            color: "#fff",
-            fontWeight: "600",
-            fontSize: "1.5rem",
-          }}
-        >
-          Enter Password:
-        </DialogTitle>
-        <DialogContent sx={{ backgroundColor: "#222", color: "#fff" }}>
-          <Stack display={"flex"} flexDirection={"row"}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              type={"password"}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  color: "white",
-                  "& fieldset": { borderColor: "white" },
-                  "&:hover fieldset": { borderColor: "#90caf9" },
-                  "&.Mui-focused fieldset": { borderColor: "#90caf9" },
-                },
-                input: { color: "white" },
-              }}
-            />
-            {/* <Box
-              sx={{
-                cursor: "pointer",
-                backgroundColor: "#fff",
-                borderRadius: "8px",
-                padding: 2,
-                marginLeft: 1,
-              }}
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
-              <Typography sx={{ color: "#000" }}>Enter</Typography>
-            </Box> */}
-          </Stack>
-        </DialogContent>
-      </Dialog>
     </Box>
   );
 }
