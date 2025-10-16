@@ -14,6 +14,7 @@ import {
   Divider,
   LinearProgress,
   Stack,
+  TextField,
   ToggleButton,
   ToggleButtonGroup,
   Toolbar,
@@ -25,6 +26,8 @@ import { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
+import LockOutlineIcon from "@mui/icons-material/LockOutline";
+import LockOpenIcon from "@mui/icons-material/LockOpen";
 type Book = {
   id: string;
   title: string;
@@ -94,6 +97,18 @@ export default function ReadingListApp() {
     setOpen(true);
   };
 
+  // ADMIN MODE
+  const [admin, setAdmin] = useState(false);
+  const [adminModal, setAdminModal] = useState(false);
+  const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    if (password === "1q2w3e4r") {
+      setAdminModal(false);
+      setAdmin(true);
+    }
+  }, [password]);
+
   return (
     <Box
       sx={{
@@ -150,11 +165,28 @@ export default function ReadingListApp() {
       <Toolbar sx={{ py: 2 }} />
       <Box
         position="sticky"
-        sx={{ p: 2, marginLeft: { xs: 0, md: 15 }, marginTop: 2 }}
+        sx={{
+          p: 2,
+          paddingX: { xs: 0, md: 15 },
+          marginTop: 2,
+          display: "flex",
+          flexDirection: "row",
+        }}
       >
         <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
           {"Leo's Reading List"}
         </Typography>
+        {/* ADMIN MODE */}
+        <Box
+          onClick={() => {
+            if (!admin) {
+              setAdminModal(true);
+            }
+          }}
+          sx={{ cursor: "pointer" }}
+        >
+          {admin ? <LockOpenIcon /> : <LockOutlineIcon />}
+        </Box>
       </Box>
 
       <Container maxWidth="lg" sx={{ py: 0, paddingBottom: 5 }}>
@@ -442,6 +474,60 @@ export default function ReadingListApp() {
           </DialogActions>
         </Dialog>
       </Container>
+      {/* ADMIN MODE */}
+      <Dialog
+        open={adminModal}
+        onClose={() => {
+          setAdminModal(false), setPassword("");
+        }}
+        maxWidth="md"
+        fullWidth
+      >
+        <DialogTitle
+          sx={{
+            backgroundColor: "#222",
+            color: "#fff",
+            fontWeight: "600",
+            fontSize: "1.5rem",
+          }}
+        >
+          Enter Password:
+        </DialogTitle>
+        <DialogContent sx={{ backgroundColor: "#222", color: "#fff" }}>
+          <Stack display={"flex"} flexDirection={"row"}>
+            <TextField
+              fullWidth
+              variant="outlined"
+              type={"password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  color: "white",
+                  "& fieldset": { borderColor: "white" },
+                  "&:hover fieldset": { borderColor: "#90caf9" },
+                  "&.Mui-focused fieldset": { borderColor: "#90caf9" },
+                },
+                input: { color: "white" },
+              }}
+            />
+            {/* <Box
+              sx={{
+                cursor: "pointer",
+                backgroundColor: "#fff",
+                borderRadius: "8px",
+                padding: 2,
+                marginLeft: 1,
+              }}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              <Typography sx={{ color: "#000" }}>Enter</Typography>
+            </Box> */}
+          </Stack>
+        </DialogContent>
+      </Dialog>
     </Box>
   );
 }
