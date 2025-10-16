@@ -167,7 +167,7 @@ export default function ReadingListApp() {
         position="sticky"
         sx={{
           p: 2,
-          paddingX: { xs: 0, md: 15 },
+          paddingX: { xs: 2, md: 15 },
           marginTop: 2,
           display: "flex",
           flexDirection: "row",
@@ -183,7 +183,7 @@ export default function ReadingListApp() {
               setAdminModal(true);
             }
           }}
-          sx={{ cursor: "pointer" }}
+          sx={{ cursor: "pointer", color: admin ? "#fff" : "#000" }}
         >
           {admin ? <LockOpenIcon /> : <LockOutlineIcon />}
         </Box>
