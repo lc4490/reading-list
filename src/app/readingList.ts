@@ -97,6 +97,7 @@ export const READING_LIST: Book[] = [
     done: false,
     cover: "/thucydides.jpg",
     link: "https://www.amazon.com/History-Peloponnesian-War-Thucydides/dp/0140440399",
+    spine: "/thucydides-spine.jpeg",
   },
   {
     id: "xenophon-hellenika",
