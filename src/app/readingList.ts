@@ -10,6 +10,7 @@ type Book = {
   done?: boolean;
   cover?: string;
   link?: string;
+  spine?: string;
 };
 
 export const READING_LIST: Book[] = [
@@ -26,6 +27,7 @@ export const READING_LIST: Book[] = [
     done: true,
     cover: "/iliad.jpeg",
     link: "https://www.amazon.com/Iliad-Homer/dp/1324001801",
+    spine: "/iliad-spine.jpg",
   },
   {
     id: "homer-odyssey",
@@ -39,6 +41,7 @@ export const READING_LIST: Book[] = [
     done: true,
     cover: "/odyssey.jpeg",
     link: "https://www.amazon.com/Odyssey-Homer/dp/0393089053",
+    spine: "/odyssey-spine.jpeg",
   },
   {
     id: "an-oresteia",
@@ -52,6 +55,7 @@ export const READING_LIST: Book[] = [
     done: true,
     cover: "/oresteia.jpg",
     link: "https://www.amazon.com/Oresteia-Agamemnon-Aiskhylos-Sophokles-Euripides/dp/086547916X",
+    spine: "/oresteia-spine.jpg",
   },
   {
     id: "theogony-works",
@@ -65,6 +69,7 @@ export const READING_LIST: Book[] = [
     done: true,
     cover: "/hesiod.jpeg",
     link: "https://www.amazon.com/Theogony-Works-Oxford-Worlds-Classics/dp/019953831X/",
+    spine: "/theogony-spine.jpg",
   },
   {
     id: "herodotus-histories",
@@ -78,6 +83,7 @@ export const READING_LIST: Book[] = [
     done: true,
     cover: "/herodotus.jpg",
     link: "https://www.amazon.com/Histories-Herodotus-dp-0140449086/dp/0140449086/",
+    spine: "/herodotus-spine.jpg",
   },
   {
     id: "thucydides-peloponnesian",
