@@ -285,13 +285,17 @@ export default function ReadingListApp() {
                   ? "transparent"
                   : "rgba(255,255,255,0.035)",
                 transform: "translateY(0px)",
-                border: book.spine && "1px solid rgba(255,255,255,0.08)",
+                border: book.spine
+                  ? "none"
+                  : "1px solid rgba(255,255,255,0.08)",
                 transition:
                   "transform .18s ease, background .18s ease, border-color .18s ease",
                 "&:hover": {
                   transform: "translateY(-2px)",
                   background: book.spine ? "" : "rgba(255,255,255,0.055)",
-                  borderColor: book.spine ? "#fff" : "rgba(255,255,255,0.16)",
+                  border: book.spine
+                    ? "1px solid rgba(255,255,255,0.9)"
+                    : "1px solid rgba(255,255,255,0.16)",
                 },
                 cursor: book.notesPath ? "pointer" : "default",
               }}
