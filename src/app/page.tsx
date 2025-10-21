@@ -267,7 +267,7 @@ export default function ReadingListApp() {
         <Divider sx={{ mb: 0 }} />
 
         {/* books */}
-        <Stack spacing={0}>
+        <Stack spacing={0.5}>
           {filtered.map((book) => (
             <Box
               key={book.id}
@@ -293,9 +293,7 @@ export default function ReadingListApp() {
                 "&:hover": {
                   transform: "translateY(-2px)",
                   background: book.spine ? "" : "rgba(255,255,255,0.055)",
-                  border: book.spine
-                    ? "1px solid rgba(255,255,255,0.9)"
-                    : "1px solid rgba(255,255,255,0.16)",
+                  border: "1px solid rgba(255,255,255,0.9)",
                 },
                 cursor: book.notesPath ? "pointer" : "default",
               }}
