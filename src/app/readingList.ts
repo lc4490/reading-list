@@ -107,6 +107,7 @@ export const READING_LIST: Book[] = [
     genre: "history",
     category: "greek",
     done: false,
+    spine: "/xenophon-spine.jpg",
   },
   {
     id: "plato-last-days",
@@ -116,6 +117,7 @@ export const READING_LIST: Book[] = [
     genre: "philosophy",
     category: "greek",
     done: false,
+    spine: "/socrates-spine.jpg",
   },
   {
     id: "plato-symposium",

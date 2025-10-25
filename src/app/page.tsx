@@ -320,6 +320,35 @@ export default function ReadingListApp() {
                       zIndex: 0,
                     }}
                   />
+                  {book.done && (
+                    <Box
+                      sx={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        borderRadius: 3,
+                        background: "rgba(0,0,0,0.25)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <CheckCircleIcon
+                        sx={{
+                          position: "absolute",
+                          top: isMobile ? 2 : 8,
+                          left: isMobile ? 2 : 8,
+                          color: "#3b82f6",
+                          background: "rgba(0,0,0,0.5)",
+                          borderRadius: "50%",
+                          fontSize: isMobile ? 15 : 25,
+                          // p: "2px",
+                        }}
+                      />
+                    </Box>
+                  )}
                 </>
               ) : (
                 <Box display="flex" justifyContent={"space-between"}>
