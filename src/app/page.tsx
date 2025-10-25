@@ -339,9 +339,9 @@ export default function ReadingListApp() {
                         sx={{
                           position: "absolute",
                           top: isMobile ? 2 : 8,
-                          left: isMobile ? 2 : 8,
+                          right: isMobile ? 2 : 8,
                           color: "#3b82f6",
-                          background: "rgba(0,0,0,0.75)",
+                          background: "rgba(0,0,0,0.6)",
                           borderRadius: "50%",
                           fontSize: isMobile ? 15 : 25,
                           // p: "2px",
