@@ -281,9 +281,10 @@ export default function ReadingListApp() {
                 alignItems: "center",
                 justifyContent: "space-between",
                 gap: 1.5,
-                background: book.spine
-                  ? "transparent"
-                  : "rgba(255,255,255,0.035)",
+                backgroundColor: "black",
+                // background: book.spine
+                //   ? "transparent"
+                //   : "rgba(255,255,255,0.035)",
                 transform: "translateY(0px)",
                 border: book.spine
                   ? "none"
@@ -320,7 +321,7 @@ export default function ReadingListApp() {
                       zIndex: 0,
                     }}
                   />
-                  {book.done && (
+                  {/* {book.done && (
                     <Box
                       sx={{
                         position: "absolute",
@@ -348,7 +349,7 @@ export default function ReadingListApp() {
                         }}
                       />
                     </Box>
-                  )}
+                  )} */}
                 </>
               ) : (
                 <Box display="flex" justifyContent={"space-between"}>
