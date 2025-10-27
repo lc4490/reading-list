@@ -11,6 +11,7 @@ type Book = {
   cover?: string;
   link?: string;
   spine?: string;
+  rating?: number;
 };
 
 export const READING_LIST: Book[] = [
@@ -28,6 +29,7 @@ export const READING_LIST: Book[] = [
     cover: "/iliad.jpeg",
     link: "https://www.amazon.com/Iliad-Homer/dp/1324001801",
     spine: "/iliad-spine.jpg",
+    rating: 5,
   },
   {
     id: "homer-odyssey",
@@ -42,6 +44,7 @@ export const READING_LIST: Book[] = [
     cover: "/odyssey.jpeg",
     link: "https://www.amazon.com/Odyssey-Homer/dp/0393089053",
     spine: "/odyssey-spine.jpeg",
+    rating: 4,
   },
   {
     id: "an-oresteia",
@@ -56,6 +59,7 @@ export const READING_LIST: Book[] = [
     cover: "/oresteia.jpg",
     link: "https://www.amazon.com/Oresteia-Agamemnon-Aiskhylos-Sophokles-Euripides/dp/086547916X",
     spine: "/oresteia-spine.jpg",
+    rating: 4.5,
   },
   {
     id: "theogony-works",
@@ -70,6 +74,7 @@ export const READING_LIST: Book[] = [
     cover: "/hesiod.jpeg",
     link: "https://www.amazon.com/Theogony-Works-Oxford-Worlds-Classics/dp/019953831X/",
     spine: "/theogony-spine.jpg",
+    rating: 1,
   },
   {
     id: "herodotus-histories",
@@ -84,6 +89,7 @@ export const READING_LIST: Book[] = [
     cover: "/herodotus.jpg",
     link: "https://www.amazon.com/Histories-Herodotus-dp-0140449086/dp/0140449086/",
     spine: "/herodotus-spine.jpg",
+    rating: 3,
   },
   {
     id: "thucydides-peloponnesian",
@@ -98,6 +104,7 @@ export const READING_LIST: Book[] = [
     cover: "/thucydides.jpg",
     link: "https://www.amazon.com/History-Peloponnesian-War-Thucydides/dp/0140440399",
     spine: "/thucydides-spine.jpeg",
+    rating: 5,
   },
   {
     id: "xenophon-hellenika",

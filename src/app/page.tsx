@@ -14,6 +14,7 @@ import {
   DialogTitle,
   Divider,
   LinearProgress,
+  Rating,
   Stack,
   ToggleButton,
   ToggleButtonGroup,
@@ -37,6 +38,7 @@ type Book = {
   cover?: string;
   link?: string;
   spine?: string;
+  rating?: number;
 };
 
 import { READING_LIST } from "./readingList";
@@ -493,6 +495,23 @@ export default function ReadingListApp() {
                     },
                   }}
                 />
+
+                {activeBook.rating && (
+                  <Box width="100%" display="flex" justifyContent={"center"}>
+                    <Rating
+                      value={activeBook.rating}
+                      size="large"
+                      readOnly
+                      precision={0.5}
+                      sx={{
+                        "& .MuiRating-iconEmpty": {
+                          color: "#444",
+                          textShadow: "0 0 2px rgba(255,255,255,0.4)",
+                        },
+                      }}
+                    />
+                  </Box>
+                )}
               </Box>
             )}
 
