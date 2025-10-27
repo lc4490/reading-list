@@ -357,7 +357,7 @@ export default function ReadingListApp() {
                     display="flex"
                     flexDirection="row"
                     alignItems="center"
-                    // width={{ xs: "200px", md: "750px" }}
+                    width={"250px"}
                     sx={{
                       overflowX: "auto", // enables horizontal scrolling
                       whiteSpace: "nowrap", // keep text on one line
