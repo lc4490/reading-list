@@ -233,6 +233,25 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
+    id: "horace-odes",
+    title: "The Odes",
+    author: "Horace",
+    year: -23,
+    genre: "literature",
+    category: "roman",
+    done: false,
+  },
+
+  {
+    id: "ovid-metamorphoses",
+    title: "Metamorphoses",
+    author: "Ovid",
+    year: 8,
+    genre: "literature",
+    category: "roman",
+    done: false,
+  },
+  {
     id: "tacitus-annals",
     title: "The Annals",
     author: "Tacitus",
