@@ -287,7 +287,9 @@ export default function ReadingListApp() {
                 background: book.spine ? "transparent" : "black",
                 transform: "translateY(0px)",
                 border: book.spine
-                  ? "none"
+                  ? book.done
+                    ? "none"
+                    : "1px solid rgba(255,255,255,1)"
                   : "1px solid rgba(255,255,255,0.08)",
                 transition:
                   "transform .18s ease, background .18s ease, border-color .18s ease",
