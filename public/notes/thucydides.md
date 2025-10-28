@@ -33,3 +33,7 @@ I believe the Melian Dialogue offers deeper insight into the Athenian psychology
 #### Thoughts on the debate over the Sicillian invasion
 
 I believe the Sicillian expedition shows the inevitability and unchanging nature of the Athenian psychology. Nicias, an Athenian general, pleads for Athens to call off the Sicillian expedition, as it is too great a risk. Unfortunately, Nicias forgot he was arguing to Athenians, who love taking risks. I believe another aspect is that their psychology is so ingrained in their psychology that it is impossible to change it. The Athenians mindset is like capitalism, it requires a system of infinite growth. Soon, that growth will reach a limit and collapse in on itself, but the Athenians can’t stop it even if they wanted to.
+
+#### Thoughts on the ending
+
+Thucydides' text is infamously known for its incompleteness, even ending in the middle of the sentence. He only narrates 20 out of the 27 years of the Peloponnesian War. So as a historical account of the war, it is fair to label it as incomplete. I would argue that the text is complete, however, as I believe the true meaning of the text is to create a profile of the Athenian psychology, and document how it leads societies to great fame, and then great collapse. In this sense, we follow the origin of the conflict, caused by Athenian daring and expansionism, and conclude with the Sicillian expedition, when Athens finally overextends itself and collapses completely. This text sufficiently describes, and forewarns the dangers of the Athenian mind.
