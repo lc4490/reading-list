@@ -462,8 +462,15 @@ export default function ReadingListApp() {
               fontSize: "1.5rem",
             }}
           >
-            {activeBook ? `Thoughts on ${activeBook.title}` : "Notes"}
+            {activeBook ? (
+              <>
+                Thoughts on <em>{activeBook.title}</em>
+              </>
+            ) : (
+              "Notes"
+            )}
           </DialogTitle>
+
           <DialogContent
             dividers
             sx={{ backgroundColor: "#222", color: "#fff" }}
