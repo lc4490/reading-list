@@ -110,7 +110,7 @@ export const READING_LIST: Book[] = [
   },
   {
     id: "xenophon-hellenika",
-    title: "Hellenika",
+    title: "A History of My Times",
     author: "Xenophon",
     translation: "(translated by Rex Warner)",
     year: -360,
@@ -218,7 +218,7 @@ export const READING_LIST: Book[] = [
     category: "roman",
     done: false,
   },
-  // COLLAPSE INTO EMPIRE
+  // RISE OF THE EMPIRE
   {
     id: "caesar-gallic",
     title: "Commentarii de Bello Gallico (The Gallic Wars)",
@@ -353,7 +353,7 @@ export const READING_LIST: Book[] = [
   },
 
   // --- Christian ---
-  // CHRISTIAN IDEOLOGY
+  // BIBLES
   {
     id: "bible",
     title: "The Holy Bible",
@@ -548,7 +548,7 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
-    id: "newton-prophecies",
+    id: "newton-observations",
     title:
       "Observations upon the Prophecies of Daniel, and the Apocalypse of St. John",
     author: "Isaac Newton",
@@ -689,7 +689,7 @@ export const READING_LIST: Book[] = [
   {
     id: "nietzsche-zarathustra",
     title: "Thuse Spoke Zarathustra",
-    author: "Friedrich Hegel",
+    author: "Friedrich Nietzsche",
     year: 1883,
     genre: "philosophy",
     category: "enlightenment",
