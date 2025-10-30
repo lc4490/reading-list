@@ -444,7 +444,7 @@ export const READING_LIST: Book[] = [
     author: "Muhammad",
     year: 632,
     genre: "literature",
-    category: "islam",
+    category: "islamic",
     done: false,
   },
   {
@@ -453,7 +453,7 @@ export const READING_LIST: Book[] = [
     author: "Al-Farabi",
     year: 940,
     genre: "philosophy",
-    category: "islam",
+    category: "islamic",
     done: false,
   },
   {
@@ -462,7 +462,7 @@ export const READING_LIST: Book[] = [
     author: "Avicenna (Ibn Sina)",
     year: 1020,
     genre: "philosophy",
-    category: "islam",
+    category: "islamic",
     done: false,
   },
   {
@@ -471,7 +471,7 @@ export const READING_LIST: Book[] = [
     author: "Al-Ghazali",
     year: 1095,
     genre: "philosophy",
-    category: "islam",
+    category: "islamic",
     done: false,
   },
   {
@@ -480,7 +480,7 @@ export const READING_LIST: Book[] = [
     author: "Averroes (Ibn Rushd)",
     year: 1180,
     genre: "philosophy",
-    category: "islam",
+    category: "islamic",
     done: false,
   },
 
