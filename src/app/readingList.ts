@@ -501,15 +501,15 @@ export const READING_LIST: Book[] = [
     category: "islamic",
     done: false,
   },
-  // {
-  //   id: "khaldun-muqaddimah",
-  //   title: "The Muqaddimah",
-  //   author: "Ibn Khaldun",
-  //   year: 1377,
-  //   genre: "history",
-  //   category: "islamic",
-  //   done: false,
-  // },
+  {
+    id: "khaldun-muqaddimah",
+    title: "The Muqaddimah",
+    author: "Ibn Khaldun",
+    year: 1377,
+    genre: "history",
+    category: "islamic",
+    done: false,
+  },
 
   // --- RENAISSANCE ---
   {
