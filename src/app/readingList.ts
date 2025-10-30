@@ -697,7 +697,7 @@ export const READING_LIST: Book[] = [
   // NIETZSCHE
   {
     id: "nietzsche-zarathustra",
-    title: "Thuse Spoke Zarathustra",
+    title: "Thus Spoke Zarathustra",
     author: "Friedrich Nietzsche",
     year: 1883,
     genre: "philosophy",
