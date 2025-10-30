@@ -89,7 +89,10 @@ export default function ReadingListApp() {
     return list;
   }, [books, genre, category]);
   const completedCount = filtered.filter((b) => b.done).length;
-  const progress = Math.round((completedCount / filtered.length) * 100);
+  const progress =
+    filtered.length === 0
+      ? 0
+      : Math.round((completedCount / filtered.length) * 100);
 
   const openNotes = (book: Book) => {
     setActiveBook(book);

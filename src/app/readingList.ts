@@ -16,6 +16,7 @@ type Book = {
 
 export const READING_LIST: Book[] = [
   // --- greek ---
+  // LITERATURE AND MYTHOLOGY
   {
     id: "homer-iliad",
     title: "The Iliad",
@@ -76,6 +77,7 @@ export const READING_LIST: Book[] = [
     spine: "/theogony-spine.jpg",
     rating: 1,
   },
+  // HISTORY
   {
     id: "herodotus-histories",
     title: "The Histories",
@@ -120,6 +122,7 @@ export const READING_LIST: Book[] = [
     link: "https://www.amazon.com/History-My-Times-Penguin-Classics/dp/0140441751",
     spine: "/xenophon-spine.jpg",
   },
+  // PHILOSOPHY
   {
     id: "plato-last-days",
     title: "The Last Days of Socrates",
@@ -166,6 +169,7 @@ export const READING_LIST: Book[] = [
     category: "greek",
     done: false,
   },
+  // COLLAPSE INTO MACEDON
   {
     id: "demosthenes-philippics",
     title: "Philippics",
@@ -186,6 +190,7 @@ export const READING_LIST: Book[] = [
   },
 
   // --- roman ---
+  // HISTORY OF EARLY REPUBLIC
   {
     id: "livy-histories",
     title: "History of Rome (Books I-V)",
@@ -204,6 +209,16 @@ export const READING_LIST: Book[] = [
     category: "roman",
     done: false,
   },
+  {
+    id: "cicero-defense",
+    title: "In Defence of the Republic",
+    author: "Marcus Tullius Cicero",
+    year: -63,
+    genre: "history",
+    category: "roman",
+    done: false,
+  },
+  // COLLAPSE INTO EMPIRE
   {
     id: "caesar-gallic",
     title: "Commentarii de Bello Gallico (The Gallic Wars)",
@@ -233,6 +248,7 @@ export const READING_LIST: Book[] = [
 
     done: false,
   },
+  // ROMAN IMPERIAL LITERATURE
   {
     id: "virgil-aeneid",
     title: "The Aeneid",
@@ -262,6 +278,8 @@ export const READING_LIST: Book[] = [
     category: "roman",
     done: false,
   },
+
+  // ROMAN IMPERIAL HISTORY
   {
     id: "tacitus-annals",
     title: "The Annals",
@@ -302,6 +320,7 @@ export const READING_LIST: Book[] = [
 
   //   done: false,
   // },
+  // ROMAN IMPERIAL PHILOSOPHY
   {
     id: "seneca-letters",
     title: "Letters",
@@ -333,14 +352,15 @@ export const READING_LIST: Book[] = [
     done: false,
   },
 
-  // --- Byzantine ---
+  // --- Christian ---
+  // CHRISTIAN IDEOLOGY
   {
     id: "bible",
     title: "The Holy Bible",
     author: "Various",
     year: 325,
     genre: "literature",
-    category: "byzantine",
+    category: "christian",
 
     done: false,
   },
@@ -350,7 +370,7 @@ export const READING_LIST: Book[] = [
     author: "Various",
     year: 325,
     genre: "literature",
-    category: "byzantine",
+    category: "christian",
 
     done: false,
   },
@@ -360,17 +380,18 @@ export const READING_LIST: Book[] = [
     author: "Various",
     year: 325,
     genre: "literature",
-    category: "byzantine",
+    category: "christian",
 
     done: false,
   },
+  // EARLY CHRISTIAN HISTORY
   {
     id: "eusebius-history",
     title: "Ecclesiastical History",
     author: "Eusebius",
     year: 325,
     genre: "history",
-    category: "byzantine",
+    category: "christian",
 
     done: false,
   },
@@ -380,17 +401,18 @@ export const READING_LIST: Book[] = [
     author: "Ammianus Marcellinus",
     year: 390,
     genre: "history",
-    category: "byzantine",
+    category: "christian",
 
     done: false,
   },
+  // AUGUSTINE PHILOSOPHY
   {
     id: "augustine-confessions",
     title: "Confessions",
     author: "Saint Augustine",
     year: 400,
     genre: "philosophy",
-    category: "byzantine",
+    category: "christian",
 
     done: false,
   },
@@ -400,21 +422,69 @@ export const READING_LIST: Book[] = [
     author: "Saint Augustine",
     year: 426,
     genre: "philosophy",
-    category: "byzantine",
+    category: "christian",
 
     done: false,
   },
+  // POST-AUGUSTIAN HISTORY
   {
     id: "secret-history",
     title: "The Secret History",
     author: "Procopius",
     year: 550,
     genre: "history",
-    category: "byzantine",
+    category: "christian",
 
     done: false,
   },
-  // --- Renaissance ---
+  // --- ISLAM ---
+  {
+    id: "quran",
+    title: "The Qur'an",
+    author: "Muhammad",
+    year: 632,
+    genre: "literature",
+    category: "islam",
+    done: false,
+  },
+  {
+    id: "alfarabi-city",
+    title: "The Virtuous City",
+    author: "Al-Farabi",
+    year: 940,
+    genre: "philosophy",
+    category: "islam",
+    done: false,
+  },
+  {
+    id: "avicenna-metaphysics",
+    title: "Metaphysics (from The Book of Healing)",
+    author: "Avicenna (Ibn Sina)",
+    year: 1020,
+    genre: "philosophy",
+    category: "islam",
+    done: false,
+  },
+  {
+    id: "alghazali-incoherence",
+    title: "The Incoherence of the Philosophers",
+    author: "Al-Ghazali",
+    year: 1095,
+    genre: "philosophy",
+    category: "islam",
+    done: false,
+  },
+  {
+    id: "averroes-incoherence",
+    title: "The Incoherence of the Incoherence",
+    author: "Averroes (Ibn Rushd)",
+    year: 1180,
+    genre: "philosophy",
+    category: "islam",
+    done: false,
+  },
+
+  // --- RENAISSANCE ---
   {
     id: "dante-comedy",
     title: "Divine Comedy",
@@ -426,17 +496,6 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
-    id: "pico-oration",
-    title: "Oration on the Dignity of Man",
-    author: "Giovanni Pico della Mirandola",
-    year: 1486,
-    genre: "philosophy",
-    category: "renaissance",
-
-    done: false,
-  },
-
-  {
     id: "machiavelli-prince",
     title: "The Prince",
     author: "Niccolò Machiavelli",
@@ -447,28 +506,6 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
-    id: "machiavelli-livy",
-    title: "Discourse on Livy",
-    author: "Niccolò Machiavelli",
-    year: 1517,
-    genre: "philosophy",
-    category: "renaissance",
-
-    done: false,
-  },
-  {
-    id: "machiavelli-florentine",
-    title: "Florentine Histories",
-    author: "Niccolò Machiavelli",
-    year: 1532,
-    genre: "history",
-    category: "renaissance",
-
-    done: false,
-  },
-
-  // --- Protestant Revolution ---
-  {
     id: "luther-theses",
     title: "Ninety-five Theses",
     author: "Martin Luther",
@@ -478,7 +515,28 @@ export const READING_LIST: Book[] = [
 
     done: false,
   },
-  // --- Scientific Revolution ---
+  {
+    id: "luther-freedom",
+    title: "The Freedom of a Christian",
+    author: "Martin Luther",
+    year: 1520,
+    genre: "philosophy",
+    category: "renaissance",
+
+    done: false,
+  },
+
+  // SCIENTIFIC PHILOSOPHY
+  {
+    id: "descartes-meditations",
+    title: "Meditations on First Philosophy",
+    author: "Rene Decartes",
+    year: 1641,
+    genre: "philosophy",
+    category: "renaissance",
+
+    done: false,
+  },
   {
     id: "newton-principia",
     title: "The Mathematical Principles of Natural Philosophy",
@@ -500,6 +558,8 @@ export const READING_LIST: Book[] = [
 
     done: false,
   },
+
+  // --- ENLIGHTENMENT ---
   {
     id: "milton-lost",
     title: "Paradise Lost",
@@ -521,7 +581,26 @@ export const READING_LIST: Book[] = [
   //   done: false,
   // },
 
-  // --- Enlightenment / French Revolution ---
+  // NATURE OF MAN
+  {
+    id: "hobbes-leviathan",
+    title: "Leviathan",
+    author: "Thomas Hobbes",
+    year: 1651,
+    genre: "philosophy",
+    category: "enlightenment",
+    done: false,
+  },
+  {
+    id: "locke-essay",
+    title: "Essay Concering Human Understanding",
+    author: "John Locke",
+    year: 1690,
+    genre: "philosophy",
+    category: "enlightenment",
+
+    done: false,
+  },
   {
     id: "rousseau-inequality",
     title: "A Discourse on the Origin of Inequality",
@@ -592,7 +671,7 @@ export const READING_LIST: Book[] = [
     author: "Friedrich Hegel",
     year: 1820,
     genre: "philosophy",
-    category: "industrial",
+    category: "enlightenment",
 
     done: false,
   },
@@ -602,19 +681,31 @@ export const READING_LIST: Book[] = [
     author: "Friedrich Hegel",
     year: 1837,
     genre: "philosophy",
-    category: "industrial",
+    category: "enlightenment",
+
+    done: false,
+  },
+  // NIETZSCHE
+  {
+    id: "nietzsche-zarathustra",
+    title: "Thuse Spoke Zarathustra",
+    author: "Friedrich Hegel",
+    year: 1883,
+    genre: "philosophy",
+    category: "enlightenment",
 
     done: false,
   },
 
-  // --- Marx ---
+  // --- CAPITALISM ---
+  // MARX
   {
     id: "marx-manifesto",
     title: "Communist Manifesto",
     author: "Karl Marx",
     year: 1848,
     genre: "philosophy",
-    category: "industrial",
+    category: "capitalism",
 
     done: false,
   },
@@ -624,7 +715,49 @@ export const READING_LIST: Book[] = [
     author: "Karl Marx",
     year: 1867,
     genre: "philosophy",
-    category: "industrial",
+    category: "capitalism",
+
+    done: false,
+  },
+  // DARWIN
+  {
+    id: "darwin-origin",
+    title: "On the Origin of Species",
+    author: "Charles Darwin",
+    year: 1859,
+    genre: "philosophy",
+    category: "capitalism",
+
+    done: false,
+  },
+  {
+    id: "darwin-descent",
+    title: "The Descent of Man",
+    author: "Charles Darwin",
+    year: 1871,
+    genre: "philosophy",
+    category: "capitalism",
+
+    done: false,
+  },
+  // FREUD
+  {
+    id: "freud-dreams",
+    title: "The Interpretation of Dreams",
+    author: "Sigmund Freud",
+    year: 1900,
+    genre: "philosophy",
+    category: "capitalism",
+
+    done: false,
+  },
+  {
+    id: "freud-civilization",
+    title: "Civilization and its Discontents",
+    author: "Sigmund Freud",
+    year: 1930,
+    genre: "philosophy",
+    category: "capitalism",
 
     done: false,
   },
@@ -640,27 +773,13 @@ export const READING_LIST: Book[] = [
 
   //   done: false,
   // },
-
-  // // --- Nietzsche ---
-  // {
-  //   id: "nietzsche-genealogy",
-  //   title: "On the Genealogy of Morals",
-  //   author: "Friedrich Nietzsche",
-  //   year: 1887,
-  //   genre: "philosophy",
-  //   category: "nietzsche",
-
-  //   done: false,
-  // },
-
-  // --- Capitalism / Sociology ---
   {
     id: "durkheim-suicide",
     title: "On Suicide",
     author: "Emile Durkheim",
     year: 1897,
     genre: "philosophy",
-    category: "industrial",
+    category: "capitalism",
 
     done: false,
   },
@@ -670,7 +789,7 @@ export const READING_LIST: Book[] = [
     author: "Georg Simmel",
     year: 1900,
     genre: "philosophy",
-    category: "industrial",
+    category: "capitalism",
 
     done: false,
   },
@@ -680,7 +799,7 @@ export const READING_LIST: Book[] = [
     author: "Max Weber",
     year: 1905,
     genre: "philosophy",
-    category: "industrial",
+    category: "capitalism",
 
     done: false,
   },
