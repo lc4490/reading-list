@@ -1,6 +1,6 @@
 #### General Thoughts
 
-I added this book to my reading list due to the common belief that Thucydides' narrative was incomplete, and Xenophon was the continuation. After finishing Thucydides, I disagree with this sentiment, believing that his narrative fulfilled its purpose. That left me a little lost with Xenophon, but I have enjoyed my reading experience thus far. I enjoyed Socrates' cameo, as my next text will feature him quite prominently.
+I see Xenophon as the third installment in the trilogy of Greek historians, starting with Herodotus, leading into Thucydides, and concluding with Xenophon. This can be understood in multiple ways. First, it can be interpreted as the rise and fall of Ancient Greece or Hellas. The concept of pan-Hellenic identity was born in Herodotus' Histories, as a response to the Persian threat. Hellas tore itself apart in Thucydides' History of the Peloponnesian War, as the Greek world was torn between Athens and Sparta. Xenophon captures the aftermath of this conflict, as the city states grow weak and decadent following the thirty year conflict, setting the stage for the Macedonian invasion. Another way of looking at it is the story of Athens, Herodotus sees the rise of Athens, Thucydides sees the fall of Athens, and Xenophon shows the aftermath. Whatever way you look at it, this text is heavily underrated and under-appreciated, and is a worthy final installment in the Ancient Greek Historical trilogy.
 
 #### Thoughts on Athenian government post-Sicillian expedition
 
