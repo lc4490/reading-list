@@ -152,15 +152,6 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
-    id: "aristotle-metaphysics",
-    title: "Metaphysics",
-    author: "Aristotle",
-    year: -340,
-    genre: "philosophy",
-    category: "greek",
-    done: false,
-  },
-  {
     id: "aristotle-ethics",
     title: "Nichomachean Ethics",
     author: "Aristotle",
@@ -555,6 +546,16 @@ export const READING_LIST: Book[] = [
 
   // SCIENTIFIC PHILOSOPHY
   {
+    id: "bacon-atlantis",
+    title: "New Atlantis",
+    author: "Francis Bacon",
+    year: 1626,
+    genre: "literature",
+    category: "renaissance",
+
+    done: false,
+  },
+  {
     id: "descartes-meditations",
     title: "Meditations on First Philosophy",
     author: "Rene Decartes",
@@ -564,16 +565,16 @@ export const READING_LIST: Book[] = [
 
     done: false,
   },
-  {
-    id: "newton-principia",
-    title: "The Mathematical Principles of Natural Philosophy",
-    author: "Isaac Newton",
-    year: 1687,
-    genre: "philosophy",
-    category: "renaissance",
+  // {
+  //   id: "newton-principia",
+  //   title: "The Mathematical Principles of Natural Philosophy",
+  //   author: "Isaac Newton",
+  //   year: 1687,
+  //   genre: "philosophy",
+  //   category: "renaissance",
 
-    done: false,
-  },
+  //   done: false,
+  // },
   {
     id: "newton-observations",
     title:
