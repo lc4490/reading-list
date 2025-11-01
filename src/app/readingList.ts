@@ -74,7 +74,7 @@ export const READING_LIST: Book[] = [
     done: true,
     cover: "/hesiod.jpeg",
     link: "https://www.amazon.com/Theogony-Works-Oxford-Worlds-Classics/dp/019953831X/",
-    spine: "/theogony-spine.jpg",
+    spine: "/theogony-spine-copy.jpg",
     rating: 1,
   },
   // HISTORY

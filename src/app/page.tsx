@@ -316,6 +316,8 @@ export default function ReadingListApp() {
                     sx={{
                       width: "100%",
                       height: "auto",
+                      minHeight: { xs: "30px", md: "80px" },
+                      objectPosition: "25% center",
                       objectFit: "cover",
                       borderRadius: 3,
                       position: "relative",
@@ -324,22 +326,21 @@ export default function ReadingListApp() {
                       zIndex: 0,
                     }}
                   />
-                  {/* {book.done && (
-                    <Box
-                      sx={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        borderRadius: 3,
-                        // background: "rgba(0,0,0,0.25)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <CheckCircleIcon
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: 3,
+                      // background: "rgba(0,0,0,0.25)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    {/* <CheckCircleIcon
                         sx={{
                           position: "absolute",
                           top: isMobile ? 2 : 8,
@@ -350,9 +351,62 @@ export default function ReadingListApp() {
                           fontSize: isMobile ? 15 : 25,
                           // p: "2px",
                         }}
+                      /> */}
+                    <Stack
+                      flexDirection={{ xs: "row", md: "column" }}
+                      gap={{ xs: 0.5, md: 0.5 }}
+                      marginRight={{ xs: 2.5, md: 2.5 }}
+                      height="100%"
+                      overflow={"clip"}
+                      justifyContent="center"
+                      alignItems="center"
+                    >
+                      <Chip
+                        size="small"
+                        sx={{
+                          backgroundColor: "white",
+                          border: "1px solid #000",
+                          display: { xs: "none", md: "block" },
+                        }}
+                        label={
+                          book.year > 0
+                            ? `${book.year} CE`
+                            : `${Math.abs(book.year)} BCE`
+                        }
                       />
-                    </Box>
-                  )} */}
+                      <Chip
+                        size="small"
+                        label={
+                          isMobile
+                            ? capitalize(book.genre).slice(0, 3) + "."
+                            : capitalize(book.genre)
+                        }
+                        sx={{
+                          background:
+                            "linear-gradient(135deg, #6366f1, #14b8a6)",
+                          border: "1px solid #000",
+                          color: "#fff",
+                          fontWeight: 600,
+                        }}
+                      />
+
+                      <Chip
+                        size="small"
+                        label={
+                          isMobile
+                            ? capitalize(book.category).slice(0, 3) + "."
+                            : capitalize(book.category)
+                        }
+                        sx={{
+                          background:
+                            "linear-gradient(135deg, #ec4899, #f97316)", // pink → orange
+                          border: "1px solid #000",
+                          color: "#fff",
+                          fontWeight: 600,
+                        }}
+                      />
+                    </Stack>
+                  </Box>
                 </>
               ) : (
                 <Box display="flex" justifyContent={"space-between"}>
