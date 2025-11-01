@@ -131,7 +131,7 @@ export const READING_LIST: Book[] = [
     genre: "philosophy",
     category: "greek",
     done: false,
-    // spine: "/socrates-spine.jpg",
+    spine: "/socrates-spine.jpg",
   },
   {
     id: "plato-symposium",

@@ -280,7 +280,7 @@ export default function ReadingListApp() {
               flexDirection="row"
               justifyContent={"space-between"}
               sx={{
-                p: book.spine ? 0 : { xs: 1.25, md: 2 },
+                p: book.spine ? 0 : { xs: 1.25, md: 1.25 },
                 borderRadius: 3,
                 // display: "flex",
                 alignItems: "center",
@@ -354,8 +354,8 @@ export default function ReadingListApp() {
                       /> */}
                     <Stack
                       flexDirection={{ xs: "row", md: "column" }}
-                      gap={{ xs: 0.5, md: 0.5 }}
-                      marginRight={{ xs: 2.5, md: 2.5 }}
+                      gap={{ xs: 0.5, md: 1 }}
+                      marginRight={{ xs: 2.25, md: 2.5 }}
                       height="100%"
                       overflow={"clip"}
                       justifyContent="center"
@@ -384,7 +384,6 @@ export default function ReadingListApp() {
                         sx={{
                           background:
                             "linear-gradient(135deg, #6366f1, #14b8a6)",
-                          border: "1px solid #000",
                           color: "#fff",
                           fontWeight: 600,
                         }}
@@ -400,7 +399,6 @@ export default function ReadingListApp() {
                         sx={{
                           background:
                             "linear-gradient(135deg, #ec4899, #f97316)", // pink → orange
-                          border: "1px solid #000",
                           color: "#fff",
                           fontWeight: 600,
                         }}
@@ -448,9 +446,9 @@ export default function ReadingListApp() {
                     </Typography>
                   </Box>
                   <Stack
-                    direction="row"
+                    direction={{ xs: "row", md: "column" }}
                     spacing={{ xs: 0.5, md: 1 }}
-                    marginRight={1}
+                    marginRight={{ xs: 1, md: 0 }}
                     minWidth={"100px"}
                     alignItems={"center"}
                     justifyContent={"flex-end"}
