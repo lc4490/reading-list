@@ -280,7 +280,7 @@ export default function ReadingListApp() {
               flexDirection="row"
               justifyContent={"space-between"}
               sx={{
-                p: book.spine ? 0 : { xs: 1.25, md: 1.25 },
+                p: book.spine ? 0 : { xs: 1, md: 1.25 },
                 borderRadius: 3,
                 // display: "flex",
                 alignItems: "center",
@@ -355,7 +355,7 @@ export default function ReadingListApp() {
                     <Stack
                       flexDirection={{ xs: "row", md: "column" }}
                       gap={{ xs: 0.5, md: 1 }}
-                      marginRight={{ xs: 2.25, md: 2.5 }}
+                      marginRight={{ xs: 1, md: 2.5 }}
                       height="100%"
                       overflow={"clip"}
                       justifyContent="center"
@@ -448,7 +448,7 @@ export default function ReadingListApp() {
                   <Stack
                     direction={{ xs: "row", md: "column" }}
                     spacing={{ xs: 0.5, md: 1 }}
-                    marginRight={{ xs: 1, md: 0 }}
+                    // marginRight={{ xs: 1, md: 0 }}
                     minWidth={"100px"}
                     alignItems={"center"}
                     justifyContent={"flex-end"}
