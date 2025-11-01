@@ -366,6 +366,7 @@ export default function ReadingListApp() {
                         sx={{
                           backgroundColor: "white",
                           border: "1px solid #000",
+                          borderRadius: "6px",
                           display: { xs: "none", md: "block" },
                         }}
                         label={
@@ -384,6 +385,7 @@ export default function ReadingListApp() {
                         sx={{
                           background:
                             "linear-gradient(135deg, #6366f1, #14b8a6)",
+                          borderRadius: "6px",
                           color: "#fff",
                           fontWeight: 600,
                         }}
@@ -399,6 +401,7 @@ export default function ReadingListApp() {
                         sx={{
                           background:
                             "linear-gradient(135deg, #ec4899, #f97316)", // pink → orange
+                          borderRadius: "6px",
                           color: "#fff",
                           fontWeight: 600,
                         }}
@@ -458,6 +461,7 @@ export default function ReadingListApp() {
                       size="small"
                       sx={{
                         backgroundColor: "white",
+                        borderRadius: "6px",
                         display: { xs: "none", md: "block" },
                       }}
                       label={
@@ -475,6 +479,7 @@ export default function ReadingListApp() {
                       }
                       sx={{
                         background: "linear-gradient(135deg, #6366f1, #14b8a6)",
+                        borderRadius: "6px",
                         color: "#fff",
                         fontWeight: 600,
                       }}
@@ -489,6 +494,7 @@ export default function ReadingListApp() {
                       }
                       sx={{
                         background: "linear-gradient(135deg, #ec4899, #f97316)", // pink → orange
+                        borderRadius: "6px",
                         color: "#fff",
                         fontWeight: 600,
                       }}
