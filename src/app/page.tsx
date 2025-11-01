@@ -317,7 +317,7 @@ export default function ReadingListApp() {
                       width: "100%",
                       height: "auto",
                       minHeight: { xs: "30px", md: "80px" },
-                      objectPosition: "25% center",
+                      objectPosition: "0% center",
                       objectFit: "cover",
                       borderRadius: 3,
                       position: "relative",
