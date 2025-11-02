@@ -25,6 +25,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 type Book = {
   id: string;
   title: string;
@@ -98,6 +99,40 @@ export default function ReadingListApp() {
     setActiveBook(book);
     setOpen(true);
   };
+  const [copied, setCopied] = useState(false);
+
+  const [readingListString, setReadingListString] = useState("");
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(readingListString);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = readingListString;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      ta.remove();
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1200);
+  };
+
+  useEffect(() => {
+    const reading_list = filtered
+      .map((book) => {
+        return `${book.title} by ${book.author}${
+          book.translation ? " " + book.translation : ""
+        } [${capitalize(book.category)}] [${capitalize(book.genre)}] (${
+          book.year
+        })`;
+      })
+      .join("\n");
+
+    setReadingListString(reading_list);
+  }, [progress, READING_LIST]);
 
   return (
     <Box
@@ -157,7 +192,7 @@ export default function ReadingListApp() {
         position="sticky"
         sx={{
           p: 2,
-          paddingLeft: { xs: 2, md: 15 },
+          paddingX: { xs: 2, md: 15 },
           marginTop: 2,
           display: "flex",
           flexDirection: "row",
@@ -166,6 +201,16 @@ export default function ReadingListApp() {
         <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
           {"Leo's Reading List"}
         </Typography>
+        <Button
+          variant="outlined"
+          size="small"
+          onClick={copy}
+          // startIcon={<ContentCopyIcon fontSize="small" />}
+          sx={{ textTransform: "none" }}
+        >
+          <ContentCopyIcon fontSize="small" />
+          {/* {copied ? "Copied!" : "Copy"} */}
+        </Button>
       </Box>
 
       <Container maxWidth="lg" sx={{ py: 0, paddingBottom: 5 }}>
@@ -273,74 +318,81 @@ export default function ReadingListApp() {
 
         {/* books */}
         <Stack spacing={0.5}>
-          {filtered.map((book) => (
-            <Box
-              key={book.id}
-              // display="flex"
-              flexDirection="row"
-              justifyContent={"space-between"}
-              sx={{
-                p: book.spine ? 0 : { xs: 1, md: 1.25 },
-                borderRadius: 3,
-                // display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: 1.5,
-                // backgroundColor: "black",
-                background: book.spine ? "transparent" : "black",
-                transform: "translateY(0px)",
-                border: book.spine
-                  ? "none"
-                  : "1px solid rgba(255,255,255,0.08)",
-                transition:
-                  "transform .18s ease, background .18s ease, border-color .18s ease",
-                "&:hover": {
-                  transform: "translateY(-2px)",
-                  background: book.spine ? "" : "rgba(255,255,255,0.055)",
-                  border: "1px solid rgba(255,255,255,0.9)",
-                },
-                cursor: book.notesPath ? "pointer" : "default",
-              }}
-              onClick={() => {
-                if (book.notesPath) {
-                  openNotes(book);
-                }
-              }}
-            >
-              {book.spine ? (
-                <>
-                  <Box
-                    component="img"
-                    src={book.spine}
-                    alt={book.title}
-                    sx={{
-                      width: "100%",
-                      height: "auto",
-                      minHeight: { xs: "30px", md: "80px" },
-                      objectPosition: "0% center",
-                      objectFit: "cover",
-                      borderRadius: 3,
-                      position: "relative",
-                      top: 0,
-                      left: 0,
-                      zIndex: 0,
-                    }}
-                  />
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: 3,
-                      // background: "rgba(0,0,0,0.25)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "flex-end",
-                    }}
-                  >
-                    {/* <CheckCircleIcon
+          {filtered.map((book) =>
+            book.author === "title" ? (
+              <Box key={book.id}>
+                <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
+                  {book.title}
+                </Typography>
+              </Box>
+            ) : (
+              <Box
+                key={book.id}
+                // display="flex"
+                flexDirection="row"
+                justifyContent={"space-between"}
+                sx={{
+                  p: book.spine ? 0 : { xs: 1, md: 1.25 },
+                  borderRadius: 3,
+                  // display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: 1.5,
+                  // backgroundColor: "black",
+                  background: book.spine ? "transparent" : "black",
+                  transform: "translateY(0px)",
+                  border: book.spine
+                    ? "none"
+                    : "1px solid rgba(255,255,255,0.08)",
+                  transition:
+                    "transform .18s ease, background .18s ease, border-color .18s ease",
+                  "&:hover": {
+                    transform: "translateY(-2px)",
+                    background: book.spine ? "" : "rgba(255,255,255,0.055)",
+                    border: "1px solid rgba(255,255,255,0.9)",
+                  },
+                  cursor: book.notesPath ? "pointer" : "default",
+                }}
+                onClick={() => {
+                  if (book.notesPath) {
+                    openNotes(book);
+                  }
+                }}
+              >
+                {book.spine ? (
+                  <>
+                    <Box
+                      component="img"
+                      src={book.spine}
+                      alt={book.title}
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        minHeight: { xs: "30px", md: "80px" },
+                        objectPosition: "0% center",
+                        objectFit: "cover",
+                        borderRadius: 3,
+                        position: "relative",
+                        top: 0,
+                        left: 0,
+                        zIndex: 0,
+                      }}
+                    />
+                    <Box
+                      sx={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        borderRadius: 3,
+                        // background: "rgba(0,0,0,0.25)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "flex-end",
+                      }}
+                    >
+                      {/* <CheckCircleIcon
                         sx={{
                           position: "absolute",
                           top: isMobile ? 2 : 8,
@@ -352,20 +404,115 @@ export default function ReadingListApp() {
                           // p: "2px",
                         }}
                       /> */}
-                    <Stack
-                      flexDirection={{ xs: "row", md: "column" }}
-                      gap={{ xs: 0.5, md: 1 }}
-                      marginRight={{ xs: 1, md: 2.5 }}
-                      height="100%"
-                      overflow={"clip"}
-                      justifyContent="center"
+                      <Stack
+                        flexDirection={{ xs: "row", md: "column" }}
+                        gap={{ xs: 0.5, md: 1 }}
+                        marginRight={{ xs: 1, md: 2.5 }}
+                        height="100%"
+                        overflow={"clip"}
+                        justifyContent="center"
+                        alignItems="center"
+                      >
+                        <Chip
+                          size="small"
+                          sx={{
+                            backgroundColor: "white",
+                            border: "1px solid #000",
+                            borderRadius: "6px",
+                            display: { xs: "none", md: "block" },
+                          }}
+                          label={
+                            book.year > 0
+                              ? `${book.year} CE`
+                              : `${Math.abs(book.year)} BCE`
+                          }
+                        />
+                        <Chip
+                          size="small"
+                          label={
+                            isMobile
+                              ? capitalize(book.genre).slice(0, 3) + "."
+                              : capitalize(book.genre)
+                          }
+                          sx={{
+                            background:
+                              "linear-gradient(135deg, #6366f1, #14b8a6)",
+                            borderRadius: "6px",
+                            color: "#fff",
+                            fontWeight: 600,
+                          }}
+                        />
+
+                        <Chip
+                          size="small"
+                          label={
+                            isMobile
+                              ? capitalize(book.category).slice(0, 3) + "."
+                              : capitalize(book.category)
+                          }
+                          sx={{
+                            background:
+                              "linear-gradient(135deg, #ec4899, #f97316)", // pink → orange
+                            borderRadius: "6px",
+                            color: "#fff",
+                            fontWeight: 600,
+                          }}
+                        />
+                      </Stack>
+                    </Box>
+                  </>
+                ) : (
+                  <Box display="flex" justifyContent={"space-between"}>
+                    <Box
+                      display="flex"
+                      flexDirection="row"
                       alignItems="center"
+                      width={"250px"}
+                      sx={{
+                        overflowX: "auto", // enables horizontal scrolling
+                        whiteSpace: "nowrap", // keep text on one line
+                      }}
+                    >
+                      <Box sx={{ marginRight: 1 }}>
+                        {book.done ? (
+                          <CheckCircleIcon
+                            sx={{ color: "#3b82f6", fontSize: 25 }}
+                          />
+                        ) : (
+                          <RadioButtonUncheckedIcon
+                            sx={{ color: "rgba(59,130,246,0.4)", fontSize: 25 }}
+                          />
+                        )}
+                      </Box>
+
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          display: { xs: "block", md: "inline" },
+                          whiteSpace: "pre-line",
+                        }}
+                      >
+                        {book.title} {`by ${book.author}`}{" "}
+                        {book.translation
+                          ? isMobile
+                            ? ""
+                            : `${book.translation}`
+                          : ""}
+                      </Typography>
+                    </Box>
+                    <Stack
+                      direction={{ xs: "row", md: "column" }}
+                      spacing={{ xs: 0.5, md: 1 }}
+                      // marginRight={{ xs: 1, md: 0 }}
+                      minWidth={"100px"}
+                      alignItems={"center"}
+                      justifyContent={"flex-end"}
+                      sx={{ mt: 1, flexWrap: "wrap" }}
                     >
                       <Chip
                         size="small"
                         sx={{
                           backgroundColor: "white",
-                          border: "1px solid #000",
                           borderRadius: "6px",
                           display: { xs: "none", md: "block" },
                         }}
@@ -408,102 +555,10 @@ export default function ReadingListApp() {
                       />
                     </Stack>
                   </Box>
-                </>
-              ) : (
-                <Box display="flex" justifyContent={"space-between"}>
-                  <Box
-                    display="flex"
-                    flexDirection="row"
-                    alignItems="center"
-                    width={"250px"}
-                    sx={{
-                      overflowX: "auto", // enables horizontal scrolling
-                      whiteSpace: "nowrap", // keep text on one line
-                    }}
-                  >
-                    <Box sx={{ marginRight: 1 }}>
-                      {book.done ? (
-                        <CheckCircleIcon
-                          sx={{ color: "#3b82f6", fontSize: 25 }}
-                        />
-                      ) : (
-                        <RadioButtonUncheckedIcon
-                          sx={{ color: "rgba(59,130,246,0.4)", fontSize: 25 }}
-                        />
-                      )}
-                    </Box>
-
-                    <Typography
-                      variant="subtitle1"
-                      sx={{
-                        display: { xs: "block", md: "inline" },
-                        whiteSpace: "pre-line",
-                      }}
-                    >
-                      {book.title} {`by ${book.author}`}{" "}
-                      {book.translation
-                        ? isMobile
-                          ? ""
-                          : `${book.translation}`
-                        : ""}
-                    </Typography>
-                  </Box>
-                  <Stack
-                    direction={{ xs: "row", md: "column" }}
-                    spacing={{ xs: 0.5, md: 1 }}
-                    // marginRight={{ xs: 1, md: 0 }}
-                    minWidth={"100px"}
-                    alignItems={"center"}
-                    justifyContent={"flex-end"}
-                    sx={{ mt: 1, flexWrap: "wrap" }}
-                  >
-                    <Chip
-                      size="small"
-                      sx={{
-                        backgroundColor: "white",
-                        borderRadius: "6px",
-                        display: { xs: "none", md: "block" },
-                      }}
-                      label={
-                        book.year > 0
-                          ? `${book.year} CE`
-                          : `${Math.abs(book.year)} BCE`
-                      }
-                    />
-                    <Chip
-                      size="small"
-                      label={
-                        isMobile
-                          ? capitalize(book.genre).slice(0, 3) + "."
-                          : capitalize(book.genre)
-                      }
-                      sx={{
-                        background: "linear-gradient(135deg, #6366f1, #14b8a6)",
-                        borderRadius: "6px",
-                        color: "#fff",
-                        fontWeight: 600,
-                      }}
-                    />
-
-                    <Chip
-                      size="small"
-                      label={
-                        isMobile
-                          ? capitalize(book.category).slice(0, 3) + "."
-                          : capitalize(book.category)
-                      }
-                      sx={{
-                        background: "linear-gradient(135deg, #ec4899, #f97316)", // pink → orange
-                        borderRadius: "6px",
-                        color: "#fff",
-                        fontWeight: 600,
-                      }}
-                    />
-                  </Stack>
-                </Box>
-              )}
-            </Box>
-          ))}
+                )}
+              </Box>
+            )
+          )}
         </Stack>
 
         <Dialog

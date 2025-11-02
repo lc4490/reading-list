@@ -183,7 +183,7 @@ export const READING_LIST: Book[] = [
     id: "arrian-anabasis",
     title: "Anabasis of Alexander",
     author: "Arrian",
-    year: 120,
+    year: -323,
     genre: "history",
     category: "greek",
     done: false,
