@@ -121,6 +121,7 @@ export const READING_LIST: Book[] = [
     cover: "/xenophon.jpg",
     link: "https://www.amazon.com/History-My-Times-Penguin-Classics/dp/0140441751",
     spine: "/xenophon-spine.jpg",
+    rating: 4.5,
   },
   // PHILOSOPHY
   {
