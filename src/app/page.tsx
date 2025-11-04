@@ -343,6 +343,8 @@ export default function ReadingListApp() {
                   transform: "translateY(0px)",
                   border: book.spine
                     ? "none"
+                    : book.notesPath
+                    ? "1px solid white"
                     : "1px solid rgba(255,255,255,0.08)",
                   transition:
                     "transform .18s ease, background .18s ease, border-color .18s ease",

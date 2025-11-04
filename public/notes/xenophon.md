@@ -9,3 +9,7 @@ The Athenian government and people seem to be spiraling further and further as t
 #### Thoughts on where Xenophon fits alongside Herodotus, Thucydides
 
 I see Xenophon as the third installment in the trilogy of Greek historians, starting with Herodotus, leading into Thucydides, and concluding with Xenophon. This can be understood in multiple ways. First, it can be interpreted as the rise and fall of Ancient Greece or Hellas. The concept of pan-Hellenic identity was born in Herodotus' Histories, as a response to the Persian threat. Hellas tore itself apart in Thucydides' History of the Peloponnesian War, as the Greek world was torn between Athens and Sparta. Xenophon captures the aftermath of this conflict, as the city states grow weak and decadent following the thirty year conflict, setting the stage for the Macedonian invasion. Another way of looking at it is the story of Athens, Herodotus sees the rise of Athens, Thucydides sees the fall of Athens, and Xenophon shows the aftermath. Whatever way you look at it, this text is heavily underrated and under-appreciated, and is a worthy final installment in the Ancient Greek Historical trilogy.
+
+#### Thoughts on the ending
+
+The final note Xenophon leaves us with is the Greek world in the wake of these endless wars. In this final battle between Athens, Sparta, and Thebes, nobody really won and Greece is left all the weaker for it. He does not live to see the rise of Philip II of Macedon and his conquest of Greece, but he may as well have predicted it.

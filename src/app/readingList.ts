@@ -117,7 +117,7 @@ export const READING_LIST: Book[] = [
     genre: "history",
     category: "greek",
     notesPath: "/notes/xenophon.md",
-    done: false,
+    done: true,
     cover: "/xenophon.jpg",
     link: "https://www.amazon.com/History-My-Times-Penguin-Classics/dp/0140441751",
     spine: "/xenophon-spine.jpg",
@@ -131,6 +131,7 @@ export const READING_LIST: Book[] = [
     genre: "philosophy",
     category: "greek",
     done: false,
+    notesPath: "/notes/socrates.md",
     // spine: "/socrates-spine.jpg",
   },
   {
