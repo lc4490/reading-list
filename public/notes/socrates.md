@@ -25,3 +25,7 @@ Socrates' seemingly willingness to die is twofold. First is his extreme convicti
 #### Thoughts on Socrates parallels with Jesus
 
 Through my reading of The Lasy Days of Socrates, I cannot help but notice so many parallels between his life and Jesus Christ. Both Socrates and Jesus were the "son" of a stonemason. Both Socrates and Jesus preached a message salvation by prioritizing cultivation of the soul over material matters. Their teachings lead them into conflict with the established order, Socrates due to his rejection of the Greek pantheon, Jesus due to this rejection of the Roman pantheon as well as the traditional Judaic teachings. For their teachings, they were both executed by a somewhat democratic process by their own people, the people they were trying to save.
+
+#### Thoughts on Phaedo
+
+In this dialogue, Socrates speaks to two of his students, Simmias and Cebes, about how he does not fear death but in fact welcomes it, and explains his justification as to why. Socrates believes his

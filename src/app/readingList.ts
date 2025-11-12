@@ -131,11 +131,11 @@ export const READING_LIST: Book[] = [
     year: -399,
     genre: "philosophy",
     category: "greek",
-    done: false,
+    done: true,
     notesPath: "/notes/socrates.md",
     cover: "/socrates.jpg",
     link: "https://www.amazon.com/Last-Days-Socrates-Penguin-Classics-ebook/dp/B002RI9XUG",
-    // spine: "/socrates-spine.jpg",
+    spine: "/socrates-spine.jpg",
   },
   {
     id: "plato-symposium",
@@ -144,6 +144,7 @@ export const READING_LIST: Book[] = [
     year: -385,
     genre: "philosophy",
     category: "greek",
+    notesPath: "/notes/symposium.md",
     done: false,
   },
   {
