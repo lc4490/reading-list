@@ -176,24 +176,24 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   // COLLAPSE INTO MACEDON
-  {
-    id: "demosthenes-philippics",
-    title: "Philippics",
-    author: "Demosthenes",
-    year: -351,
-    genre: "history",
-    category: "greek",
-    done: false,
-  },
-  {
-    id: "arrian-anabasis",
-    title: "Anabasis of Alexander",
-    author: "Arrian",
-    year: -323,
-    genre: "history",
-    category: "greek",
-    done: false,
-  },
+  // {
+  //   id: "demosthenes-philippics",
+  //   title: "Philippics",
+  //   author: "Demosthenes",
+  //   year: -351,
+  //   genre: "history",
+  //   category: "greek",
+  //   done: false,
+  // },
+  // {
+  //   id: "arrian-anabasis",
+  //   title: "Anabasis of Alexander",
+  //   author: "Arrian",
+  //   year: -323,
+  //   genre: "history",
+  //   category: "greek",
+  //   done: false,
+  // },
 
   // --- roman ---
   // HISTORY OF EARLY REPUBLIC
