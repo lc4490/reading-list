@@ -136,6 +136,7 @@ export const READING_LIST: Book[] = [
     cover: "/socrates.jpg",
     link: "https://www.amazon.com/Last-Days-Socrates-Penguin-Classics-ebook/dp/B002RI9XUG",
     spine: "/socrates-spine.jpg",
+    rating: 5,
   },
   {
     id: "plato-symposium",
