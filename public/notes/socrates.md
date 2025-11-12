@@ -1,6 +1,6 @@
 #### General Thoughts
 
-This text was my introduction to Greek philosophy. The text is divided into four dialogues: Euthyphro, Apology, Crito, and Phaedo. On their own, they each have their own unique philosophical points, but taken together, they tell the story of the death of Socrates. This text was very challenging to read, because of its density. There are a lot of complex concepts in these relatively short dialogues, so I've really tried to re-read and process this text as slowly as possible.
+This text was a wonderful introduction to philosophy. The text is divided into four dialogues: Euthyphro, Apology, Crito, and Phaedo. It begins with Euthyphro, which acts as a trailer or pitch for philosophy as a practice. It then goes to Apology and Crito, which describe what a philosopher is and why they do what they do, then concludes with Phaedo, which was a very challenging text with a lot of complex concepts. Together, they tell the story of the last few days of Socrates' life. This text was my most challenging text by far, although it was only 169 pages, I had to read some parts multiple times, especially Phaedo.
 
 #### Thoughts on Euthyphro
 
@@ -22,10 +22,28 @@ In this dialogue, Socrates is compelled to escape his imprisonment by his studen
 
 Socrates' seemingly willingness to die is twofold. First is his extreme conviction in his mission, but the other is that he does not fear death the way his contemporaries, or even we do.Socrates argues that if the soul does not exist, and that death is just an endless sleep, it would very peaceful. However, if the soul does exist, and Socrates' soul would go to Hades (the common belief at the time), it is far more important for him to die while cultivating his soul, rather than live and letting it rot, only for it to be weaker when he eventually does die.
 
-#### Thoughts on Socrates parallels with Jesus
-
-Through my reading of The Lasy Days of Socrates, I cannot help but notice so many parallels between his life and Jesus Christ. Both Socrates and Jesus were the "son" of a stonemason. Both Socrates and Jesus preached a message salvation by prioritizing cultivation of the soul over material matters. Their teachings lead them into conflict with the established order, Socrates due to his rejection of the Greek pantheon, Jesus due to this rejection of the Roman pantheon as well as the traditional Judaic teachings. For their teachings, they were both executed by a somewhat democratic process by their own people, the people they were trying to save.
-
 #### Thoughts on Phaedo
 
-In this dialogue, Socrates speaks to two of his students, Simmias and Cebes, about how he does not fear death but in fact welcomes it, and explains his justification as to why. Socrates believes his
+In this dialogue, Phaedo recalls the death of Socrates, in which Socrates debates two of his students, Simmias and Cebes, about the nature of death. Socrates seeks to prove why he, as a philosopher should not fear death, but in fact welcome it. His argument is this: a philosopher dedicates his entire life to separating his soul from his bodily desires. Death is simply the ultimate separation between body and soul. The soul is also the avenue in which we interact with concepts like goodness, justice, and truth, since we certainly cannot percieve these concepts with our bodily senses. Simmias and Cebes are not convinced that the soul exists after we die, so Socrates presents a few arguments.
+
+First, Socrates claims that all opposites interchange positions via two processes. For example, something small becomes its opposite, big, by getting bigger. Likewise, something big becomes its opposite, small, by getting smaller. Whether or not we have words for these processes, these processes must exist. Socrates likens death and life as opposites, and thus going from life to death is dying, and there must be a process of going from death to life. If SOMETHING is going from death to life, that proves the existence of a soul pre-birth.
+
+Second, Socrates claims that humans are born with an innate sense of concepts such as equality, justice, and beauty, because we can perceive when things fall short of these concepts. In order to understand the difference between someone's beauty and the perfect beauty, we must have had a concept of the perfect beauty. The perfect forms cannot be percieved by the body, and thus must predate the body, and thus humans must have had a soul before they had a body.
+
+Third, Socrates argues that the soul does not dissapate when it dies. He does this by claiming everything can be divided into what can be sensed and what cannot. He argues that human beauty changes, and is not eternal, but the concept of beauty, the perfect beauty is unchangeable. Human beauty is sensed, the perfect beauty cannot be sensed. Thus since the soul belongs in the category of things that cannot be sensed, it will not dissapate when it dies.
+
+#### Thoughts on the deception of the bodily senses
+
+Socrates repeats multiple times in these dialogues that the bodily senses can be deceptive. As a philosopher, it is his duty to separate out these bodily desires in order to focus on the truth through channeling the soul. Socrates in this way is the progenitor to Immanuel Kant, and is also pretty much proven correct by modern neuroscience. His assertion that the mind is the cause of all things, and that the bodily senses may not be entirely truthful are reflected in how we now understand sight, hearing, etc as waves that trigger chemicals in the brain, and the brain constructs an image of the world through these chemicals. These senses can be deceptive as well and not reflect reality. It is amazing that Socrates was able to deduce this 2500 years ago.
+
+#### Thoughts on Buddhist influence
+
+In this dialogue, Socrates discusses the nature of the soul after death, and his view is that uncultivated souls are cursed to roam the earth, and reincarnate into animals, and the only way to be free from this cycle is through cultivation. This concept seems eerily similar to Buddhist and Hindu thought, and I believe there was an influence. The note on the book labeled this sort of thinking as Pythagorean, and I believe that Ancient Indian civilizations had the potential to interact with Ancient Greek civilizations, through the Persian Empire.
+
+#### Thoughts on influence on Christianity
+
+Platonic influence on Christianity is extremely obvious throughout this text. From Socrates' message of focusing not on the human body and materialism and instead towards cultivation of the soul, to his description of what basically sounds like heaven and hell, it is clear that the New Testament Authors of the 1st Century were informed by Platonic ideas.
+
+#### Thoughts on Socrates parallels with Jesus
+
+Beyond just the theological influence, I find a shockingly amount of parallels between the characters of Socrates and Jesus Christ. Tell me what this story reminds you of. The son of a stonemason preaches a message of focusing less on materialism and bodily pleasures and instead salvation through cultivation of the soul. This prophet rebukes several pharisees/wise men and makes them look foolish in comparison. They are then arrested and charged by their government, and the government let the people decide their fate, the very people they were trying to save, choose for them to die.
