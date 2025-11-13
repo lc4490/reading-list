@@ -145,8 +145,12 @@ export const READING_LIST: Book[] = [
     year: -385,
     genre: "philosophy",
     category: "greek",
+    done: true,
     notesPath: "/notes/symposium.md",
-    done: false,
+    cover: "/symposium.jpg",
+    link: "https://www.amazon.com/Symposium-Oxford-Worlds-Classics-Plato/dp/0199540195",
+    spine: "/symposium-spine.jpg",
+    rating: 4.5,
   },
   {
     id: "plato-republic",
