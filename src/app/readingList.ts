@@ -203,7 +203,7 @@ export const READING_LIST: Book[] = [
   // HISTORY OF EARLY REPUBLIC
   {
     id: "livy-histories",
-    title: "History of Rome (Books I-V)",
+    title: "History of Rome",
     author: "Livy",
     year: -293,
     genre: "history",
@@ -406,6 +406,16 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
+    id: "eusebius-constantine",
+    title: "The Life of Constantine",
+    author: "Eusebius",
+    year: 340,
+    genre: "history",
+    category: "christian",
+
+    done: false,
+  },
+  {
     id: "later-roman-empire",
     title: "The Later Roman Empire",
     author: "Ammianus Marcellinus",
@@ -437,16 +447,16 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   // POST-AUGUSTIAN HISTORY
-  {
-    id: "secret-history",
-    title: "The Secret History",
-    author: "Procopius",
-    year: 550,
-    genre: "history",
-    category: "christian",
+  // {
+  //   id: "secret-history",
+  //   title: "The Secret History",
+  //   author: "Procopius",
+  //   year: 550,
+  //   genre: "history",
+  //   category: "christian",
 
-    done: false,
-  },
+  //   done: false,
+  // },
   // --- ISLAM ---
   {
     id: "quran",
