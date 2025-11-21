@@ -220,15 +220,6 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
-    id: "plutarch-1",
-    title: "Plutarch's Lives Volume 1",
-    author: "Plutarch",
-    year: 100,
-    genre: "history",
-    category: "roman",
-    done: false,
-  },
-  {
     id: "sallust-catiline",
     title: "Catiline's War, The Jugurthine War, Histories",
     author: "Sallust",
@@ -245,6 +236,15 @@ export const READING_LIST: Book[] = [
     genre: "history",
     category: "roman",
 
+    done: false,
+  },
+  {
+    id: "plutarch-1",
+    title: "Plutarch's Lives Volume 1",
+    author: "Plutarch",
+    year: 100,
+    genre: "history",
+    category: "roman",
     done: false,
   },
   {
