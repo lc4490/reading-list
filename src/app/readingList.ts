@@ -238,6 +238,16 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
+    id: "appian-wars",
+    title: "Civil Wars",
+    author: "Appian",
+    year: 150,
+    genre: "history",
+    category: "roman",
+
+    done: false,
+  },
+  {
     id: "plutarch-2",
     title: "Plutarch's Lives Volume 2",
     author: "Plutarch",
@@ -317,16 +327,6 @@ export const READING_LIST: Book[] = [
   // },
 
   // ROMAN IMPERIAL HISTORY
-  // {
-  //   id: "appian-wars",
-  //   title: "Civil Wars",
-  //   author: "Appian",
-  //   year: 150,
-  //   genre: "history",
-  //   category: "roman",
-
-  //   done: false,
-  // },
   {
     id: "tacitus-annals",
     title: "The Annals",
