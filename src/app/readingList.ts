@@ -160,6 +160,9 @@ export const READING_LIST: Book[] = [
     genre: "philosophy",
     category: "greek",
     done: false,
+    // notesPath: "/notes/republic.md",
+    cover: "/covers/republic.jpg",
+    link: "https://www.amazon.com/Republic-Plato/dp/0141442433/",
   },
   {
     id: "aristotle-ethics",
