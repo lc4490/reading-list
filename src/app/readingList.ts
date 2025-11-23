@@ -174,6 +174,7 @@ export const READING_LIST: Book[] = [
     genre: "philosophy",
     category: "greek",
     done: false,
+    cover: "/covers/ethics.jpg",
   },
   {
     id: "aristotle-politics",
