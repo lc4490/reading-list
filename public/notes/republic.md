@@ -1,11 +1,51 @@
 #### General Thoughts
 
-#### Thoughts on the arguments for injustice
+The Republic is widely known as Plato’s masterwork, and rightfully so. Although it was a very difficult read, I believe it was thoroughly worthwhile. If Plato’s Symposium sought to ask the question: “what is love?”, the Republic seeks to answer the question: “what is justice?”. I don’t really take any of the political philosophy seriously, first of all because it was written 2500 years ago, but second of all because I believe this book was not intended to be a treatise on government. The political philosophy from this book stems from Plato’s metaphor for “the ideal city”, when he uses it to explore the nature of the indiviudal. I think the primary purpose of the book is to assert that justice is always superior to injustice, because justice itself is maintenance and care for the soul.
 
-#### Thoughts on the original city
+#### Thoughts on the initial argument
 
-#### Thoughts on Plato's "Political Philosophy"
+The discussion around justice begins when Socrates asks Cephalus, an old man, what he finds comforting about old age. Cephalus says that it his wealth that grants him comfort, as because of it, he doesn’t have to worry about unpaid debts or offering temple sacrifices, which is his definition of justice. Socrates, being an asshole, proceeds to grill this old man about his definition of justice, and Cephalus’ son, Polemarchus steps in. Polemarchus offers the initial definition of justice: giving onto others what they deserve. For example, bringing benefit to one’s friends and harm to one’s enemies. Socrates points out that people can make errors in judgement, and may have bad men as friends and good men as enemies. This would theoretically cause someone to bring harm to good people, who Socrates says cannot be just. Socrates further argues that a just man shouldn’t harm anyone, as a horse does not become a better horse if harmed, and so harm is not conducive to making bad people good.
 
-#### Thoughts on the five cities
+#### Thoughts on Thrasymachus
 
-#### Thoughts on Plato's contempt for poetry
+At this point in the conversation, Thrasymachus interrupts. Thrasymachus is a philosopher’s worst nightmare, as he is clearly just arguing to argue, and not to find common ground. He offers a new definition of justice: to obey the interests of the strong. His argument is not very solid and is easily taken apart, but he pivots to stranger and stranger arguments for the sake of being antagonistic. He does offer the concept that injustice is superior to justice.
+
+#### Thoughts on the argument for injustice
+
+Although Thrasymachus offers weak arguments for injustice, Glaucon now steps in to play devil’s advocate. He presents the argument that there are three types of good: the first being things that are pleasant within themselves, such as good food, the second being things that lead to pleasant things, like exercise or making money, and the third being what is both. Glaucon argues that justice is the second, that it is only good for people because of what it brings, and if nobody was watching, everyone would choose injustice. If a person was theoretically so unjust that they were able to hide their injustice perfectly, they would cheat and lie in every aspect of their life, make tons of money, gain tons of honor, and gain favor with the gods through sacrifice, and thus never face any consequences for their injustice. Glaucon challenges Socrates to show why justice is the third kind of good, if injustice is so profitable.
+
+#### Thoughts on the ancestor of Gyges the Lydian
+
+Glaucon raises the example of the ancestor of Gyges the Lydian to prove his point about injustice. He said that this ancestor once found a ring on a corpse that could turn him invisible, and thus he was able to commit injustice without ever getting caught, eventually using it to usurp the crown. An interesting allusion because we know from Herodotus’ Histories that Gyges was a bodyguard of the king of Lydia that watched the queen while she was undressed, and also killed the king to take his throne.
+
+#### Thoughts on the city of pigs
+
+To answer Glaucon, Socrates offers to create a metaphor, to liken people to cities. He would craft a just city and an unjust city, and liken it to the corresponding people. He begins by creating a simple city of only a few people, that satisfy just the basic needs of a city such as clothing, food, etc. Glaucon says this city may as well be for pigs, which forces Socrates to add more people to the city and expand it, eventually needing to have an entire army. Unfortunately, the argument continues on the basis that this city is the just city, but it is interesting to think about Socrates’ initial conception of a city, and how it represents justice. Maybe the truly just person is a minimalist, focusing just on what is needed and minding his own business.
+
+#### Thoughts on Socrates/Plato’s political compass
+
+Due to Glaucon’s demands, Socrates is forced to expand the city, which eventually warrants the need for a soldier-class, which he calls “guards”. Most of the discussion is now centered on the upbringing of these guards. This is where Socrates starts to lose me in terms of the political ideology, but I think it makes sense in metaphorical terms. Socrates suggests these guards must be selectively bred (eugenicist), share property (communist), co-ed (feminist), and must have total control of the people (elitism). They and the rest of the population must be brainwashed through censorship of literature, and state-mandated stories.
+
+I don’t think Socrates really believes that cities should be ran this way or that people should live this way. If we consider Socrates’ sentiments in previous dialogues like Euthyphro, he believes that the best thing anyone can do is seek the truth, which makes it strange for him to suggest that the best form of government should run on lying to the people. Even in this dialogue itself, the conclusion is for people to live in a way that is best for the soul, in which I do not think his suggested form of government would be ideal.
+
+If we consider that the city, and by extension, the guards are just a metaphor for the individual, then I think it makes a lot more sense. Although I would disagree with the assertion that there are “better” people and thus they would be more suited to rule, I do believe that there are better and worse parts of ourselves, and that we should allow the better parts of us to dictate our actions, without abandoning the rest of it either.
+
+#### Thoughts on Socrates/Plato’s contempt for poetry
+
+Socrates has a really strange hatred of poetry, in which I feel obliged to come to its defense. Socrates believes that poetry is untruthful, and portraying gods and heroes in negative lights may have harmful impacts on society. I disagree, on account that I agree with the Socrates from Euthyphro, that all mankind was granted with the ability to reason, and it is through the practice of reason that we can come closer to the truth. Poetry provides that necessary stimulation of the brain, since it isn’t truth. It allows for us to absorb concepts through metaphors. Socrates even creates his own myths, of the cave and of the myth of Er, so I’m not sure if he is being truthful with his hatred of poetry.
+
+#### Thoughts on Socrates/Plato’s influence on Augustus
+
+I believe Augustus was inspired by Plato’s Republic when he constructed the new government for the Roman Empire. First, he created a new myth to replace Homer, The Aeneid, in order to feed the people myth as propaganda. He also selected his successor through observing them throughout childhood, instead of the traditional hereditary succession. I believe that he viewed himself as the philosopher-king, the ultimate realization of Socrates’ vision.
+
+#### Thoughts on the comparison of types of governments
+
+Digressions aside, once Socrates has finally completed his outline of the just city, we can compare justice and injustice once again. His city pretty much amounts to an aristocracy, which he claims is the best form of government, because the ruling class are the “best parts of society”, and thus will make the best decisions for it. He names other forms of government, timocracy, oligarchy, democracy, and tyranny. It was chilling how similarly his description of oligarchy matched up with modern day america, and also how his description of a transition from democracy to tyrnany mirrored Trump’s ascension to power. Socrates concludes that the tyrannical government is the worst government, because it is self-destructive, all consuming, and most like slavery. Thus, even though it may seem to have lots of riches from the outside, the tyrannical state is not a state that is good to its citizens, and will eventually consume and consume until it implodes. Socrates says this is like the unjust person Glaucon referred to at the beginning, although they may seem to have lots of material things, their soul will be unhealthy and at war with itself. Whereas the aristocratic, or just person, has the best parts of itself in charge, and is able to satisfy each part of the city/person but not overfeed it and let it control them.
+
+#### Thoughts on the Allegory of the Cave
+
+The Allegory of the Cave is perhaps the most famous part of Plato’s Republic, so I don’t have much to say about it. It seems to have created a historical archetype, of a savior trying to convince people that they are living in a false reality, and that there is more to life than what it seems, only to not be believed.
+
+#### Thoughts on the Allegory of the Cave, Myth of Er and its inspiration on Christianity
+
+Ironic from someone who hates myths and poetry so much that Socrates gives us two myths to end the book. First was the Allegory of the Cave, the most famous part of Plato’s Republic, very likely inspired from the circumstances of the historical Socrates, and second being the Myth of Er. The Myth of Er is about a man named Er who seemingly died in battle, but is revived on the funeral pyre, and tells the story of what he saw from the afterlife. It is a striking cosmology of heaven and hell, incredibly similar to modern-day Christian ideas. Glaucon mentions in the beginning that the unjust man can bribe his way to appease the gods, but there is no such bribing in the Myth of Er. Like Christianity, the afterlife is not determined by your ritual sacrifices, but by the strength of your character and how you lived your life. Souls that were just ascended to the sky for 1000 years, and souls that were unjust descended into the underworld for 1000 years. The souls return to the middle in order to be reborn into bodies again on Earth. Er describes the souls that came from the sky as happy and satiated, whereas the souls from the underworld were in pain, with the worst of them locked in forever (guarded by proto-demonic creatures). The souls drew lots to be reborn into earth. Aside from the reincarnation part, this sounds very eerily similar to Christian cosmology, which makes sense because Christianity was born through the intersection of Greek, Persian, and Jewish culture.
