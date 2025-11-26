@@ -207,43 +207,63 @@ export const READING_LIST: Book[] = [
 
   // --- roman ---
   // HISTORY OF EARLY REPUBLIC
+
+  // ROMAN IMPERIAL LITERATURE
   {
-    id: "livy-histories",
-    title: "History of Rome",
-    author: "Livy",
-    year: -293,
-    genre: "history",
-    category: "roman",
-    done: false,
-  },
-  {
-    id: "polybius-histories",
-    title: "Histories",
-    author: "Polybius",
-    year: -150,
-    genre: "history",
-    category: "roman",
-    done: false,
-  },
-  {
-    id: "sallust-catiline",
-    title: "Catiline's War, The Jugurthine War, Histories",
-    author: "Sallust",
-    year: -40,
-    genre: "history",
-    category: "roman",
-    done: false,
-  },
-  {
-    id: "appian-wars",
-    title: "Civil Wars",
-    author: "Appian",
-    year: 150,
-    genre: "history",
+    id: "virgil-aeneid",
+    title: "The Aeneid",
+    author: "Virgil (translated by Scott McGill)",
+    year: -19,
+    genre: "literature",
     category: "roman",
 
     done: false,
   },
+  {
+    id: "horace-odes",
+    title: "The Odes",
+    author: "Horace",
+    year: -13,
+    genre: "literature",
+    category: "roman",
+    done: false,
+  },
+  {
+    id: "ovid-metamorphoses",
+    title: "Metamorphoses",
+    author: "Ovid",
+    year: 8,
+    genre: "literature",
+    category: "roman",
+    done: false,
+  },
+  {
+    id: "livy-histories",
+    title: "History of Rome",
+    author: "Livy",
+    year: 9,
+    genre: "literature",
+    category: "roman",
+    done: false,
+  },
+  // {
+  //   id: "polybius-histories",
+  //   title: "Histories",
+  //   author: "Polybius",
+  //   year: -118,
+  //   genre: "history",
+  //   category: "roman",
+  //   done: false,
+  // },
+  // {
+  //   id: "sallust-catiline",
+  //   title: "Catiline's War, The Jugurthine War, Histories",
+  //   author: "Sallust",
+  //   year: -35,
+  //   genre: "history",
+  //   category: "roman",
+  //   done: false,
+  // },
   {
     id: "plutarch-1",
     title: "Plutarch's Lives Volume 1",
@@ -262,6 +282,16 @@ export const READING_LIST: Book[] = [
     category: "roman",
     done: false,
   },
+  // {
+  //   id: "appian-wars",
+  //   title: "Civil Wars",
+  //   author: "Appian",
+  //   year: 150,
+  //   genre: "history",
+  //   category: "roman",
+
+  //   done: false,
+  // },
   // RISE OF THE EMPIRE
   // {
   //   id: "caesar-gallic",
@@ -292,36 +322,6 @@ export const READING_LIST: Book[] = [
 
   //   done: false,
   // },
-  // ROMAN IMPERIAL LITERATURE
-  {
-    id: "virgil-aeneid",
-    title: "The Aeneid",
-    author: "Virgil (translated by Scott McGill)",
-    year: -19,
-    genre: "literature",
-    category: "roman",
-
-    done: false,
-  },
-  {
-    id: "horace-odes",
-    title: "The Odes",
-    author: "Horace",
-    year: -13,
-    genre: "literature",
-    category: "roman",
-    done: false,
-  },
-
-  {
-    id: "ovid-metamorphoses",
-    title: "Metamorphoses",
-    author: "Ovid",
-    year: 8,
-    genre: "literature",
-    category: "roman",
-    done: false,
-  },
   // {
   //   id: "lucan-pharsalia",
   //   title: "Pharsalia",
@@ -374,26 +374,26 @@ export const READING_LIST: Book[] = [
   //   done: false,
   // },
   // ROMAN IMPERIAL PHILOSOPHY
-  {
-    id: "seneca-letters",
-    title: "Letters",
-    author: "Seneca",
-    year: 65,
-    genre: "philosophy",
-    category: "roman",
+  // {
+  //   id: "seneca-letters",
+  //   title: "Letters",
+  //   author: "Seneca",
+  //   year: 65,
+  //   genre: "philosophy",
+  //   category: "roman",
 
-    done: false,
-  },
-  {
-    id: "epictetus-discourses",
-    title: "Discourses",
-    author: "Epictetus",
-    year: 108,
-    genre: "philosophy",
-    category: "roman",
+  //   done: false,
+  // },
+  // {
+  //   id: "epictetus-discourses",
+  //   title: "Discourses",
+  //   author: "Epictetus",
+  //   year: 108,
+  //   genre: "philosophy",
+  //   category: "roman",
 
-    done: false,
-  },
+  //   done: false,
+  // },
   {
     id: "marcus-meditations",
     title: "Meditations",
