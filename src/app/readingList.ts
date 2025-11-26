@@ -363,16 +363,16 @@ export const READING_LIST: Book[] = [
 
     done: false,
   },
-  // {
-  //   id: "lucretius-nature",
-  //   title: "On the Nature of Things",
-  //   author: "Lucretius",
-  //   year: -55,
-  //   genre: "philosophy",
-  //   category: "roman",
+  {
+    id: "lucretius-nature",
+    title: "On the Nature of Things",
+    author: "Lucretius",
+    year: -55,
+    genre: "philosophy",
+    category: "roman",
 
-  //   done: false,
-  // },
+    done: false,
+  },
   // ROMAN IMPERIAL PHILOSOPHY
   // {
   //   id: "seneca-letters",
@@ -384,16 +384,16 @@ export const READING_LIST: Book[] = [
 
   //   done: false,
   // },
-  // {
-  //   id: "epictetus-discourses",
-  //   title: "Discourses",
-  //   author: "Epictetus",
-  //   year: 108,
-  //   genre: "philosophy",
-  //   category: "roman",
+  {
+    id: "epictetus-discourses",
+    title: "Discourses",
+    author: "Epictetus",
+    year: 108,
+    genre: "philosophy",
+    category: "roman",
 
-  //   done: false,
-  // },
+    done: false,
+  },
   {
     id: "marcus-meditations",
     title: "Meditations",
