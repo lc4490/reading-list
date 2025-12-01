@@ -212,7 +212,7 @@ export const READING_LIST: Book[] = [
   {
     id: "virgil-aeneid",
     title: "The Aeneid",
-    author: "Virgil (translated by Scott McGill)",
+    author: "Virgil",
     year: -19,
     genre: "literature",
     category: "roman",
