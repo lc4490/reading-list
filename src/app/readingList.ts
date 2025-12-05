@@ -173,8 +173,12 @@ export const READING_LIST: Book[] = [
     year: -340,
     genre: "philosophy",
     category: "greek",
-    done: false,
+    done: true,
+    notesPath: "/notes/ethics.md",
     cover: "/covers/ethics.jpg",
+    link: "https://www.amazon.com/Nicomachean-Ethics-Penguin-Classics/dp/0140455477",
+    spine: "/spines/ethics-spine.jpg",
+    rating: 4.5,
   },
   {
     id: "aristotle-politics",
@@ -184,6 +188,7 @@ export const READING_LIST: Book[] = [
     genre: "philosophy",
     category: "greek",
     done: false,
+    cover: "/covers/politics.md",
   },
   // COLLAPSE INTO MACEDON
   // {
@@ -335,7 +340,7 @@ export const READING_LIST: Book[] = [
   // ROMAN IMPERIAL HISTORY
   {
     id: "tacitus-annals",
-    title: "The Annals",
+    title: "The Annals and The Histories",
     author: "Tacitus",
     year: 110,
     genre: "history",
@@ -343,16 +348,16 @@ export const READING_LIST: Book[] = [
 
     done: false,
   },
-  {
-    id: "tacitus-histories",
-    title: "The Histories",
-    author: "Tacitus",
-    year: 105,
-    genre: "history",
-    category: "roman",
+  // {
+  //   id: "tacitus-histories",
+  //   title: "The Histories",
+  //   author: "Tacitus",
+  //   year: 105,
+  //   genre: "history",
+  //   category: "roman",
 
-    done: false,
-  },
+  //   done: false,
+  // },
   {
     id: "josephus-jewish-war",
     title: "The Jewish War",
@@ -578,7 +583,7 @@ export const READING_LIST: Book[] = [
   },
   {
     id: "machiavelli-prince",
-    title: "The Prince",
+    title: "The Prince and Discourses on Livy",
     author: "Niccolò Machiavelli",
     year: 1513,
     genre: "philosophy",
