@@ -209,7 +209,6 @@ export const READING_LIST: Book[] = [
   //   category: "greek",
   //   done: false,
   // },
-
   // --- roman ---
   // HISTORY OF EARLY REPUBLIC
 
