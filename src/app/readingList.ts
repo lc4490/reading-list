@@ -211,7 +211,6 @@ export const READING_LIST: Book[] = [
   // },
   // --- roman ---
   // HISTORY OF EARLY REPUBLIC
-
   // ROMAN IMPERIAL LITERATURE
   {
     id: "virgil-aeneid",
