@@ -190,7 +190,25 @@ export const READING_LIST: Book[] = [
     done: false,
     cover: "/covers/politics.md",
   },
-  // COLLAPSE INTO MACEDON
+  // HELLENISTIC BRIDGE
+  {
+    id: "diodorus-history",
+    title: "Bibliotheca Historica",
+    author: "Diodorus Siculus",
+    year: -30,
+    genre: "history",
+    category: "greek",
+    done: false,
+  },
+  {
+    id: "polybius-histories",
+    title: "Histories",
+    author: "Polybius",
+    year: -118,
+    genre: "history",
+    category: "greek",
+    done: false,
+  },
   // {
   //   id: "demosthenes-philippics",
   //   title: "Philippics",
