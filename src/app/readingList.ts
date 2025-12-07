@@ -490,16 +490,16 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   // POST-AUGUSTIAN HISTORY
-  // {
-  //   id: "secret-history",
-  //   title: "The Secret History",
-  //   author: "Procopius",
-  //   year: 550,
-  //   genre: "history",
-  //   category: "christian",
+  {
+    id: "secret-history",
+    title: "The Secret History",
+    author: "Procopius",
+    year: 550,
+    genre: "history",
+    category: "christian",
 
-  //   done: false,
-  // },
+    done: false,
+  },
   // --- ISLAM ---
   {
     id: "quran",
