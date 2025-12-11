@@ -317,7 +317,7 @@ export default function ReadingListApp() {
         <Divider sx={{ mb: 0 }} />
 
         {/* books */}
-        <Stack spacing={0.5}>
+        <Stack spacing={{ xs: 0, md: 0.5 }}>
           {filtered.map((book) =>
             book.author === "title" ? (
               <Box key={book.id}>
