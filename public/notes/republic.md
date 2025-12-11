@@ -53,3 +53,7 @@ We as people often recoil at the sight of successful, unjust people. We want to 
 #### Thoughts on the metaphor of the men on the boat:
 
 To describe how societies are lead, Plato raises a metaphor of people on a boat. The captain is blind and dumb, so the other people on the boat debate and bicker over who should steer it. The person who ends up steering it will not be the one who is most qualified to steer it, but the one who is best at convincing others that he should steer it. The truly most qualified person to steer the boat is the guy in the corner staring at the stars, but everyone else thinks he’s crazy.
+
+#### Thoughts on pleasure and pain
+
+Plato suggests that pleasure and pain can disguise themselves as the abscence of the other. For example, imagine there are three levels of existence, pleasure, neutral, and pain. If someone goes from pain to neutral, they may feel pleasure, but it is in reality just a cessation of pain. To try this yourself, shove the nail on your thumb into your index finger for five seconds with enough force to feel a slight pain. Once you release it, it feels sort of good. This is the way I think about money. Money can buy necessities such as food, and thus can be cessation of pains such as hunger. But an excess of a cessation of pain is nothing, you can only remove the nail from your hand once.
