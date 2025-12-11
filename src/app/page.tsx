@@ -373,7 +373,7 @@ export default function ReadingListApp() {
                         // minHeight: { xs: "30px", md: "80px" },
                         objectPosition: "0% center",
                         objectFit: "cover",
-                        borderRadius: 3,
+                        borderRadius: { xs: 1, md: 2 },
                         position: "relative",
                         top: 0,
                         left: 0,
