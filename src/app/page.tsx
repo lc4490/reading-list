@@ -370,7 +370,7 @@ export default function ReadingListApp() {
                       sx={{
                         width: "100%",
                         height: "auto",
-                        minHeight: { xs: "30px", md: "80px" },
+                        // minHeight: { xs: "30px", md: "80px" },
                         objectPosition: "0% center",
                         objectFit: "cover",
                         borderRadius: 3,
@@ -406,7 +406,7 @@ export default function ReadingListApp() {
                           // p: "2px",
                         }}
                       /> */}
-                      <Stack
+                      {/* <Stack
                         flexDirection={{ xs: "row", md: "column" }}
                         gap={{ xs: 0.5, md: 1 }}
                         marginRight={{ xs: 1, md: 2.5 }}
@@ -460,7 +460,7 @@ export default function ReadingListApp() {
                             fontWeight: 600,
                           }}
                         />
-                      </Stack>
+                      </Stack> */}
                     </Box>
                   </>
                 ) : (
@@ -470,6 +470,7 @@ export default function ReadingListApp() {
                       flexDirection="row"
                       alignItems="center"
                       width={"250px"}
+                      minHeight={{ xs: "30px", md: "80px" }}
                       sx={{
                         overflowX: "auto", // enables horizontal scrolling
                         whiteSpace: "nowrap", // keep text on one line
@@ -502,7 +503,7 @@ export default function ReadingListApp() {
                           : ""}
                       </Typography>
                     </Box>
-                    <Stack
+                    {/* <Stack
                       direction={{ xs: "row", md: "column" }}
                       spacing={{ xs: 0.5, md: 1 }}
                       // marginRight={{ xs: 1, md: 0 }}
@@ -555,7 +556,7 @@ export default function ReadingListApp() {
                           fontWeight: 600,
                         }}
                       />
-                    </Stack>
+                    </Stack> */}
                   </Box>
                 )}
               </Box>
