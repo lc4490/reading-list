@@ -448,16 +448,16 @@ export const READING_LIST: Book[] = [
 
     done: false,
   },
-  {
-    id: "eusebius-constantine",
-    title: "The Life of Constantine",
-    author: "Eusebius",
-    year: 340,
-    genre: "history",
-    category: "christian",
+  // {
+  //   id: "eusebius-constantine",
+  //   title: "The Life of Constantine",
+  //   author: "Eusebius",
+  //   year: 340,
+  //   genre: "history",
+  //   category: "christian",
 
-    done: false,
-  },
+  //   done: false,
+  // },
   {
     id: "later-roman-empire",
     title: "The Later Roman Empire",
