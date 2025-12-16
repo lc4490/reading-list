@@ -1,10 +1,6 @@
-### Summary
+### General Thoughts
 
 An Oresteia tells the story of the cycle of revenge of the royal family of Argos. It begins with Agamemnon’s triumphant return from his victory in the Trojan war. He is immediately slain by his wife Clytemnestra, as revenge for their daughter Iphigenia. On their way to avenge the slight against his brother Menalaus, due to the abduction of his wife, Helen, by Paris Alexander of Troy, the Greek fleet was trapped at sea by strong gusts of wind. On the advice of a fortune teller, Agamemnon decides to sacrifice his beloved daughter Iphigenia, which clears the winds and allows the Greek fleet to sail to Troy. As revenge, Clytemnestra killed Agamemnon as soon as he came home. As revenge for this, Agamemnon and Clytemnestra’s other children, Orestes and Elektra, kill their own mother. Now, the city of Argos calls for revenge against the siblings, holding a vote as to whether or not to stone them. Note that up to this point, the words of revenge and justice could easily be interchanged, which is the point of this story. The story sees how the idea of justice is ultimately corrupting, and the story ends with Orestes and Elektra using justice to justify their kidnapping and threatening of two innocent lives in order to escape judgement from the people of Argos for the murder of their mother.
-
-#### General thoughts
-
-Anne Carson did something really unique by taking one play from each Athenian playwright (Aeschylus’ Agamemnon, Sophocles’ Electra, Euripides’ Orestes) and crafting a cohesive story. This story dramatizes the contradictory nature of justice. Each act of violence is presented as just, yet only creates more violence. Agamemnon sacrifices Iphigenia, his daughter, in the name of justice for the common good -> Clytemnestra, Iphigenia's mother, murders Agamemnon in response to the death of her daughter -> Electra and Orestes, children of Agamemnon and Clytemnestra, murder Clytemnestra in response to the death of their father. As the cycle continues, Electra and Orestes descend into greater depravity, revealing that the desire for justice is indistinguishable from violence.
 
 #### Thoughts on how the three Athenian playwrights represent the rise, peak, and fall of Athenian society
 

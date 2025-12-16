@@ -1,10 +1,6 @@
-### Summary
+### General Thoughts
 
 Thucydides writes in The History of the Peloponnesian War the story of the endless ambition of the Athenian Empire. It begins with a psychological portrait of the Athenian psyche, risk-seeking and ambitious. These character traits lead them to prevail in the Greco-Persian War, earning most of the glory despite the destruction of their city, Athens. From this victory they established the Delian League, a mutual defense pact between the Greek city-states in order to defend each other from the Persian Empire. But as the tyranny of the Persian Empire faded, the tyranny of the Athenian Empire replaced it. Their ruthless expansion eventually forced the city-states of Greece to beg Sparta to oppose them. Although their risk-taking and ambitious nature initially favored them, the Athenian’s ambition ended up being their downfall, eventually taking on a risk too great, the invasion of Sicily. The very nature that granted them their empire ended up being what destroyed them. Another interesting note in this text is Pericles funeral oration. Most people think this is an ode to the greatness of democracy, but on closer inspection, it is a justification for imperialism. In the oration, Pericles declares the greatness of Athenian society, how its citizens were the most free of any other Greek city state, yet his conclusion is that they should take this freedom of theirs and oppress the freedom of others.
-
-#### General thoughts
-
-Although this text appears to just be a historical account of the Peloponnesian war between Athens and Sparta, I believe it is truly meant as a case study of the Athenian psyche. An exploration for how its risk-taking nature and endless ambition shape not only its own destiny but the world around it. Early in the book, Thucydides constructs a psychological portrait of the Athenian mind: fearless and never satiated. The rest of the book details the unfolding of the war, which sees these very qualities, which fuel Athenian greatness and threaten its neighbors, also ensure its self-destruction. The lesson here is that all Athenians, and those who bear similar mindsets cannot be allowed to exist, else endlessly threaten its neighbors and inevitably destroy itself.
 
 #### Thoughts on Thucydides’ writing style
 

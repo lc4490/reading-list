@@ -1,8 +1,8 @@
-### Summary
+### General Thoughts
 
 Xenophon writes in his Hellenika the story of the aftermath of war. It picks up right at the end of Thucydides’ narrative, and tells not only the end of the conflict between Sparta and Athens, but also the numerous wars following it. The end of the Peloponnesian War saw Sparta on top of the Greek world, only for the Athenians to regroup in a few years, alongside the Thebans to challenge Spartan hegemony. Even the Persian Empire was sending assistance to the Athenian-Theban alliance in order to destablize the region. These combined powers were able to defeat Sparta, leading to Thebes to assume the role of hegemon. This lead to Sparta and Athens now allying against and defeating Thebes. These wars resulted in the weakening of the entire Greek world, which set the perfect stage for Philip II of Macedon to sweep up the remains.
 
-#### General Thoughts
+#### Personal Thoughts
 
 Xenophon’s Hellenika or A History of My Times is the first semi-obscure work in my reading list. Xenophon himself is less famous compared to Homer, Herodotus, or Thucydides, and Hellenika is not even his most famous work (Anabasis). I was initially drawn to Hellenika due to the common belief that Thucydides’ work was unfinished, and that it was a near direct continuation of Thucydides. Since finishing Thucydides, I strongly disagree with this sentiment, as I wrote about in my notes on his work. That left me a little lost, with an already purchased copy of Hellenika sitting on my shelf. Upon reading Hellenika, I can say with certainty it was worthwhile. It slots in beautifully as the third installment in a “Greek History” trilogy alongside Herodotus and Thucydides. It can be framed like this: Herodotus shows the birth of the Greek world, Thucydides shows the conflict, and Xenophon shows the aftermath. Xenophon was also a student of Socrates, and Socrates influence is felt throughout this work. Xenophon chooses to focus more on virtue, of both the individual and the state as a whole, compared to Herodotus and Thucydides, which was a perfect appetizer for Socrates’ heavy emphasis on virtue.
 

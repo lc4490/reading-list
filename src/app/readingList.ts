@@ -187,8 +187,12 @@ export const READING_LIST: Book[] = [
     year: -330,
     genre: "philosophy",
     category: "greek",
-    done: false,
-    cover: "/covers/politics.md",
+    done: true,
+    notesPath: "/notes/politics.md",
+    cover: "/covers/politics.jpg",
+    link: "https://www.amazon.com/Politics-Penguin-Classics-Aristotle/dp/0140444211/",
+    spine: "/spines/politics-spine.jpg",
+    rating: 4.5,
   },
   // HELLENISTIC BRIDGE
   {
@@ -265,15 +269,6 @@ export const READING_LIST: Book[] = [
     category: "roman",
     done: false,
   },
-  // {
-  //   id: "polybius-histories",
-  //   title: "Histories",
-  //   author: "Polybius",
-  //   year: -118,
-  //   genre: "history",
-  //   category: "roman",
-  //   done: false,
-  // },
   // {
   //   id: "sallust-catiline",
   //   title: "Catiline's War, The Jugurthine War, Histories",
