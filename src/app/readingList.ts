@@ -202,6 +202,7 @@ export const READING_LIST: Book[] = [
     year: -30,
     genre: "history",
     category: "greek",
+    cover: "/covers/diodorus.jpg",
     done: false,
   },
   {
