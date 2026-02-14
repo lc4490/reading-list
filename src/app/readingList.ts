@@ -240,7 +240,7 @@ export const READING_LIST: Book[] = [
     year: -19,
     genre: "literature",
     category: "roman",
-
+    cover: "/covers/aeneid.jpg",
     done: false,
   },
   {
@@ -573,6 +573,16 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   {
+    id: "canterbury-tales",
+    title: "The Canterbury Tales",
+    author: "Geoffrey Chaucer",
+    year: 1400,
+    genre: "literature",
+    category: "renaissance",
+
+    done: false,
+  },
+  {
     id: "machiavelli-prince",
     title: "The Prince and Discourses on Livy",
     author: "Niccolò Machiavelli",
@@ -604,16 +614,16 @@ export const READING_LIST: Book[] = [
   },
 
   // SCIENTIFIC PHILOSOPHY
-  {
-    id: "bacon-atlantis",
-    title: "New Atlantis",
-    author: "Francis Bacon",
-    year: 1626,
-    genre: "literature",
-    category: "renaissance",
+  // {
+  //   id: "bacon-atlantis",
+  //   title: "New Atlantis",
+  //   author: "Francis Bacon",
+  //   year: 1626,
+  //   genre: "literature",
+  //   category: "renaissance",
 
-    done: false,
-  },
+  //   done: false,
+  // },
   {
     id: "descartes-meditations",
     title: "Meditations on First Philosophy",

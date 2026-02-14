@@ -344,8 +344,8 @@ export default function ReadingListApp() {
                   border: book.spine
                     ? "none"
                     : book.cover
-                    ? "1px solid white"
-                    : "1px solid rgba(255,255,255,0.08)",
+                      ? "1px solid white"
+                      : "1px solid rgba(255,255,255,0.08)",
                   transition:
                     "transform .18s ease, background .18s ease, border-color .18s ease",
                   "&:hover": {
@@ -504,7 +504,7 @@ export default function ReadingListApp() {
                           : ""}
                       </Typography>
                     </Box>
-                    {/* <Stack
+                    <Stack
                       direction={{ xs: "row", md: "column" }}
                       spacing={{ xs: 0.5, md: 1 }}
                       // marginRight={{ xs: 1, md: 0 }}
@@ -557,11 +557,11 @@ export default function ReadingListApp() {
                           fontWeight: 600,
                         }}
                       />
-                    </Stack> */}
+                    </Stack>
                   </Box>
                 )}
               </Box>
-            )
+            ),
           )}
         </Stack>
 
