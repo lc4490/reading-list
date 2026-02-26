@@ -474,16 +474,16 @@ export const READING_LIST: Book[] = [
 
   //   done: false,
   // },
-  {
-    id: "later-roman-empire",
-    title: "The Later Roman Empire",
-    author: "Ammianus Marcellinus",
-    year: 390,
-    genre: "history",
-    category: "christian",
+  // {
+  //   id: "later-roman-empire",
+  //   title: "The Later Roman Empire",
+  //   author: "Ammianus Marcellinus",
+  //   year: 390,
+  //   genre: "history",
+  //   category: "christian",
 
-    done: false,
-  },
+  //   done: false,
+  // },
   // AUGUSTINE PHILOSOPHY
   {
     id: "augustine-confessions",
@@ -506,16 +506,16 @@ export const READING_LIST: Book[] = [
     done: false,
   },
   // POST-AUGUSTIAN HISTORY
-  {
-    id: "secret-history",
-    title: "The Secret History",
-    author: "Procopius",
-    year: 550,
-    genre: "history",
-    category: "christian",
+  // {
+  //   id: "secret-history",
+  //   title: "The Secret History",
+  //   author: "Procopius",
+  //   year: 550,
+  //   genre: "history",
+  //   category: "christian",
 
-    done: false,
-  },
+  //   done: false,
+  // },
   // --- ISLAM ---
   {
     id: "quran",
