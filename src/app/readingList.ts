@@ -254,8 +254,12 @@ export const READING_LIST: Book[] = [
     year: -13,
     genre: "literature",
     category: "roman",
-    done: false,
+    done: true,
+    notesPath: "/notes/odes.md",
     cover: "/covers/odes.jpg",
+    link: "https://www.amazon.com/Odes-Horace/dp/0374525722/",
+    spine: "/spines/odes-spine.jpg",
+    rating: 4.5,
   },
   {
     id: "ovid-metamorphoses",
