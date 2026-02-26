@@ -29,7 +29,7 @@ export const READING_LIST: Book[] = [
     done: true,
     cover: "/covers/iliad.jpeg",
     link: "https://www.amazon.com/Iliad-Homer/dp/1324001801",
-    spine: "/spines/iliad-spine.jpg",
+    spine: "/spines/iliad-spine.png",
     rating: 5,
   },
   {
@@ -258,7 +258,7 @@ export const READING_LIST: Book[] = [
     notesPath: "/notes/odes.md",
     cover: "/covers/odes.jpg",
     link: "https://www.amazon.com/Odes-Horace/dp/0374525722/",
-    spine: "/spines/odes-spine.jpg",
+    spine: "/spines/odes-spine.png",
     rating: 4.5,
   },
   {
