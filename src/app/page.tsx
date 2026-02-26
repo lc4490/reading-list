@@ -198,7 +198,10 @@ export default function ReadingListApp() {
           flexDirection: "row",
         }}
       >
-        <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
+        <Typography
+          variant="h6"
+          sx={{ flexGrow: 1, fontWeight: 700, color: "#fff" }}
+        >
           {"Leo's Reading List"}
         </Typography>
         <Button
@@ -234,6 +237,7 @@ export default function ReadingListApp() {
                     display: "block",
                     // mb: 0.5,
                     fontWeight: "600",
+                    color: "#fff",
                     // paddingX: 2,
                   }}
                 >
@@ -277,6 +281,7 @@ export default function ReadingListApp() {
                     // mb: 0.5,
                     fontWeight: "600",
                     // paddingX: 2,
+                    color: "#fff",
                   }}
                 >
                   Category:
