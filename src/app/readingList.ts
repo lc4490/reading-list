@@ -240,8 +240,12 @@ export const READING_LIST: Book[] = [
     year: -19,
     genre: "literature",
     category: "roman",
+    done: true,
+    notesPath: "/notes/aeneid.md",
     cover: "/covers/aeneid.jpg",
-    done: false,
+    link: "https://www.amazon.com/Aeneid-Virgil/dp/1324096438/",
+    spine: "/spines/aeneid-spine.jpg",
+    rating: 4.5,
   },
   {
     id: "horace-odes",
