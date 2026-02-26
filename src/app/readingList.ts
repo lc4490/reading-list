@@ -410,6 +410,16 @@ export const READING_LIST: Book[] = [
 
     done: false,
   },
+  {
+    id: "plotinus-enneads",
+    title: "The Enneads",
+    author: "Plotinus",
+    year: 270,
+    genre: "philosophy",
+    category: "roman",
+
+    done: false,
+  },
 
   // --- Christian ---
   // BIBLES
