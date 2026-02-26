@@ -255,6 +255,7 @@ export const READING_LIST: Book[] = [
     genre: "literature",
     category: "roman",
     done: false,
+    cover: "/covers/odes.jpg",
   },
   {
     id: "ovid-metamorphoses",
