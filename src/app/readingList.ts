@@ -1,24 +1,9 @@
-type Book = {
-  id: string;
-  title: string;
-  author: string;
-  translation?: string;
-  year: number;
-  genre: string;
-  category: string;
-  notesPath?: string;
-  done?: boolean;
-  cover?: string;
-  link?: string;
-  spine?: string;
-  rating?: number;
-};
+import { Book } from "./book";
 
 export const READING_LIST: Book[] = [
   // --- greek ---
   // LITERATURE AND MYTHOLOGY
   {
-    id: "homer-iliad",
     title: "The Iliad",
     author: "Homer",
     translation: "(translated by Emily Wilson)",
@@ -33,7 +18,6 @@ export const READING_LIST: Book[] = [
     rating: 5,
   },
   {
-    id: "homer-odyssey",
     title: "The Odyssey",
     author: "Homer",
     translation: "(translated by Emily Wilson)",
@@ -48,7 +32,6 @@ export const READING_LIST: Book[] = [
     rating: 4,
   },
   {
-    id: "an-oresteia",
     title: "An Oresteia",
     author: "Aeschylus, Sophocles, Euripides",
     translation: "(translated by Anne Carson)",
@@ -63,7 +46,6 @@ export const READING_LIST: Book[] = [
     rating: 4.5,
   },
   {
-    id: "theogony-works",
     title: "Theogony & Works and Days",
     author: "Hesiod",
     translation: "(translated by M.L. West)",
@@ -79,7 +61,6 @@ export const READING_LIST: Book[] = [
   },
   // HISTORY
   {
-    id: "herodotus-histories",
     title: "The Histories",
     author: "Herodotus",
     translation: "(translated by Aubrey de Sélincourt)",
@@ -94,7 +75,6 @@ export const READING_LIST: Book[] = [
     rating: 3.5,
   },
   {
-    id: "thucydides-peloponnesian",
     title: "History of the Peloponnesian War",
     author: "Thucydides",
     translation: "(translated by Rex Warner)",
@@ -109,7 +89,6 @@ export const READING_LIST: Book[] = [
     rating: 5,
   },
   {
-    id: "xenophon-hellenika",
     title: "A History of My Times",
     author: "Xenophon",
     translation: "(translated by Rex Warner)",
@@ -125,7 +104,6 @@ export const READING_LIST: Book[] = [
   },
   // PHILOSOPHY
   {
-    id: "plato-last-days",
     title: "The Last Days of Socrates",
     author: "Plato",
     year: -399,
@@ -139,7 +117,6 @@ export const READING_LIST: Book[] = [
     rating: 5,
   },
   {
-    id: "plato-symposium",
     title: "The Symposium",
     author: "Plato",
     year: -385,
@@ -153,7 +130,6 @@ export const READING_LIST: Book[] = [
     rating: 4.5,
   },
   {
-    id: "plato-republic",
     title: "The Republic",
     author: "Plato",
     year: -375,
@@ -167,7 +143,6 @@ export const READING_LIST: Book[] = [
     rating: 5,
   },
   {
-    id: "aristotle-ethics",
     title: "Nichomachean Ethics",
     author: "Aristotle",
     year: -340,
@@ -181,7 +156,6 @@ export const READING_LIST: Book[] = [
     rating: 4.5,
   },
   {
-    id: "aristotle-politics",
     title: "Politics",
     author: "Aristotle",
     year: -330,
@@ -234,7 +208,6 @@ export const READING_LIST: Book[] = [
   // },
   // ROMAN IMPERIAL LITERATURE
   {
-    id: "virgil-aeneid",
     title: "The Aeneid",
     author: "Virgil",
     year: -19,
@@ -248,7 +221,6 @@ export const READING_LIST: Book[] = [
     rating: 4.5,
   },
   {
-    id: "horace-odes",
     title: "The Odes",
     author: "Horace",
     year: -13,
@@ -262,23 +234,20 @@ export const READING_LIST: Book[] = [
     rating: 4.5,
   },
   {
-    id: "ovid-metamorphoses",
     title: "Metamorphoses",
     author: "Ovid",
     year: 8,
     genre: "literature",
     category: "roman",
-    done: false,
     cover: "/covers/ovid.jpg",
+    link: "https://www.amazon.com/Metamorphoses-New-Translation-Ovid/dp/039332642X/",
   },
   {
-    id: "livy-histories",
-    title: "History of Rome",
+    title: "The Early History of Rome",
     author: "Livy",
     year: 9,
     genre: "literature",
     category: "roman",
-    done: false,
   },
   // {
   //   id: "sallust-catiline",
@@ -290,22 +259,18 @@ export const READING_LIST: Book[] = [
   //   done: false,
   // },
   {
-    id: "plutarch-1",
     title: "Plutarch's Lives Volume 1",
     author: "Plutarch",
     year: 100,
     genre: "history",
     category: "roman",
-    done: false,
   },
   {
-    id: "plutarch-2",
     title: "Plutarch's Lives Volume 2",
     author: "Plutarch",
     year: 100,
     genre: "history",
     category: "roman",
-    done: false,
   },
   // {
   //   id: "appian-wars",
@@ -340,14 +305,11 @@ export const READING_LIST: Book[] = [
 
   // ROMAN IMPERIAL HISTORY
   {
-    id: "tacitus-annals",
     title: "The Annals and The Histories",
     author: "Tacitus",
     year: 110,
     genre: "history",
     category: "roman",
-
-    done: false,
   },
   // {
   //   id: "tacitus-histories",
@@ -360,24 +322,18 @@ export const READING_LIST: Book[] = [
   //   done: false,
   // },
   {
-    id: "josephus-jewish-war",
     title: "The Jewish War",
     author: "Josephus",
     year: 75,
     genre: "history",
     category: "roman",
-
-    done: false,
   },
   {
-    id: "lucretius-nature",
     title: "On the Nature of Things",
     author: "Lucretius",
     year: -55,
     genre: "philosophy",
     category: "roman",
-
-    done: false,
   },
   // ROMAN IMPERIAL PHILOSOPHY
   // {
@@ -391,78 +347,57 @@ export const READING_LIST: Book[] = [
   //   done: false,
   // },
   {
-    id: "epictetus-discourses",
     title: "Discourses",
     author: "Epictetus",
     year: 108,
     genre: "philosophy",
     category: "roman",
-
-    done: false,
   },
   {
-    id: "marcus-meditations",
     title: "Meditations",
     author: "Marcus Aurelius",
     year: 170,
     genre: "philosophy",
     category: "roman",
-
-    done: false,
   },
   {
-    id: "plotinus-enneads",
     title: "The Enneads",
     author: "Plotinus",
     year: 270,
     genre: "philosophy",
     category: "roman",
-
-    done: false,
   },
 
   // --- Christian ---
   // BIBLES
   {
-    id: "bible",
     title: "The Holy Bible",
     author: "Various",
     year: 325,
     genre: "literature",
     category: "christian",
-
-    done: false,
   },
   {
-    id: "dead-sea-scrolls",
     title: "The Dead Sea Scrolls",
     author: "Various",
     year: 325,
     genre: "literature",
     category: "christian",
-
-    done: false,
   },
   {
-    id: "nag-hammadi",
     title: "The Nag Hammadi Scriptures",
     author: "Various",
     year: 325,
     genre: "literature",
     category: "christian",
-
-    done: false,
   },
   // EARLY CHRISTIAN HISTORY
   {
-    id: "eusebius-history",
     title: "Ecclesiastical History",
     author: "Eusebius",
     year: 325,
     genre: "history",
     category: "christian",
-
-    done: false,
   },
   // {
   //   id: "eusebius-constantine",
@@ -486,24 +421,18 @@ export const READING_LIST: Book[] = [
   // },
   // AUGUSTINE PHILOSOPHY
   {
-    id: "augustine-confessions",
     title: "Confessions",
     author: "Saint Augustine",
     year: 400,
     genre: "philosophy",
     category: "christian",
-
-    done: false,
   },
   {
-    id: "augustine-city",
     title: "City of God",
     author: "Saint Augustine",
     year: 426,
     genre: "philosophy",
     category: "christian",
-
-    done: false,
   },
   // POST-AUGUSTIAN HISTORY
   // {
@@ -518,119 +447,90 @@ export const READING_LIST: Book[] = [
   // },
   // --- ISLAM ---
   {
-    id: "quran",
     title: "The Qur'an",
     author: "Muhammad",
     year: 632,
     genre: "literature",
     category: "islamic",
-    done: false,
   },
   {
-    id: "alfarabi-city",
     title: "The Virtuous City",
     author: "Al-Farabi",
     year: 940,
     genre: "philosophy",
     category: "islamic",
-    done: false,
   },
   {
-    id: "avicenna-metaphysics",
     title: "Metaphysics (from The Book of Healing)",
     author: "Avicenna (Ibn Sina)",
     year: 1020,
     genre: "philosophy",
     category: "islamic",
-    done: false,
   },
   {
-    id: "alghazali-incoherence",
     title: "The Incoherence of the Philosophers",
     author: "Al-Ghazali",
     year: 1095,
     genre: "philosophy",
     category: "islamic",
-    done: false,
   },
   {
-    id: "averroes-incoherence",
     title: "The Incoherence of the Incoherence",
     author: "Averroes (Ibn Rushd)",
     year: 1180,
     genre: "philosophy",
     category: "islamic",
-    done: false,
   },
   {
-    id: "maimonides-guide",
     title: "The Guide for the Perplexed",
     author: "Moses Maimonnides",
     year: 1190,
     genre: "philosophy",
     category: "islamic",
-    done: false,
   },
   {
-    id: "khaldun-muqaddimah",
     title: "The Muqaddimah",
     author: "Ibn Khaldun",
     year: 1377,
     genre: "history",
     category: "islamic",
-    done: false,
   },
 
   // --- RENAISSANCE ---
   {
-    id: "dante-comedy",
     title: "Divine Comedy",
     author: "Dante Alighieri",
     year: 1320,
     genre: "literature",
     category: "renaissance",
-
-    done: false,
   },
   {
-    id: "canterbury-tales",
     title: "The Canterbury Tales",
     author: "Geoffrey Chaucer",
     year: 1400,
     genre: "literature",
     category: "renaissance",
-
-    done: false,
   },
   {
-    id: "machiavelli-prince",
     title: "The Prince and Discourses on Livy",
     author: "Niccolò Machiavelli",
     year: 1513,
     genre: "philosophy",
     category: "renaissance",
-
-    done: false,
   },
   {
-    id: "luther-theses",
     title: "Ninety-five Theses",
     author: "Martin Luther",
     year: 1517,
     genre: "philosophy",
     category: "renaissance",
-
-    done: false,
   },
   {
-    id: "luther-freedom",
     title: "The Freedom of a Christian",
     author: "Martin Luther",
     year: 1520,
     genre: "philosophy",
     category: "renaissance",
-
-    done: false,
   },
 
   // SCIENTIFIC PHILOSOPHY
@@ -645,14 +545,11 @@ export const READING_LIST: Book[] = [
   //   done: false,
   // },
   {
-    id: "descartes-meditations",
     title: "Meditations on First Philosophy",
-    author: "Rene Decartes",
+    author: "René Descartes",
     year: 1641,
     genre: "philosophy",
     category: "renaissance",
-
-    done: false,
   },
   // {
   //   id: "newton-principia",
@@ -665,27 +562,21 @@ export const READING_LIST: Book[] = [
   //   done: false,
   // },
   {
-    id: "newton-observations",
     title:
       "Observations upon the Prophecies of Daniel, and the Apocalypse of St. John",
     author: "Isaac Newton",
     year: 1733,
     genre: "philosophy",
     category: "renaissance",
-
-    done: false,
   },
 
   // --- ENLIGHTENMENT ---
   {
-    id: "milton-lost",
     title: "Paradise Lost",
     author: "John Milton",
     year: 1667,
     genre: "literature",
     category: "enlightenment",
-
-    done: false,
   },
   // {
   //   id: "milton-regained",
@@ -700,183 +591,133 @@ export const READING_LIST: Book[] = [
 
   // NATURE OF MAN
   {
-    id: "hobbes-leviathan",
     title: "Leviathan",
     author: "Thomas Hobbes",
     year: 1651,
     genre: "philosophy",
     category: "enlightenment",
-    done: false,
   },
   {
-    id: "locke-essay",
     title: "Essay Concering Human Understanding",
     author: "John Locke",
     year: 1690,
     genre: "philosophy",
     category: "enlightenment",
-
-    done: false,
   },
   {
-    id: "rousseau-inequality",
     title: "A Discourse on the Origin of Inequality",
     author: "Jean-Jacques Rousseau",
     year: 1755,
     genre: "philosophy",
     category: "enlightenment",
-
-    done: false,
   },
   {
-    id: "rousseau-emile",
     title: "Emile",
     author: "Jean-Jacques Rousseau",
     year: 1762,
     genre: "philosophy",
     category: "enlightenment",
-
-    done: false,
   },
   {
-    id: "rousseau-contract",
     title: "The Social Contract",
     author: "Jean-Jacques Rousseau",
     year: 1762,
     genre: "philosophy",
     category: "enlightenment",
-
-    done: false,
   },
 
   // --- Kant ---
   {
-    id: "kant-pure-reason",
     title: "Critique of Pure Reason",
     author: "Immanuel Kant",
     year: 1781,
     genre: "philosophy",
     category: "enlightenment",
-
-    done: false,
   },
   {
-    id: "kant-metaphysics",
     title: "Fundamental Principles to the Metaphysics of Morals",
     author: "Immanuel Kant",
     year: 1785,
     genre: "philosophy",
     category: "enlightenment",
-
-    done: false,
   },
   {
-    id: "kant-practical",
     title: "Critique of Practical Reason",
     author: "Immanuel Kant",
     year: 1788,
     genre: "philosophy",
     category: "enlightenment",
-
-    done: false,
   },
 
   // --- Hegel ---
   {
-    id: "hegel-right",
     title: "The Philosophy of Right",
     author: "Friedrich Hegel",
     year: 1820,
     genre: "philosophy",
     category: "enlightenment",
-
-    done: false,
   },
   {
-    id: "hegel-history",
     title: "The Philosophy of History",
     author: "Friedrich Hegel",
     year: 1837,
     genre: "philosophy",
     category: "enlightenment",
-
-    done: false,
   },
   // NIETZSCHE
   {
-    id: "nietzsche-zarathustra",
     title: "Thus Spoke Zarathustra",
     author: "Friedrich Nietzsche",
     year: 1883,
     genre: "philosophy",
     category: "enlightenment",
-
-    done: false,
   },
 
   // --- CAPITALISM ---
   // MARX
   {
-    id: "marx-manifesto",
     title: "Communist Manifesto",
     author: "Karl Marx",
     year: 1848,
     genre: "philosophy",
     category: "capitalism",
-
-    done: false,
   },
   {
-    id: "marx-capital",
     title: "Capital",
     author: "Karl Marx",
     year: 1867,
     genre: "philosophy",
     category: "capitalism",
-
-    done: false,
   },
   // DARWIN
   {
-    id: "darwin-origin",
     title: "On the Origin of Species",
     author: "Charles Darwin",
     year: 1859,
     genre: "philosophy",
     category: "capitalism",
-
-    done: false,
   },
   {
-    id: "darwin-descent",
     title: "The Descent of Man",
     author: "Charles Darwin",
     year: 1871,
     genre: "philosophy",
     category: "capitalism",
-
-    done: false,
   },
   // FREUD
   {
-    id: "freud-dreams",
     title: "The Interpretation of Dreams",
     author: "Sigmund Freud",
     year: 1900,
     genre: "philosophy",
     category: "capitalism",
-
-    done: false,
   },
   {
-    id: "freud-civilization",
     title: "Civilization and its Discontents",
     author: "Sigmund Freud",
     year: 1930,
     genre: "philosophy",
     category: "capitalism",
-
-    done: false,
   },
 
   // // --- Russia ---
@@ -891,34 +732,25 @@ export const READING_LIST: Book[] = [
   //   done: false,
   // },
   {
-    id: "durkheim-suicide",
     title: "On Suicide",
     author: "Emile Durkheim",
     year: 1897,
     genre: "philosophy",
     category: "capitalism",
-
-    done: false,
   },
   {
-    id: "simmel-money",
     title: "The Philosophy of Money",
     author: "Georg Simmel",
     year: 1900,
     genre: "philosophy",
     category: "capitalism",
-
-    done: false,
   },
   {
-    id: "weber-protestant",
     title: "The Protestant Work Ethic and the Spirit of Capitalism",
     author: "Max Weber",
     year: 1905,
     genre: "philosophy",
     category: "capitalism",
-
-    done: false,
   },
 
   // --- Modern day ---

@@ -2,6 +2,8 @@
 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
+import LockIcon from "@mui/icons-material/Lock"; // [admin]
+import LockOpenIcon from "@mui/icons-material/LockOpen"; // [admin]
 import {
   AppBar,
   Box,
@@ -13,12 +15,15 @@ import {
   DialogContent,
   DialogTitle,
   Divider,
+  IconButton, // [admin]
   LinearProgress,
   Rating,
   Stack,
+  TextField, // [admin]
   ToggleButton,
   ToggleButtonGroup,
   Toolbar,
+  Tooltip, // [admin]
   Typography,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
@@ -26,22 +31,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-type Book = {
-  id: string;
-  title: string;
-  author: string;
-  translation?: string;
-  year: number;
-  genre: string;
-  category: string;
-  notesPath?: string;
-  done?: boolean;
-  cover?: string;
-  link?: string;
-  spine?: string;
-  rating?: number;
-};
-
+import { Book } from "./book";
 import { READING_LIST } from "./readingList";
 
 const GENRES = ["all", "literature", "history", "philosophy"];
@@ -68,7 +58,7 @@ for (let i = 0; i < READING_LIST.length; i++) {
     CATEGORIES.push(READING_LIST[i].category);
   }
 }
-console.log(CATEGORIES);
+
 
 export default function ReadingListApp() {
   const theme = useTheme();
@@ -79,16 +69,31 @@ export default function ReadingListApp() {
   const [category, setCategory] = useState("all");
   const [open, setOpen] = useState(false);
   const [activeBook, setActiveBook] = useState<Book | null>(null);
-  const [books, setBooks] = useState<Book[]>(READING_LIST);
+  // [admin] ——————————————————————————————————————————————
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const [loginPassword, setLoginPassword] = useState("");
+  const [loginError, setLoginError] = useState(false);
+  const [noteEditing, setNoteEditing] = useState(false);
+  const [noteDraft, setNoteDraft] = useState("");
+  const [noteSaving, setNoteSaving] = useState(false);
+  const [noteMd, setNoteMd] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch("/api/auth")
+      .then((r) => r.json())
+      .then((data) => setIsAdmin(data.ok));
+  }, []);
+  // ————————————————————————————————————————————————————
 
   const filtered = useMemo(() => {
-    let list = [...books];
+    let list = [...READING_LIST];
 
     if (genre !== "all") list = list.filter((b) => b.genre === genre);
     if (category !== "all") list = list.filter((b) => b.category === category);
 
     return list;
-  }, [books, genre, category]);
+  }, [genre, category]);
   const completedCount = filtered.filter((b) => b.done).length;
   const progress =
     filtered.length === 0
@@ -98,24 +103,29 @@ export default function ReadingListApp() {
   const openNotes = (book: Book) => {
     setActiveBook(book);
     setOpen(true);
+    setNoteEditing(false); // [admin]
+    setNoteMd(null); // [admin]
   };
+
+  // [admin] ——————————————————————————————————————————————
+  const noteKey = activeBook
+    ? (activeBook.notesPath?.replace(/^\/notes\//, "") ?? activeBook.title.toLowerCase().replace(/\s+/g, "-") + ".md")
+    : "";
+
+  const saveNote = async () => {
+    setNoteSaving(true);
+    await fetch(`/api/notes/${noteKey}`, { method: "PUT", body: noteDraft });
+    setNoteMd(noteDraft);
+    setNoteEditing(false);
+    setNoteSaving(false);
+  };
+  // ————————————————————————————————————————————————————
   const [copied, setCopied] = useState(false);
 
   const [readingListString, setReadingListString] = useState("");
 
   const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(readingListString);
-    } catch {
-      const ta = document.createElement("textarea");
-      ta.value = readingListString;
-      ta.style.position = "fixed";
-      ta.style.opacity = "0";
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      ta.remove();
-    }
+    await navigator.clipboard.writeText(readingListString);
     setCopied(true);
     setTimeout(() => setCopied(false), 1200);
   };
@@ -132,7 +142,7 @@ export default function ReadingListApp() {
       .join("\n");
 
     setReadingListString(reading_list);
-  }, [progress, READING_LIST]);
+  }, [filtered]);
 
   return (
     <Box
@@ -208,11 +218,16 @@ export default function ReadingListApp() {
           variant="outlined"
           size="small"
           onClick={copy}
-          // startIcon={<ContentCopyIcon fontSize="small" />}
-          sx={{ textTransform: "none" }}
+          startIcon={<ContentCopyIcon fontSize="small" />}
+          sx={{
+            textTransform: "none",
+            minWidth: 90,
+            borderColor: copied ? "#14b8a6" : undefined,
+            color: copied ? "#14b8a6" : undefined,
+            transition: "color 0.2s, border-color 0.2s",
+          }}
         >
-          <ContentCopyIcon fontSize="small" />
-          {/* {copied ? "Copied!" : "Copy"} */}
+          {copied ? "Copied!" : "Copy"}
         </Button>
       </Box>
 
@@ -325,14 +340,14 @@ export default function ReadingListApp() {
         <Stack spacing={{ xs: 0, md: 0.5 }}>
           {filtered.map((book) =>
             book.author === "title" ? (
-              <Box key={book.id}>
+              <Box key={book.title}>
                 <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
                   {book.title}
                 </Typography>
               </Box>
             ) : (
               <Box
-                key={book.id}
+                key={book.title}
                 // display="flex"
                 flexDirection="row"
                 justifyContent={"space-between"}
@@ -358,13 +373,9 @@ export default function ReadingListApp() {
                     background: book.spine ? "" : "rgba(255,255,255,0.055)",
                     border: "1px solid rgba(255,255,255,0.9)",
                   },
-                  cursor: book.notesPath ? "pointer" : "default",
+                  cursor: "pointer",
                 }}
-                onClick={() => {
-                  if (book.notesPath) {
-                    openNotes(book);
-                  }
-                }}
+                onClick={() => openNotes(book)}
               >
                 {book.spine ? (
                   <>
@@ -372,6 +383,7 @@ export default function ReadingListApp() {
                       component="img"
                       src={book.spine}
                       alt={book.title}
+                      loading="lazy"
                       sx={{
                         width: "100%",
                         height: "auto",
@@ -615,6 +627,7 @@ export default function ReadingListApp() {
                   component="img"
                   src={activeBook.cover}
                   alt={`${activeBook.title} cover`}
+                  loading="lazy"
                   sx={{
                     width: "100%",
                     aspectRatio: "2 / 3", // standard book cover ratio
@@ -648,11 +661,96 @@ export default function ReadingListApp() {
             )}
 
             {/* Notes content */}
-            {activeBook ? <MarkdownNotes book={activeBook} /> : null}
+            {activeBook ? (
+              <MarkdownNotes
+                book={activeBook}
+                md={noteMd}
+                setMd={setNoteMd}
+                editing={noteEditing}
+                draft={noteDraft}
+                setDraft={setNoteDraft}
+              />
+            ) : null}
           </DialogContent>
 
-          <DialogActions sx={{ backgroundColor: "#222" }}>
+          <DialogActions sx={{ backgroundColor: "#222", justifyContent: "space-between" }}>
+            {/* [admin] lock icon + edit/save/cancel buttons */}
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Tooltip title={isAdmin ? "Log out" : "Admin login"}>
+                <IconButton
+                  size="small"
+                  onClick={async () => {
+                    if (isAdmin) {
+                      await fetch("/api/auth", { method: "DELETE" });
+                      setIsAdmin(false);
+                      setNoteEditing(false);
+                    } else {
+                      setLoginOpen(true);
+                    }
+                  }}
+                  sx={{ color: isAdmin ? "#14b8a6" : "#666" }}
+                >
+                  {isAdmin ? <LockOpenIcon fontSize="small" /> : <LockIcon fontSize="small" />}
+                </IconButton>
+              </Tooltip>
+              {isAdmin && !noteEditing && (
+                <Button
+                  size="small"
+                  variant="outlined"
+                  onClick={() => { setNoteDraft(noteMd ?? ""); setNoteEditing(true); }}
+                  sx={{ textTransform: "none", borderColor: "#555", color: "#aaa" }}
+                >
+                  Edit
+                </Button>
+              )}
+              {isAdmin && noteEditing && (
+                <>
+                  <Button size="small" onClick={() => setNoteEditing(false)}>Cancel</Button>
+                  <Button size="small" variant="contained" onClick={saveNote} disabled={noteSaving}>
+                    {noteSaving ? "Saving…" : "Save"}
+                  </Button>
+                </>
+              )}
+            </Box>
             <Button onClick={() => setOpen(false)}>Close</Button>
+          </DialogActions>
+        </Dialog>
+
+        {/* [admin] login dialog */}
+        <Dialog open={loginOpen} onClose={() => { setLoginOpen(false); setLoginError(false); setLoginPassword(""); }} maxWidth="xs" fullWidth>
+          <DialogTitle sx={{ backgroundColor: "#222", color: "#fff" }}>Admin Login</DialogTitle>
+          <DialogContent sx={{ backgroundColor: "#222" }}>
+            <TextField
+              autoFocus
+              fullWidth
+              type="password"
+              label="Password"
+              value={loginPassword}
+              onChange={(e) => { setLoginPassword(e.target.value); setLoginError(false); }}
+              onKeyDown={async (e) => {
+                if (e.key === "Enter") {
+                  const res = await fetch("/api/auth", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ password: loginPassword }) });
+                  if (res.ok) { setIsAdmin(true); setLoginOpen(false); setLoginPassword(""); }
+                  else setLoginError(true);
+                }
+              }}
+              error={loginError}
+              helperText={loginError ? "Incorrect password" : ""}
+              sx={{ mt: 1, input: { color: "#fff" }, label: { color: "#aaa" }, "& .MuiOutlinedInput-root fieldset": { borderColor: "#444" } }}
+            />
+          </DialogContent>
+          <DialogActions sx={{ backgroundColor: "#222" }}>
+            <Button onClick={() => { setLoginOpen(false); setLoginError(false); setLoginPassword(""); }}>Cancel</Button>
+            <Button
+              variant="contained"
+              onClick={async () => {
+                const res = await fetch("/api/auth", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ password: loginPassword }) });
+                if (res.ok) { setIsAdmin(true); setLoginOpen(false); setLoginPassword(""); }
+                else setLoginError(true);
+              }}
+            >
+              Login
+            </Button>
           </DialogActions>
         </Dialog>
       </Container>
@@ -664,35 +762,67 @@ function capitalize(s: string) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-function MarkdownNotes({ book }: { book: Book }) {
-  const [md, setMd] = useState<string | null>(null);
+function MarkdownNotes({
+  book,
+  md,
+  setMd,
+  editing,
+  draft,
+  setDraft,
+}: {
+  book: Book;
+  md: string | null;
+  setMd: (md: string) => void;
+  editing: boolean;
+  draft: string;
+  setDraft: (draft: string) => void;
+}) {
   const [loading, setLoading] = useState(false);
+
+  const key = book.notesPath?.replace(/^\/notes\//, "") ?? book.title.toLowerCase().replace(/\s+/g, "-") + ".md";
 
   useEffect(() => {
     if (!book) return;
     let cancelled = false;
-
-    const path = book.notesPath || `/notes/${book.id}.md`;
     setLoading(true);
 
-    fetch(path)
+    fetch(`/api/notes/${key}`)
       .then((r) => (r.ok ? r.text() : Promise.reject()))
-      .then((text) => !cancelled && setMd(text))
-      .catch(() => {
-        // fallback to inline notes (if any)
-        if (!cancelled) setMd("");
-      })
-      .finally(() => !cancelled && setLoading(false));
+      .then((text) => { if (!cancelled) setMd(text); })
+      .catch(() => { if (!cancelled) setMd(""); })
+      .finally(() => { if (!cancelled) setLoading(false); });
 
-    return () => {
-      cancelled = true;
-    };
-  }, [book]);
+    return () => { cancelled = true; };
+  }, [book, key, setMd]);
 
   if (loading && md === null) {
     return (
       <Box sx={{ mt: 1 }}>
         <LinearProgress />
+      </Box>
+    );
+  }
+
+  if (editing) {
+    return (
+      <Box sx={{ mt: 1 }}>
+        <textarea
+          value={draft}
+          onChange={(e) => setDraft(e.target.value)}
+          style={{
+            width: "100%",
+            minHeight: 320,
+            background: "#111",
+            color: "#fff",
+            border: "1px solid #444",
+            borderRadius: 6,
+            padding: 12,
+            fontFamily: "monospace",
+            fontSize: 14,
+            resize: "vertical",
+            boxSizing: "border-box",
+          }}
+        />
       </Box>
     );
   }
