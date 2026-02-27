@@ -59,7 +59,6 @@ for (let i = 0; i < READING_LIST.length; i++) {
   }
 }
 
-
 export default function ReadingListApp() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -84,7 +83,7 @@ export default function ReadingListApp() {
       .then((r) => r.json())
       .then((data) => setIsAdmin(data.ok));
   }, []);
-  // ————————————————————————————————————————————————————
+  // ————————————————————————————————————————————————————----
 
   const filtered = useMemo(() => {
     let list = [...READING_LIST];
@@ -109,7 +108,8 @@ export default function ReadingListApp() {
 
   // [admin] ——————————————————————————————————————————————
   const noteKey = activeBook
-    ? (activeBook.notesPath?.replace(/^\/notes\//, "") ?? activeBook.title.toLowerCase().replace(/\s+/g, "-") + ".md")
+    ? (activeBook.notesPath?.replace(/^\/notes\//, "") ??
+      activeBook.title.toLowerCase().replace(/\s+/g, "-") + ".md")
     : "";
 
   const saveNote = async () => {
@@ -673,7 +673,9 @@ export default function ReadingListApp() {
             ) : null}
           </DialogContent>
 
-          <DialogActions sx={{ backgroundColor: "#222", justifyContent: "space-between" }}>
+          <DialogActions
+            sx={{ backgroundColor: "#222", justifyContent: "space-between" }}
+          >
             {/* [admin] lock icon + edit/save/cancel buttons */}
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <Tooltip title={isAdmin ? "Log out" : "Admin login"}>
@@ -690,23 +692,41 @@ export default function ReadingListApp() {
                   }}
                   sx={{ color: isAdmin ? "#14b8a6" : "#666" }}
                 >
-                  {isAdmin ? <LockOpenIcon fontSize="small" /> : <LockIcon fontSize="small" />}
+                  {isAdmin ? (
+                    <LockOpenIcon fontSize="small" />
+                  ) : (
+                    <LockIcon fontSize="small" />
+                  )}
                 </IconButton>
               </Tooltip>
               {isAdmin && !noteEditing && (
                 <Button
                   size="small"
                   variant="outlined"
-                  onClick={() => { setNoteDraft(noteMd ?? ""); setNoteEditing(true); }}
-                  sx={{ textTransform: "none", borderColor: "#555", color: "#aaa" }}
+                  onClick={() => {
+                    setNoteDraft(noteMd ?? "");
+                    setNoteEditing(true);
+                  }}
+                  sx={{
+                    textTransform: "none",
+                    borderColor: "#555",
+                    color: "#aaa",
+                  }}
                 >
                   Edit
                 </Button>
               )}
               {isAdmin && noteEditing && (
                 <>
-                  <Button size="small" onClick={() => setNoteEditing(false)}>Cancel</Button>
-                  <Button size="small" variant="contained" onClick={saveNote} disabled={noteSaving}>
+                  <Button size="small" onClick={() => setNoteEditing(false)}>
+                    Cancel
+                  </Button>
+                  <Button
+                    size="small"
+                    variant="contained"
+                    onClick={saveNote}
+                    disabled={noteSaving}
+                  >
                     {noteSaving ? "Saving…" : "Save"}
                   </Button>
                 </>
@@ -717,8 +737,19 @@ export default function ReadingListApp() {
         </Dialog>
 
         {/* [admin] login dialog */}
-        <Dialog open={loginOpen} onClose={() => { setLoginOpen(false); setLoginError(false); setLoginPassword(""); }} maxWidth="xs" fullWidth>
-          <DialogTitle sx={{ backgroundColor: "#222", color: "#fff" }}>Admin Login</DialogTitle>
+        <Dialog
+          open={loginOpen}
+          onClose={() => {
+            setLoginOpen(false);
+            setLoginError(false);
+            setLoginPassword("");
+          }}
+          maxWidth="xs"
+          fullWidth
+        >
+          <DialogTitle sx={{ backgroundColor: "#222", color: "#fff" }}>
+            Admin Login
+          </DialogTitle>
           <DialogContent sx={{ backgroundColor: "#222" }}>
             <TextField
               autoFocus
@@ -726,27 +757,57 @@ export default function ReadingListApp() {
               type="password"
               label="Password"
               value={loginPassword}
-              onChange={(e) => { setLoginPassword(e.target.value); setLoginError(false); }}
+              onChange={(e) => {
+                setLoginPassword(e.target.value);
+                setLoginError(false);
+              }}
               onKeyDown={async (e) => {
                 if (e.key === "Enter") {
-                  const res = await fetch("/api/auth", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ password: loginPassword }) });
-                  if (res.ok) { setIsAdmin(true); setLoginOpen(false); setLoginPassword(""); }
-                  else setLoginError(true);
+                  const res = await fetch("/api/auth", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ password: loginPassword }),
+                  });
+                  if (res.ok) {
+                    setIsAdmin(true);
+                    setLoginOpen(false);
+                    setLoginPassword("");
+                  } else setLoginError(true);
                 }
               }}
               error={loginError}
               helperText={loginError ? "Incorrect password" : ""}
-              sx={{ mt: 1, input: { color: "#fff" }, label: { color: "#aaa" }, "& .MuiOutlinedInput-root fieldset": { borderColor: "#444" } }}
+              sx={{
+                mt: 1,
+                input: { color: "#fff" },
+                label: { color: "#aaa" },
+                "& .MuiOutlinedInput-root fieldset": { borderColor: "#444" },
+              }}
             />
           </DialogContent>
           <DialogActions sx={{ backgroundColor: "#222" }}>
-            <Button onClick={() => { setLoginOpen(false); setLoginError(false); setLoginPassword(""); }}>Cancel</Button>
+            <Button
+              onClick={() => {
+                setLoginOpen(false);
+                setLoginError(false);
+                setLoginPassword("");
+              }}
+            >
+              Cancel
+            </Button>
             <Button
               variant="contained"
               onClick={async () => {
-                const res = await fetch("/api/auth", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ password: loginPassword }) });
-                if (res.ok) { setIsAdmin(true); setLoginOpen(false); setLoginPassword(""); }
-                else setLoginError(true);
+                const res = await fetch("/api/auth", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ password: loginPassword }),
+                });
+                if (res.ok) {
+                  setIsAdmin(true);
+                  setLoginOpen(false);
+                  setLoginPassword("");
+                } else setLoginError(true);
               }}
             >
               Login
@@ -779,7 +840,9 @@ function MarkdownNotes({
 }) {
   const [loading, setLoading] = useState(false);
 
-  const key = book.notesPath?.replace(/^\/notes\//, "") ?? book.title.toLowerCase().replace(/\s+/g, "-") + ".md";
+  const key =
+    book.notesPath?.replace(/^\/notes\//, "") ??
+    book.title.toLowerCase().replace(/\s+/g, "-") + ".md";
 
   useEffect(() => {
     if (!book) return;
@@ -788,11 +851,19 @@ function MarkdownNotes({
 
     fetch(`/api/notes/${key}`)
       .then((r) => (r.ok ? r.text() : Promise.reject()))
-      .then((text) => { if (!cancelled) setMd(text); })
-      .catch(() => { if (!cancelled) setMd(""); })
-      .finally(() => { if (!cancelled) setLoading(false); });
+      .then((text) => {
+        if (!cancelled) setMd(text);
+      })
+      .catch(() => {
+        if (!cancelled) setMd("");
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
 
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [book, key, setMd]);
 
   if (loading && md === null) {
