@@ -144,6 +144,39 @@ export default function ReadingListApp() {
     setReadingListString(reading_list);
   }, [filtered]);
 
+  // [admin] full-screen note editor — early return so keyboard works on mobile
+  if (noteEditing) {
+    return (
+      <Box sx={{ minHeight: "100svh", backgroundColor: "#111", display: "flex", flexDirection: "column" }}>
+        <textarea
+          autoFocus
+          value={noteDraft}
+          onChange={(e) => setNoteDraft(e.target.value)}
+          style={{
+            flex: 1,
+            width: "100%",
+            background: "transparent",
+            color: "#fff",
+            border: "none",
+            outline: "none",
+            padding: "32px 24px",
+            fontFamily: "monospace",
+            fontSize: 16,
+            lineHeight: 1.75,
+            resize: "none",
+            boxSizing: "border-box",
+          }}
+        />
+        <Box sx={{ display: "flex", justifyContent: "flex-end", gap: 1, px: 2, py: 1.5, borderTop: "1px solid #2a2a2a" }}>
+          <Button onClick={() => setNoteEditing(false)}>Cancel</Button>
+          <Button variant="contained" onClick={saveNote} disabled={noteSaving}>
+            {noteSaving ? "Saving…" : "Save"}
+          </Button>
+        </Box>
+      </Box>
+    );
+  }
+
   return (
     <Box
       sx={{
@@ -667,8 +700,6 @@ export default function ReadingListApp() {
                 md={noteMd}
                 setMd={setNoteMd}
                 editing={noteEditing}
-                draft={noteDraft}
-                setDraft={setNoteDraft}
               />
             ) : null}
           </DialogContent>
@@ -828,15 +859,11 @@ function MarkdownNotes({
   md,
   setMd,
   editing,
-  draft,
-  setDraft,
 }: {
   book: Book;
   md: string | null;
   setMd: (md: string) => void;
   editing: boolean;
-  draft: string;
-  setDraft: (draft: string) => void;
 }) {
   const [loading, setLoading] = useState(false);
 
@@ -875,27 +902,7 @@ function MarkdownNotes({
   }
 
   if (editing) {
-    return (
-      <Box sx={{ mt: 1 }}>
-        <textarea
-          value={draft}
-          onChange={(e) => setDraft(e.target.value)}
-          style={{
-            width: "100%",
-            minHeight: 320,
-            background: "#111",
-            color: "#fff",
-            border: "1px solid #444",
-            borderRadius: 6,
-            padding: 12,
-            fontFamily: "monospace",
-            fontSize: 14,
-            resize: "vertical",
-            boxSizing: "border-box",
-          }}
-        />
-      </Box>
-    );
+    return null; // handled by full-screen early return in parent
   }
 
   return (
