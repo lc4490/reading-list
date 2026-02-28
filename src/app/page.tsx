@@ -9,6 +9,7 @@ import {
   Box,
   Button,
   Chip,
+  CircularProgress,
   Container,
   Dialog,
   DialogActions,
@@ -64,6 +65,17 @@ export default function ReadingListApp() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   // const [books, setBooks] = useState<Book[]>(INITIAL_BOOKS);
 
+  const [appReady, setAppReady] = useState(false);
+  useEffect(() => {
+    const done = () => setAppReady(true);
+    if (document.readyState === "complete") {
+      done();
+      return;
+    }
+    window.addEventListener("load", done, { once: true });
+    return () => window.removeEventListener("load", done);
+  }, []);
+
   const [genre, setGenre] = useState("all");
   const [category, setCategory] = useState("all");
   const [open, setOpen] = useState(false);
@@ -112,12 +124,19 @@ export default function ReadingListApp() {
       activeBook.title.toLowerCase().replace(/\s+/g, "-") + ".md")
     : "";
 
+  const closeEditor = () => {
+    setNoteEditing(false);
+    setOpen(false);
+    setAppReady(false);
+    setTimeout(() => setAppReady(true), 100);
+  };
+
   const saveNote = async () => {
     setNoteSaving(true);
     await fetch(`/api/notes/${noteKey}`, { method: "PUT", body: noteDraft });
     setNoteMd(noteDraft);
-    setNoteEditing(false);
     setNoteSaving(false);
+    closeEditor();
   };
   // ————————————————————————————————————————————————————
   const [copied, setCopied] = useState(false);
@@ -147,7 +166,14 @@ export default function ReadingListApp() {
   // [admin] full-screen note editor — early return so keyboard works on mobile
   if (noteEditing) {
     return (
-      <Box sx={{ minHeight: "100svh", backgroundColor: "#111", display: "flex", flexDirection: "column" }}>
+      <Box
+        sx={{
+          minHeight: "100svh",
+          backgroundColor: "#111",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <textarea
           autoFocus
           value={noteDraft}
@@ -167,8 +193,17 @@ export default function ReadingListApp() {
             boxSizing: "border-box",
           }}
         />
-        <Box sx={{ display: "flex", justifyContent: "flex-end", gap: 1, px: 2, py: 1.5, borderTop: "1px solid #2a2a2a" }}>
-          <Button onClick={() => setNoteEditing(false)}>Cancel</Button>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+            gap: 1,
+            px: 2,
+            py: 1.5,
+            borderTop: "1px solid #2a2a2a",
+          }}
+        >
+          <Button onClick={closeEditor}>Cancel</Button>
           <Button variant="contained" onClick={saveNote} disabled={noteSaving}>
             {noteSaving ? "Saving…" : "Save"}
           </Button>
@@ -730,7 +765,7 @@ export default function ReadingListApp() {
                   )}
                 </IconButton>
               </Tooltip>
-              {isAdmin && !noteEditing && (
+              {isAdmin && !noteEditing && noteMd !== null && (
                 <Button
                   size="small"
                   variant="outlined"
@@ -846,6 +881,24 @@ export default function ReadingListApp() {
           </DialogActions>
         </Dialog>
       </Container>
+
+      {/* Loading screen */}
+      <Box
+        sx={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 9999,
+          backgroundColor: "#111",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          opacity: appReady ? 0 : 1,
+          pointerEvents: appReady ? "none" : "auto",
+          transition: "opacity 0.6s ease",
+        }}
+      >
+        <CircularProgress sx={{ color: "#fff" }} />
+      </Box>
     </Box>
   );
 }

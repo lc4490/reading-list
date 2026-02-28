@@ -1,4 +1,3 @@
-import { put, list } from "@vercel/blob";
 import { readFile } from "fs/promises";
 import { join } from "path";
 import { NextResponse } from "next/server";
@@ -9,17 +8,20 @@ type Params = { params: Promise<{ key: string }> };
 export async function GET(_req: Request, { params }: Params) {
   const { key } = await params;
 
-  // Try Vercel Blob first
+  // Try Vercel Blob first (dynamic import so a failure doesn't break the route)
   try {
+    const { list } = await import("@vercel/blob");
     const { blobs } = await list({ prefix: `notes/${key}` });
     const blob = blobs.find((b) => b.pathname === `notes/${key}`);
     if (blob) {
       const res = await fetch(blob.downloadUrl);
       const text = await res.text();
-      return new Response(text, { headers: { "Content-Type": "text/plain" } });
+      if (text.trim()) {
+        return new Response(text, { headers: { "Content-Type": "text/plain" } });
+      }
     }
   } catch {
-    // Blob not available or key not found — fall through to static file
+    // Blob not available or not supported — fall through to static file
   }
 
   // Fallback: read static file from /public/notes/
@@ -41,6 +43,7 @@ export async function PUT(req: Request, { params }: Params) {
   const { key } = await params;
   const body = await req.text();
 
+  const { put } = await import("@vercel/blob");
   await put(`notes/${key}`, body, {
     access: "public",
     contentType: "text/plain",
