@@ -267,13 +267,13 @@ export const READING_LIST: Book[] = [
     genre: "history",
     category: "roman",
   },
-  {
-    title: "The Twelve Caesars",
-    author: "Suetonius",
-    year: 121,
-    genre: "history",
-    category: "roman",
-  },
+  // {
+  //   title: "The Twelve Caesars",
+  //   author: "Suetonius",
+  //   year: 121,
+  //   genre: "history",
+  //   category: "roman",
+  // },
   // {
   //   id: "appian-wars",
   //   title: "Civil Wars",
