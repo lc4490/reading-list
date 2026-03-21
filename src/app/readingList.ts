@@ -222,6 +222,7 @@ export const READING_LIST: Book[] = [
     genre: "literature",
     category: "roman",
     cover: "/covers/ovid.jpg",
+    done: true,
     link: "https://www.amazon.com/Metamorphoses-New-Translation-Ovid/dp/039332642X/",
     spine: "/spines/ovid-spine.jpg",
     rating: 4.5,
