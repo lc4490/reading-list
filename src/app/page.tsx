@@ -405,7 +405,7 @@ export default function ReadingListApp() {
         <Divider sx={{ mb: 0 }} />
 
         {/* books */}
-        <Stack spacing={{ xs: 0, md: 0.5 }}>
+        <Stack spacing={0}>
           {filtered.map((book) =>
             book.author === "title" ? (
               <Box key={book.title}>
@@ -421,6 +421,7 @@ export default function ReadingListApp() {
                 justifyContent={"space-between"}
                 sx={{
                   p: book.spine ? 0 : { xs: 1, md: 1.25 },
+                  mb: book.spine ? { xs: 0, md: 0.5 } : 0.75,
                   borderRadius: { xs: 1, md: 2 },
                   // display: "flex",
                   alignItems: "center",
@@ -453,6 +454,7 @@ export default function ReadingListApp() {
                       alt={book.title}
                       loading="lazy"
                       sx={{
+                        display: "block",
                         width: "100%",
                         height: "auto",
                         // minHeight: { xs: "30px", md: "80px" },
