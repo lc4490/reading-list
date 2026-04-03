@@ -233,6 +233,11 @@ export const READING_LIST: Book[] = [
     year: 9,
     genre: "history",
     category: "roman",
+    cover: "/covers/livy.jpg",
+    done: true,
+    link: "https://www.amazon.com/Livy-Early-History-Penguin-Classics/dp/0140448098/",
+    spine: "/spines/livy-spine.jpg",
+    rating: 3,
   },
   // {
   //   title: "Histories",
